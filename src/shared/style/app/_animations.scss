@@ -1,0 +1,41 @@
+// page main fade
+
+.fade-enter-active, 
+.fade-leave-active {
+	transition: 150ms ease-in-out;
+	transition-property: opacity;
+}
+
+.fade-enter,
+.fade-leave-active {
+	opacity: 0;
+}
+
+// pulse
+
+.animation-hover-pulse-rounded {
+	--anm8-pulse-color: currentColor;
+	
+	&.--primary-color {
+		--anm8-pulse-color: var(--primary-color);
+	}
+
+	&.--secondary-color {
+		--anm8-pulse-color: var(--secondary-color);
+	}	
+	
+	&:hover {
+		animation: animation-pulse 2s infinite;
+	}
+}
+
+@keyframes animation-pulse {
+	0%   { box-shadow: 0 0 0 0 var(--anm8-pulse-color) }
+	70%  { box-shadow: 0 0 0 10px rgba(204,169,44, 0) }
+	100% { box-shadow: 0 0 0 0 rgba(204,169,44, 0) }
+}
+
+@keyframes fadeIn {
+	from { opacity: 0 }
+	to: { opacity: 1 }
+}

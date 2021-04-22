@@ -1,0 +1,64 @@
+$colors: (
+	"primary-color": #fb7988,
+	"secondary-color": #4ecdc4,
+	"hover-color": #f1f1f1,
+	"stripe-color": #f0f0f0,
+	/* gray palette */
+	"color-gray-a": #aaaaaa,
+	"color-gray-b": #bbbbbb,
+	"color-gray-c": #cccccc,
+	"color-gray-d": #dddddd,
+	"color-gray-e": #eeeeee,
+	"color-gray-f": #f6f6f6,
+	"color-gray-g": #fafafa,
+	"color-gray-dark": #444444,
+	"color-gray-light": #cccccc,
+	"color-gray-medium": #777777,
+	/* states */
+	"color-error": #d62966,
+	"color-success": #4caf08,
+	"color-warning": #ff9800,
+	"color-info": #367cc1,
+	/* social colors */
+	"color-facebook": #365397,
+	"color-github": #2f2f2f,
+	"color-google": #4285f4,
+	"color-instagram": #396d9a,
+	"color-linkedin": #006db3,
+	"color-pinterest": #ce1a19,
+	"color-skype": #00acf4,
+	"color-tumblr": #304c68,
+	"color-twitter": #00a9f1,
+	"color-vimeo": #48b6ed,
+	"color-youtube": #ff3333,
+	"color-vk": #4c75a3,
+	"color-whatsapp": #25D366,
+	"color-telegram": #0088cc,
+	"color-reddit": #ff5700,
+	"color-dribbble": #ea4c89,
+	"color-carbonmade": #9974ba,
+	"color-adobe-portfolio": #0769e0,
+	"color-contently": #00a6c2,
+	"color-coroflot": #ff5400,
+	"color-deviantart": #00e59b,
+	"color-flicker": #128fdc,
+	"color-behance": #000000,
+);
+
+:root {
+	@each $color, $value in $colors {
+		--#{$color}: #{$value};
+		.#{$color} {
+			color: var(--#{$color});
+		}
+	}
+}
+
+::selection {
+	background: darken(#4ecdc4, 10%);
+	color: #ffffff;
+}
+
+.cv-color {
+	color: var(--cv-color);
+}

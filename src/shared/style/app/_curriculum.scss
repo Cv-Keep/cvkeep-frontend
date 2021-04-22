@@ -1,0 +1,25 @@
+.delete-item-round {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  transition: 100ms;
+  text-align: center;
+  cursor: pointer;
+  display: inline-flex;
+  opacity: .5;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #444;  
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  &:hover {
+    background: var(--color-gray-d);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "cvkeep-frontend-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "nodemon ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.6",
+    "helmet": "^4.4.1",
+    "superagent": "^6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "nodemon": "^2.0.6"
+  }
+}

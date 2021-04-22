@@ -1,0 +1,7 @@
+{
+  "watch": [ "." ],
+  "ignore": ["**/*.test.js", "**/*.spec.js", ".git", "node_modules"],
+  "events": {
+    "restart": "npm run lint"
+  }
+}

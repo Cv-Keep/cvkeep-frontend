@@ -1,0 +1,130 @@
+$allInputTypes: '
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="text"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="password"]
+';
+
+#{$allInputTypes}, textarea, select {
+	width: 100%;
+	height: 38px;
+	padding: 6px 10px;
+	border: 1px solid #D1D1D1;
+	box-shadow: none;
+	box-sizing: border-box;
+	margin-top: 0;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;  
+	background-color: rgba(200,200,208,.1);
+	border-radius: 0;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;		
+	
+	&:focus {
+		border: 1px solid var(--primary-color);
+		outline: 0;
+		margin-top: 0;
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;  
+	}
+
+	&.has-error {
+		border-color: var(--color-error);
+	}	
+}
+
+#{$allInputTypes}, textarea {
+	appearance: none;
+}
+
+textarea {
+	min-height: 65px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  width: 26px;
+  height: 26px;
+  outline: none;
+  display: block;
+  appearance: none;
+  margin-right: 8px;
+  position: relative;
+	border: solid 2px var(--color-gray-a);
+	opacity: .65;
+	&:checked {
+		opacity: 1;
+		border-color: var(--primary-color);
+		&::before {
+			content: "";
+			width: 18px;
+			height: 18px;
+			background-color: var(--primary-color);
+			position: absolute;
+			top: 2px;
+			left: 2px;
+		}
+	}
+	&:hover:not(:checked) {
+		opacity: 1;
+	}
+}
+
+input[type=radio],
+input[type=radio]:checked::before{
+  border-radius: 100%;
+}
+
+label, legend {
+	cursor: text;
+	display: block;
+	margin-bottom: .5rem;
+	font-weight: 600;
+	
+	input[type="radio"],
+  input[type="checkbox"] {
+    margin: 0;
+    margin-right: 8px;
+	}
+	
+	&[data-required]::after {
+		content: '*';
+		opacity: .9;
+		margin-left: 4px;
+		color: var(--primary-color);
+	}
+}
+
+label[data-holder] {
+	color: #555;
+	display: inline-flex;
+	&:not(:last-child) {
+		margin-right: var(--gutter);
+	}
+}
+
+fieldset {
+	padding: 0;
+	border-width: 0;
+}
+
+.field {
+	margin-bottom: 14px;
+}
+
+label > .label-body {
+	display: inline-block;
+	margin-left: .5rem;
+	font-weight: normal;
+}
+
+input, textarea, select, fieldset {
+	margin-bottom: 1.5rem;
+}

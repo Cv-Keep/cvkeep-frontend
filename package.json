@@ -1,0 +1,53 @@
+{
+  "name": "cvkeep-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve",
+    "serve:ssr": "cd ./server && npm run lint && npm run serve",
+    "serve:prod": "npm run build:local && npm run serve:ssr",
+    "build:local": "mv .env.production .tmp.env && npm run build && mv .tmp.env .env.production"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "file-saver": "^2.0.2",
+    "form-serialize": "^0.7.2",
+    "html-to-image": "^1.3.20",
+    "jspdf": "^2.3.0",
+    "prerender-spa-plugin": "^3.4.0",
+    "register-service-worker": "^1.7.0",
+    "slugify": "^1.4.0",
+    "swiper": "^6.1.2",
+    "vue": "^2.6.12",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-click-outside": "^1.1.0",
+    "vue-contenteditable-directive": "^1.2.0",
+    "vue-i18n": "^8.21.0",
+    "vue-imask": "^5.2.1",
+    "vue-js-toggle-button": "^1.3.3",
+    "vue-observe-visibility": "^1.0.0",
+    "vue-router": "^3.1.6",
+    "vue-social-sharing": "^2.4.7",
+    "vue-swatches": "^1.0.4",
+    "vue-the-mask": "^0.11.1",
+    "vue-toasted": "^1.1.28",
+    "vuedraggable": "^2.23.2",
+    "vuex": "^3.1.3",
+    "webpack-dev-server": "3.11.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "@vue/cli-plugin-babel": "^3.12.1",
+    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-plugin-pwa": "^4.2.3",
+    "@vue/cli-service": "~4.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^10.0.1",
+    "vue-template-compiler": "^2.6.12"
+  }
+}

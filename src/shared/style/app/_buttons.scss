@@ -1,0 +1,89 @@
+.button, button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	display: inline-block;
+	height: 38px;
+	padding: 0 30px;
+	color: #555;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 38px;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	background-color: transparent;
+	border-radius: 25px;
+	border: 1px solid #bbb;
+	margin-bottom: 1rem;	
+	cursor: pointer;
+	box-sizing: border-box;
+	
+	&:hover, &:focus {
+		outline: 0;
+		color: #333;
+		border-color: #888;
+		filter: brightness(0.94);
+	}
+
+	&.button-primary {
+		color: #FFF;
+		background-color: var(--primary-color);
+		border-color: var(--primary-color);
+		&:hover, &:focus {
+			color: #FFF;
+			background-color: var(--primary-color);
+			border-color: var(--primary-color);
+		}
+	}
+	
+	&.button-seamless {
+		border: none;
+		background: none;
+		background-color: none;
+		
+		&:hover, &:focus, &:active {
+			border: none;
+			background: none;
+			background-color: none;
+		}
+		
+		&.button-primary {
+			color: var(--primary-color);
+		}
+	
+		&.button-secondary {
+			color: var(--secondary-color);
+		}
+	}
+
+	&.button-text {
+		padding: 0;
+		margin: 0;
+		height: auto;
+		border: none;
+		color: inherit;
+		background: none;
+		font-size: inherit;
+		line-height: inherit;
+		background-color: none;
+		text-transform: inherit;
+
+		&:hover, &:focus, &:active {
+			border: none;
+			color: inherit;
+			background: none;
+			background-color: none;
+		}		
+
+		&.button-primary {
+			color: var(--primary-color);
+		}
+	
+		&.button-secondary {
+			color: var(--secondary-color);
+		}
+	}
+}
