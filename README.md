@@ -9,6 +9,18 @@ CV Keep is a `Free and Open Source Platform` intended to manage `Online Resumés
 
 Once `Keep CV` is free and open source you can host your own plaform (Since you dont use the same brand). This can be very useful if you have a business and need to store your own user profiles, or if you are a job agency that wants a clean and quick CV registration system, or if you need to store people resumes for any purpose, including comercial ones.
 
+# Quick Start
+
+To run this plaform locally, please perform the following steps:
+Obs: You need the `CV Keep Backend` running locally.
+
+1. Clone this repository
+2. Copy the `.env` file to `.env.local` 
+2. Run `npm install` from root dir
+3. Run `npm run serve`
+
+:warning: The steps above will run a non-configured plaform. We strongly recommend you to read the full documentation in order to properly configure you plaform, including `.env` files, frontend and backend.
+
 # Documentation
 
-For documentation about development and deployment, please click here.
+For documentation about advanced usage, development and deployment, please click here.
