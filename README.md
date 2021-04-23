@@ -20,7 +20,7 @@ Obs: You need the `CV Keep Backend` running locally to have all working.
 3. Run `npm run serve`
 4. Open `https://localhost:8080` on your browser (maybe you will see a SSL warn because you're local)
 
-:warning: The steps above will run a non-configured plaform. We strongly recommend you to read the full documentation in order to properly configure your plaform, including `.env` files, frontend and backend.
+:warning: If you dont properly configure your `.env.local`, the steps above will run a non-configured plaform. We strongly recommend you to read the full documentation in order to properly configure your plaform, including `.env` files, frontend and backend.
 
 # Documentation
 
