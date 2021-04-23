@@ -7,7 +7,7 @@ You can access the production app here: https://cvkeep.com.
 
 CV Keep is a `Free and Open Source Platform` intended to manage `Online Resumés`. Its free, pretty and simple. The idea is to deal with your resume as an online profile. Instead of send resume files, you send a resume link. Its perfect if you dont want to keep updating things when adding new information on your resume or dont want to deal with an entire social network. Its quick and easy to maintain/update.
 
-Once `Keep CV` is free and open source you can host your own plaform (Since you dont use the same brand). This can be very useful if you have a business and need to store your own user profiles, or if you are a job agency that wants a clean and quick CV registration system, or if you need to store people resumes for any purpose, including comercial ones.
+Once `Keep CV` is free and open source you can host your own plaform also (Since you dont use the same brand). This can be very useful if you have a business and need to store your own user profiles, or if you are a job agency that wants a clean and quick CV registration system, or if you need to store people resumes for any purpose, including comercial ones.
 
 # Quick Start
 
