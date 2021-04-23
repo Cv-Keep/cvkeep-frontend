@@ -11,7 +11,7 @@ Once `Keep CV` is free and open source you can host your own plaform also (Since
 
 # Quick Start
 
-To quckly run this plaform locally, please perform the following steps:  
+To quickly run this plaform locally, please perform the following steps:  
 Obs: You need the `CV Keep Backend` running locally to have all working.
 
 1. Clone this repository
