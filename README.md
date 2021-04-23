@@ -19,7 +19,7 @@ Obs: You need the `CV Keep Backend` running locally to have all working.
 2. Run `npm install` from root dir
 3. Run `npm run serve`
 
-:warning: The steps above will run a non-configured plaform. We strongly recommend you to read the full documentation in order to properly configure you plaform, including `.env` files, frontend and backend.
+:warning: The steps above will run a non-configured plaform. We strongly recommend you to read the full documentation in order to properly configure your plaform, including `.env` files, frontend and backend.
 
 # Documentation
 
