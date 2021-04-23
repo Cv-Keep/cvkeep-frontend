@@ -15,9 +15,10 @@ To quckly run this plaform locally, please perform the following steps:
 Obs: You need the `CV Keep Backend` running locally to have all working.
 
 1. Clone this repository
-2. Copy the `.env` file to `.env.local` 
+2. Copy the `.env` file to `.env.local`  and configure it
 2. Run `npm install` from root dir
 3. Run `npm run serve`
+4. Open `https://localhost:8080` on your browser (maybe you will see a SSL warn because you're local)
 
 :warning: The steps above will run a non-configured plaform. We strongly recommend you to read the full documentation in order to properly configure your plaform, including `.env` files, frontend and backend.
 
