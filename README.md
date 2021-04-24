@@ -5,7 +5,7 @@ You can access the production app here: https://cvkeep.com.
 
 # What is it?
 
-`Pt-BR`: Se vc deseja ler essa documentação em português [clique aqui](https://github.com/Cv-Keep/cvkeep-docs/blob/master/README-PTBR.md)  
+`Pt-BR`: Se vc deseja ler essa documentação em português [clique aqui](https://github.com/Cv-Keep/cvkeep-frontend/blob/main/README-PTBR.md)  
 
 CV Keep is a `Free and Open Source Platform` intended to manage `Online Resumés`. Its free, pretty and simple. The idea is to deal with your resume as an online profile. Instead of send resume files, you send a resume link. Its perfect if you dont want to keep updating things when adding new information on your resume or dont want to deal with an entire social network. It offers a responsive, multi-device, quick and easy to maintain and update online resume.  
 
