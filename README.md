@@ -1,7 +1,9 @@
 # CV Keep - Front End
 
 This is the **CV Keep Front End** repository.    
-You can access the production app here: https://cvkeep.com.  
+You can access the production app here: https://cvkeep.com.
+
+`Pt-BR`: Se vc deseja ler essa documentação em português [clique aqui](https://github.com/Cv-Keep/cvkeep-docs/blob/master/README-PTBR.md)
 
 # What is it?
 
@@ -24,4 +26,4 @@ Obs: You need the `CV Keep Backend` running locally to have all working.
 
 # Documentation
 
-For documentation about advanced usage, development and deployment, please click here.
+For documentation about advanced usage, development and deployment, please [CLICK HERE](https://github.com/Cv-Keep/cvkeep-docs).
