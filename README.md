@@ -11,7 +11,7 @@ Once `Keep CV` is free and open source you can host your own plaform also (Since
 
 # Stack
 
-CV Keep is written in a MEVN stack (Mongo, Express, Vue and Node), and is focused in simplicity. Since you properly configure your .env files, the App is production ready and already internationalized (`en` and `pt-br` by default).
+CV Keep is written in a MEVN stack (Mongo, Express, Vue and Node), and is focused on simplicity. Since you properly configure your .env files, the App is production ready and already internationalized (`en` and `pt-br` by default).
 
 # Quick Start
 
