@@ -11,6 +11,10 @@ CV Keep é uma plataforma livre e de código aberto feita para mantenimento e ge
 
 Uma vez que a plataforma é livre e de código aberto, você pode hospedar a sua própria plataforma sem custo nem autorização nenhuma (desde que vc não use a mesma marca). Isso pode ser especialmente útil se vc tem um negócio que precisa guardar currículos, se você é uma agencia de empregos e precisa de um sistema de registro de usuários e currículos ou se você precisa salvar o profile profissional das pessoas por qualquer motivo, incluindo motivos comerciais.
 
+# Stack
+
+CV Keep foi escrito utilizando uma stack MEVN (Mongo, Express, Vue e Node), e é focado em simplicidade. Uma vez que vc configurou todos os arquivos .env corretamente, o app está pronto para ser executado. A aplicação vem production ready e internacionalizada (`en` e `pt-br` por padrão).
+
 # Início Rápido
 
 Pra rodar a aplicação de forma local, vc deve rodar os seguintes comandos:
@@ -22,9 +26,7 @@ Obs: Você precisará do projeto `CV Keep Backend` rodando local.
 3. Rode `npm run serve`
 4. Navegue até `https://localhost:8080` (talvez vc veja um warn de SSL porque estará local)
 
-:warning: 
-
-Se vc não configurou corretamente sua `.env.local`, os passos acima irão rodar uma aplicação desconfigurada. É fortemente recomendado que vc leia a documentação dessa aplicação afim de configura-la corretamente, incluindo arquivos `.env`, frontend e backend.
+:warning: Se vc não configurou corretamente sua `.env.local`, os passos acima irão rodar uma aplicação desconfigurada. É fortemente recomendado que vc leia a documentação dessa aplicação afim de configura-la corretamente, incluindo arquivos `.env`, frontend e backend.
 
 # Documentação
 
