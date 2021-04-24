@@ -5,7 +5,7 @@ Vc pode acessar o app em produção aqui: https://cvkeep.com.
 
 # O que é isso?
 
-`EN`: If you want to read this documentation in english [clique aqui](https://github.com/Cv-Keep/cvkeep-docs/blob/master/README.md)
+`EN`: If you want to read this documentation in english [clique aqui](https://github.com/Cv-Keep/cvkeep-frontend/blob/main/README.md)  
 
 CV Keep é uma plataforma livre e de código aberto feita para mantenimento e gerencialmento de multiplos curriculums. É perfeita se vc não gosta de ficar editando um monte de coisas pra manter um currículo atualizado ou se você não quer lidar com redes sociais só para manter um CV online. A plataforma oferece um currículo online responsivo, multi-device, rápido e fácil de manter e atualizar.
 
