@@ -34,7 +34,7 @@
 					goToCv: 'Go to my CV',
 					startNow: 'Start Now',
 					aGoodCv: 'A good',
-					curriculum: 'Résumé',
+					curriculum: 'Resumé',
 					increasesYourChances: 'increases your chances of getting a good job.',
 					imagineAGreatOne: 'Imagine a great one?',					
 				}

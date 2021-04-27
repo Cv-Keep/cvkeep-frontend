@@ -96,7 +96,6 @@
 			font-weight: 700;
 			text-overflow: ellipsis;
 			overflow: hidden;
-			white-space: pre;			
 			width: 300px;
 			color: #444444;
 			@media screen and (max-width: 425px) {

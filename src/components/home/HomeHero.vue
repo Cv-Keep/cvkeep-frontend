@@ -30,7 +30,7 @@ export default {
 			'en': {
 				goToCv: 'Go to my CV',
 				startNow: 'Start now',	
-				cvAsAnOnlineProfile: 'Your résumé as an online profile',
+				cvAsAnOnlineProfile: 'Your resumé as an online profile',
 			}
 		}
 	}
@@ -61,7 +61,7 @@ export default {
 			letter-spacing: 23px;
 			margin-bottom: 8px;
 			font-size: calc(30px + 5vw);
-			font-weight: 300;
+			font-weight: 700;
 			margin-right: -.5ch;
 			text-shadow: -2px 1px #ffffff;
 			strong {
