@@ -7,7 +7,7 @@
     <div class="container">
       <h1>{{String($brandName).toUpperCase()}}</h1>
       <h2><span>{{ $t('cvAsAnOnlineProfile') }}</span></h2>
-      
+
 			<button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()">
 				<span v-html="$logged ? $t('goToCv') : $t('startNow')"></span>
 			</button>

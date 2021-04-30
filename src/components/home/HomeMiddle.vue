@@ -67,7 +67,6 @@
 <style lang="scss" scoped>
 	.home-middle {
 		padding: 90px var(--gutter);
-    padding-bottom: 180px;
 		&__head {
 			text-align: center;
 		}

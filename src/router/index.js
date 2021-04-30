@@ -4,6 +4,7 @@ import Router from 'vue-router'
 const Cv = () => import( /* webpackChunkName: "Cv-View" */ '../views/Cv.vue' )
 const Home = () => import( /* webpackChunkName: "Home-View" */ '../views/Home.vue' )
 const Terms = () => import( /* webpackChunkName: "Terms-View" */ '../views/Terms.vue' )
+const Search = () => import( /* webpackChunkName: "Search-View" */ '../views/Search.vue' )
 const Contact = () => import( /* webpackChunkName: "Contact-View" */ '../views/Contact.vue' )
 const ResetPass = () => import( /* webpackChunkName: "ResetPass-View" */ '../views/ResetPass.vue' )
 const ConfirmReg = () => import( /* webpackChunkName: "ConfirmReg-View" */ '../views/ConfirmReg.vue' )
@@ -44,6 +45,11 @@ export default new Router({
 			path: '/confirm/',
 			name: 'confirm',
 			component: ConfirmReg
+		},		
+		{
+			path: '/search/',
+			name: 'search',
+			component: Search
 		},
 		{
 			path: '/reset-pass/',

@@ -1,6 +1,8 @@
 export default {
   'pt-br': {
     dateMask: '##/##/####',
+    findACv: 'Encontre um CV',
+    nameRoleOrLocation: 'Nome, cargo ou localidade',
     errors: {
       error: 'erro',
       wrongPassword: 'Senha incorreta',
@@ -117,6 +119,8 @@ export default {
 
   'en': {
     dateMask: '##/##/####',
+    findACv: 'Find a resumé',
+    nameRoleOrLocation: 'Name, role or location',
     errors: {
       error: 'error',
       wrongPassword: 'Wrong password',
