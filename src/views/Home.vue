@@ -1,16 +1,22 @@
 <template>
 	<div class="home-content">
 		<home-hero/>
-		<home-middle/>
-		<home-search/>
+
+		<div class="home-box">
+			<home-search/>
+			<home-features/>
+		</div>
+		
+		<home-support/>
 		<home-foot/>
 	</div>
 </template>
 
 <script>
 	import HomeHero from '@/components/home/HomeHero.vue'
-	import HomeMiddle from '@/components/home/HomeMiddle.vue'
+	import HomeFeatures from '@/components/home/HomeFeatures.vue'
 	import HomeSearch from '@/components/home/HomeSearch.vue'
+	import HomeSupport from '@/components/home/HomeSupport.vue'
 	import HomeFoot from '@/components/home/HomeFoot.vue'
 
 	export default {
@@ -18,8 +24,9 @@
 
 		components: {
 			HomeHero,
-			HomeMiddle,
+			HomeFeatures,
 			HomeSearch,
+			HomeSupport,
 			HomeFoot
 		}
 	}
@@ -28,5 +35,17 @@
 <style lang="scss" scoped>
 	.home-content {
 		overflow: hidden;
+		.home-box {
+			> div {
+				padding: 80px 0;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			.home-box {
+				> div {
+					padding: 60px 0;
+				}
+			}
+		}
 	}
 </style>

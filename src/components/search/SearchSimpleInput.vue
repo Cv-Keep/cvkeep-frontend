@@ -5,8 +5,8 @@
       {{ $t('findACv') }}
     </label>
 
-    <div class="search-input-holder">
-      <input type="text" name="subject" :placeholder="$t('nameRoleOrLocation')" :value="value">
+    <div class="search-input-holder" :disabled="disabled">
+      <input type="text" :name="name || 'subject'" :placeholder="$t('nameRoleOrLocation')" :value="value" :disabled="disabled" maxlength="54">
       
       <button type="submit">
         <i class="fa fa-arrow-right"></i>
@@ -20,9 +20,19 @@
     name: 'search-simple-input',
 
     props: {
+      name: {
+        type: String,
+        default: ''
+      },
+
       value: {
         type: String,
         default: ''
+      },
+
+      disabled: {
+        type: Boolean,
+        deafult: false
       }
     }
   }
@@ -33,12 +43,11 @@
     margin-bottom: 8px;
     label {
       font-size: 24px;
-      padding-left: 14px;
       color: var(--primary-color);
     }
     .search-input-holder {
       position: relative;
-      input[name="subject"] {
+      input {
         height: auto;
         margin: 0;
         font-size: 32px;
@@ -52,6 +61,8 @@
         right: 0;
         top: 50%;
         height: 100%;
+        padding: 0;
+        width: 90px;
         position: absolute;
         border-radius: 36px;
         transform: translateY(-50%);
@@ -60,6 +71,21 @@
         border-bottom-left-radius: 0;
         border: solid 2px var(--color-gray-light);
         font-size: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .field {
+      padding: 0 var(--gutter);
+      .search-input-holder {
+        input {
+          font-size: 18px;
+          padding-right: 72px;
+        }
+        button {
+          font-size: 18px;
+          width: 56px;
+        }
       }
     }
   }

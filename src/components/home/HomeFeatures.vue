@@ -1,13 +1,13 @@
 <template>
-  <div class="home-middle">
+  <div class="home-features">
     <div class="container">
-      <div class="home-middle__head">
+      <div class="home-features__head">
         <h2>
           {{ $t('featuredText') }}
         </h2>
       </div>
 
-      <div class="home-middle__features">
+      <div class="home-features__items">
         <div>
           <animated-icon icon="rocket"/>
           <span>{{ $t('modern') }}</span>
@@ -36,7 +36,7 @@
   import AnimatedIcon from '@/components/animated-icon/AnimatedIcon.vue'
 
   export default {
-    name: 'home-middle',
+    name: 'home-features',
 
     components: {
       AnimatedIcon
@@ -65,14 +65,32 @@
 </script>
 
 <style lang="scss" scoped>
-	.home-middle {
-		padding: 90px var(--gutter);
+	.home-features {
+    color: #444444;
+    position: relative;
+    &::before {
+      content: '';
+      z-index: 0;
+      width: 100%;
+      background-color: #fff;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 50px;
+      border-top-right-radius: 100%;
+      border-top-left-radius: 20vw 100%;
+      background-color: var(--stripe-color);
+      @media screen and (max-width: 768px) {
+        top: 0;
+        border-radius: 0;
+      }
+    }
 		&__head {
 			text-align: center;
 		}
-		&__features {
+		&__items {
 			display: flex;
-			padding: 32px 0;
+			padding-top: 32px;
       flex-wrap: wrap;
 			justify-content: space-between;
 			> div {
@@ -86,8 +104,7 @@
 			}
 		}
     @media screen and (max-width: 1023px) {
-      padding: 46px var(--gutter);
-      .home-middle__features {
+      .home-features__items {
         padding-bottom: 0;
         > div {
           min-width: 50%;

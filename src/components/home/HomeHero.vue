@@ -120,5 +120,11 @@ export default {
 				padding: var(--gutter);
 			}
 		}
+		@media screen and (max-width: 425px) {
+			h1 {
+				font-size: 32px;
+				letter-spacing: 12px;
+			}
+		}
 	}
 </style>

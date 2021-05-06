@@ -334,5 +334,15 @@ export default {
 				error: reject
 			})
 		});
+	},
+
+	cvSearchSimple (subject, page) {
+		return new Promise((resolve, reject) => {
+			this.get({
+				endpoint: `search/simple?subject=${subject}&page=${page}`,
+				success: resolve,
+				error: reject,				
+			})
+		});
 	}
 }

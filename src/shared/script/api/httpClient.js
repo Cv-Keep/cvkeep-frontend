@@ -3,9 +3,9 @@ import store from '@/store'
 import API from './api.js'
 
 const HttpClient = axios.create({
+	timeout: 30000,
+	withCredentials: true,
 	baseURL: process.env.VUE_APP_API_URL,
-	timeout: 2000,
-	withCredentials: true
 });
 
 HttpClient.interceptors.request.use(
