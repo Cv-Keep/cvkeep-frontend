@@ -18,6 +18,13 @@
 					<span>{{ $t('settings') }}</span>
 				</router-link>
 			</li>
+
+			<li>
+				<router-link :to='`/search`'>
+					<i class="fa fa-search"></i>
+					<span>{{ $t('Search') }}</span>
+				</router-link>
+			</li>			
 			
 			<li @click="signout">
 				<i class="fa fa-arrow-right"></i>

@@ -5,7 +5,7 @@
         <div class="search-form">
           <div class="container">
             <form action="#" @submit="formSubmit">
-              <search-simple-input :value="subject" :disabled="loading"/>
+              <search-simple-input :value="subject" :disabled="loading" ref="inputHolder"/>
             </form>
           </div>
         </div>
@@ -46,8 +46,12 @@ export default {
 
   computed: {
     subject: {
-      get() { return this.$route.query.subject },
+      get() { return this.$route.query.subject || '' },
       set(v) { return this.$route.query.subject !== v && this.$router.replace({ query: { subject: v }}) },
+    },
+
+    $searchInput() {
+      return this.$refs.inputHolder.$el.querySelector('input');
     }
   },
 
@@ -67,11 +71,11 @@ export default {
 
     clearSearch() {
       this.reset();
-      this.$el.querySelector('input[name=subject]').focus();
+      this.$searchInput.focus();
     },
 
     getInputVal() {
-      return this.$el.querySelector('input[name=subject]').value.trim();
+      return this.$searchInput.value.trim();
     },
 
     formSubmit(e) {
@@ -124,13 +128,13 @@ export default {
   },
 
   mounted() {
+    this.$searchInput.focus();
     this.loading = this.subject.trim().length > 0;
-    this.$el.querySelector('input[name=subject]').focus();
+    window.addEventListener('scroll', this.onScroll);
 
     const simpleInputVal = this.getInputVal();
     simpleInputVal && this.search(simpleInputVal);
 
-    window.addEventListener('scroll', this.onScroll);
   },
 
   beforeDestroy() {
