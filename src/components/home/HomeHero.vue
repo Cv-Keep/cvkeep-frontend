@@ -5,7 +5,7 @@
     </div>
 
     <div class="container">
-      <h1>{{String($brandName).toUpperCase()}}</h1>
+      <h1 class="shadow text1">{{String($brandName).toUpperCase()}}</h1>
       <h2><span>{{ $t('cvAsAnOnlineProfile') }}</span></h2>
 
 			<button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()">
@@ -63,7 +63,16 @@ export default {
 			font-size: calc(30px + 5vw);
 			font-weight: 700;
 			margin-right: -.5ch;
-			text-shadow: -2px 1px #ffffff;
+			font-weight: bold;
+			text-shadow:
+				-3px -3px 0 #fff,
+				3px -3px 0 #fff,
+				-3px 3px 0 #fff,
+				3px 3px 0 #fff,
+				4px 4px 0 var(--primary-color),
+				5px 5px 0 var(--primary-color),
+				6px 6px 0 var(--primary-color),
+				7px 7px 0 var(--primary-color) !important;
 			strong {
 				font-size: 700;
 			}
@@ -89,11 +98,12 @@ export default {
 			transition: 200ms;
 			border-width: 2px;
 			background-color: #ffffff;
-			color: var(--primary-color);
-			border-color: var(--primary-color);
+			color: var(--secondary-color);
+			border-color: var(--secondary-color);
 			&:hover {
 				filter: none;
-				box-shadow: var(--box-shadow-a);
+				color: #fff;
+				background-color: var(--secondary-color);
 			}
 		}
 		.feature-img {
@@ -122,7 +132,7 @@ export default {
 		}
 		@media screen and (max-width: 425px) {
 			h1 {
-				font-size: 32px;
+				font-size: 52px;
 				letter-spacing: 12px;
 			}
 		}

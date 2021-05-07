@@ -57,8 +57,8 @@
 			&.container {
 				width: 95%;
 			}
-		}		
-		@media screen and (max-width: 1300px) {
+		}
+		@media screen and (max-width: 1300px), (max-height: 677px) {
 			&.container {
 				padding: 80px 0;
 				padding-top: calc(var(--header-height) + 80px);

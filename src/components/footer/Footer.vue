@@ -15,23 +15,37 @@
 							{{ $t('login') }}
 						</a>
 					</li>
+
 					<li v-else>
 						<router-link to="/cv">
 							{{ $t('myCurriculum') }}
 						</router-link>
 					</li>
+
+					<li>
+						<router-link to="/search">
+							{{ $t('search') }}
+						</router-link>
+					</li>					
+
 					<li v-if="!$logged">
 						<a href="/" @click.prevent="$AuthModal.show({index:1})">
 							{{ $t('register') }}
 						</a>
 					</li>
+
 					<li v-else>
 						<router-link to="/settings">
 							{{ $t('configurations') }}
 						</router-link>
 					</li>
+
 					<li @click="reportCv = true" class="color-inherit link">
 						{{ $t('reportCv') }}
+					</li>
+
+					<li>
+						<a href="https://github.com/Cv-Keep/" target="_blank">It's FOSS &nbsp; <i class="fab fa-github-alt"></i></a>
 					</li>
 				</ul>
 
@@ -41,16 +55,22 @@
 							{{ $t('contact') }}
 						</router-link>
 					</li>
+
 					<li v-if="$route.path !== '/'">
 						<router-link to="/">
 							{{ $t('goHome') }}
 						</router-link>
 					</li>
+
 					<li>
 						<router-link to="/terms">
 							{{ $t('termsAndConditions') }}
 						</router-link>
-					</li>						
+					</li>
+
+					<li class="color-inherit link">
+						Become a supporter
+					</li>				
 				</ul>
 			</div>
 		</div>

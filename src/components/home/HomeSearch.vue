@@ -20,10 +20,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .home-search {
     form {
       margin: 0;
+      .field {
+        label {
+          font-size: 32px;
+        }
+      }
     }
   }
 </style>

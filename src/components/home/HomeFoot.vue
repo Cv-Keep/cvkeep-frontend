@@ -63,7 +63,8 @@
 				border-color: #ffffff;
 				background-color: transparent;
 				&:hover {
-					box-shadow: var(--box-shadow-a);
+					background-color: #fff;
+					color: var(--secondary-color);
 				}
 			}
 			.left {

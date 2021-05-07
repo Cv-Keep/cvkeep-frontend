@@ -1,5 +1,5 @@
 <template>
-  <div class="home-features">
+  <div :class="`home-features donation-${!!$showDonation}`">
     <div class="container">
       <div class="home-features__head">
         <h2>
@@ -28,6 +28,8 @@
           <span>{{ $t('pretty') }}</span>
         </div>
       </div>
+
+      <hr v-if="$showDonation"/>
     </div>
   </div>  
 </template>
@@ -103,6 +105,18 @@
 				}
 			}
 		}
+    hr {
+      margin: 0;
+      margin-top: 80px;
+      @media screen and (max-width: 768px) {
+        margin-top: 56px;
+      }
+    }
+    &.donation-false {
+      @media screen and (min-width: 1124px) {
+        padding-bottom: 260px !important;
+      }
+    }
     @media screen and (max-width: 1023px) {
       .home-features__items {
         padding-bottom: 0;

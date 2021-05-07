@@ -36,6 +36,7 @@
 	.home-content {
 		overflow: hidden;
 		.home-box {
+			overflow: hidden;
 			> div {
 				padding: 80px 0;
 			}

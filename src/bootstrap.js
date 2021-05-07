@@ -52,6 +52,14 @@ export default async Vue => {
 				get () { return store.state.application.isLoading },
 				set (value) { store.state.application.isLoading = value; }
 			},
+
+      $showDonation: {
+        get () {
+          return process.env.VUE_APP_DONATION_PAYPAL_URL ||
+            process.env.VUE_APP_DONATION_PIX_KEY ||
+            process.env.VUE_APP_DONATION_BITCOIN;
+        }
+      }
     },
     
     directives: {
