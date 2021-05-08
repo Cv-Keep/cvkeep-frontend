@@ -28,8 +28,6 @@
           <span>{{ $t('pretty') }}</span>
         </div>
       </div>
-
-      <hr v-if="$showDonation"/>
     </div>
   </div>  
 </template>
@@ -68,25 +66,9 @@
 
 <style lang="scss" scoped>
 	.home-features {
-    color: #444444;
+    color: #444;
     position: relative;
-    &::before {
-      content: '';
-      z-index: 0;
-      width: 100%;
-      background-color: #fff;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 50px;
-      border-top-right-radius: 100%;
-      border-top-left-radius: 20vw 100%;
-      background-color: var(--stripe-color);
-      @media screen and (max-width: 768px) {
-        top: 0;
-        border-radius: 0;
-      }
-    }
+    background-color: var(--stripe-color);
 		&__head {
 			text-align: center;
 		}
@@ -108,6 +90,7 @@
     hr {
       margin: 0;
       margin-top: 80px;
+      border-color: #333;
       @media screen and (max-width: 768px) {
         margin-top: 56px;
       }

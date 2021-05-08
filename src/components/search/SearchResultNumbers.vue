@@ -2,12 +2,12 @@
   <div class="search-result-numbers">
     <div class="search-result-numbers__left">
       <div v-if="!subject && !result.totalItems" class="search-no-term" >
-        <p>Não há nenhum critério de busca a ser executado</p>
+        <p>{{ $t('search.noSearchQuery')}} </p>
       </div>
 
       <p v-if="result.items && result.items.length > 0">
         <span class="showing-results-for">
-          Mostrando resultados para 
+          {{ $t('search.showingResultsFor') }} 
         </span>
 
         <span class="primary-color">
@@ -20,18 +20,19 @@
       </p>
 
       <p v-if="subject && result && result.totalItems === 0">
-        A busca por
+        {{ $t('search.theSearchFor') }}
         <span class="primary-color">
           <strong>{{ subject }}</strong>
         </span>
-        não retornou nenhum resultado
+        {{ $t('search.hasNoResults') }}
       </p>
     </div>
 
     <div class="search-result-numbers__right" v-if="result.totalItems > 0">
       <p>
-        Mostrando 
-        <span class="primary-color"><strong>{{result.items.length}}</strong></span> de 
+        {{ $t('search.showing') }} 
+        <span class="primary-color"><strong>{{result.items.length}}</strong></span>
+        {{ $t('search.of' )}}
         <span class="primary-color"><strong>{{result.totalItems}}</strong></span>
       </p>
     </div>

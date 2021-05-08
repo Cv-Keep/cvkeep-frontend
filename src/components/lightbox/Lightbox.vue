@@ -3,7 +3,7 @@
 		<div class="cv-lightbox" @click.self="close" @keyup.esc="close" tabindex="0" v-observe-visibility="visibilityChanged">
 			<div class="cv-lightbox__content">
 				<header v-if="title">
-					<h4>{{title}}</h4>
+					<h4 v-html="title"></h4>
 					<span @click="close"><i class="fa fa-times"></i></span>
 				</header>
 				

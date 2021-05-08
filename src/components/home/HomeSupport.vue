@@ -20,9 +20,11 @@ export default {
 
 <style lang="scss" scoped>
   .home-support {
+    padding-top: 80px;
     padding-bottom: 186px;
-    background-color: var(--stripe-color);
+    background-color: #fff;
     @media screen and (max-width: 1124px) {
+      padding-top: 56px;
       padding-bottom: 56px;
     }
   }

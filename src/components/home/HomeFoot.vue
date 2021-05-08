@@ -58,7 +58,7 @@
 				font-size: 18px;
 				margin-top: 24px;
 				color: #ffffff;
-				transition: 200ms;
+				transition: 100ms;
 				border-width: 2px;
 				border-color: #ffffff;
 				background-color: transparent;

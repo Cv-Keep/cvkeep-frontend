@@ -19,7 +19,7 @@
 				</li>
 
 				<li v-if="civilState && civilState !== 'doNotInform'">
-					<div><i class="fa fa-child"></i></div>
+					<div><i class="fa fa-ring"></i></div>
 					<div>{{ $t(`civilStates.${civilState}`) }}</div>
 				</li>
 

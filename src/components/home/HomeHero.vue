@@ -95,7 +95,7 @@ export default {
 			margin-top: 24px;
 			display: inline-block;
 			font-size: 18px;
-			transition: 200ms;
+			transition: 100ms;
 			border-width: 2px;
 			background-color: #ffffff;
 			color: var(--secondary-color);

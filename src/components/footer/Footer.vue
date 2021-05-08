@@ -24,7 +24,7 @@
 
 					<li>
 						<router-link to="/search">
-							{{ $t('search') }}
+							{{ $t('search.call') }}
 						</router-link>
 					</li>					
 
@@ -43,10 +43,6 @@
 					<li @click="reportCv = true" class="color-inherit link">
 						{{ $t('reportCv') }}
 					</li>
-
-					<li>
-						<a href="https://github.com/Cv-Keep/" target="_blank">It's FOSS &nbsp; <i class="fab fa-github-alt"></i></a>
-					</li>
 				</ul>
 
 				<ul>
@@ -56,10 +52,18 @@
 						</router-link>
 					</li>
 
+					<li>
+						<a href="https://github.com/Cv-Keep/" target="_blank">It's FOSS &nbsp; <i class="fab fa-github-alt"></i></a>
+					</li>
+
 					<li v-if="$route.path !== '/'">
 						<router-link to="/">
 							{{ $t('goHome') }}
 						</router-link>
+					</li>
+
+					<li class="color-inherit link" @click="becomeSupporter = true">
+						Become a supporter
 					</li>
 
 					<li>
@@ -67,10 +71,6 @@
 							{{ $t('termsAndConditions') }}
 						</router-link>
 					</li>
-
-					<li class="color-inherit link">
-						Become a supporter
-					</li>				
 				</ul>
 			</div>
 		</div>
@@ -80,22 +80,26 @@
 		</div>
 
 		<report-cv v-if="reportCv" @close="reportCv = false"/>
+		<become-supporter :active="becomeSupporter" @close="becomeSupporter = false"/>
 	</footer>
 </template>
 
 <script>
 	import ReportCv from '@/components/curriculum/reportCv/ReportCv.vue'
+	import BecomeSupporter from '@/components/support/BecomeSupporterModal.vue'
 
 	export default {
 		name: 'app-footer',
 
 		components: {
-			ReportCv
+			ReportCv,
+			BecomeSupporter
 		},
 
 		data () {
 			return {
-				reportCv: false
+				reportCv: false,
+				becomeSupporter: false, 
 			}
 		},
 

@@ -24,7 +24,7 @@
 
     <div class="search-view__askmore" v-if="result && result.items && subject && !loading && !result.isLastPage">
       <div class="container">
-        <button class="button" @click="searchMore">Carregar mais</button>
+        <button class="button" @click="searchMore">{{$t('search.loadMore')}}</button>
       </div>
     </div>
   </div>
@@ -151,7 +151,7 @@ export default {
       .search-form {
         padding: 56px 0;
         transition: 500ms;
-        background-color: var(--hover-color);
+        background-color: rgba(150,150,150,.2);
         form {
           margin: 0;
         }
@@ -169,7 +169,7 @@ export default {
       z-index: 1;
       width: 100%;
       background-color: #fff;
-      box-shadow: var(--box-shadow-a);
+      border-top: solid 1px rgba(150,150,150,.2);
       padding: var(--gutter) 0;          
     }
   }

@@ -1,14 +1,14 @@
 <template>
   <div class="support">
     <div class="support__content">
-      <div class="support__content__head">
+      <div class="support__content__head" v-if="title">
         <p class="title">
           <i class="fa fa-heart"></i>
           <span>Become a supporter</span>
         </p>
       </div>
 
-      <div class="support__content__body">
+      <div class="support__content__body" :style="`text-align: ${blocked ? 'left' : 'center'}`">
         <p>
           This is a <strong>free service and platform</strong> created with a lot of hard work.<br/>
           If this has been useful for your purposes, you can support our work with a donation. 
@@ -67,6 +67,11 @@ export default {
     blocked: {
       type: Boolean,
       default: false
+    },
+
+    title: {
+      type: Boolean,
+      default: true
     }
   },
 
