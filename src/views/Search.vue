@@ -10,13 +10,7 @@
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="search-view__numbers">
-      <div class="container">
-        <search-result-numbers :subject="subject" :result="result" @reset="clearSearch"/>
-      </div>
-    </div>    
+    </div>  
 
     <div class="search-view__result">
       <search-result :subject="subject" :result="result" :loading="loading"/>
@@ -27,6 +21,12 @@
         <button class="button" @click="searchMore">{{$t('search.loadMore')}}</button>
       </div>
     </div>
+
+    <div class="search-view__numbers">
+      <div class="container">
+        <search-result-numbers :subject="subject" :result="result" :loading="loading" @reset="clearSearch"/>
+      </div>
+    </div>    
   </div>
 </template>
 

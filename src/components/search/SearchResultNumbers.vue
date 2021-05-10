@@ -26,6 +26,10 @@
         </span>
         {{ $t('search.hasNoResults') }}
       </p>
+
+      <p v-if="loading">
+        {{ $t('search.searching') }}...
+      </p>
     </div>
 
     <div class="search-result-numbers__right" v-if="result.totalItems > 0">
@@ -52,6 +56,11 @@
       result: {
         type: Object,
         default: () => {}
+      },
+
+      loading: {
+        type: Boolean,
+        default: false
       }
     }
   }

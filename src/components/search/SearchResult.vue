@@ -10,6 +10,12 @@
       <div v-if="loading" class="search-loading">
         <loading-spinner/>
       </div>
+
+      <div class="search-image">
+        <div class="search-image__no-query" v-show="!loading && (!subject || !result.totalItems)">
+          <img :src="require('@/assets/square.svg')" alt="Guy waiting on a square"/>          
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -74,6 +80,18 @@ export default {
     display: flex;
     justify-content: center;
     padding: 60px 0;
+  }
+  .search-image {
+    &__no-query {
+      width: 100%;
+      img {
+        width: 90%;
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-top: 36px;
+      }
+    }
   }
 }
 </style>

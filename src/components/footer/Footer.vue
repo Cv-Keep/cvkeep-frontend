@@ -56,12 +56,6 @@
 						<a href="https://github.com/Cv-Keep/" target="_blank">It's FOSS &nbsp; <i class="fab fa-github-alt"></i></a>
 					</li>
 
-					<li v-if="$route.path !== '/'">
-						<router-link to="/">
-							{{ $t('goHome') }}
-						</router-link>
-					</li>
-
 					<li class="color-inherit link" @click="becomeSupporter = true">
 						Become a supporter
 					</li>

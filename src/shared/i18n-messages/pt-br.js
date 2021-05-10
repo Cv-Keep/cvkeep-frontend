@@ -116,6 +116,7 @@ export default {
     of: 'de',
     call: 'Buscar',
     showing: 'Mostrando',
+    searching: 'Buscando',
     loadMore: 'Carregar mais',
     findACv: 'Encontre um CV',
     nameRoleOrLocation: 'Nome, cargo, localidade, etc',

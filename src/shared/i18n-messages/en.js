@@ -117,12 +117,13 @@ export default {
     of: 'of',
     call: 'Search',
     showing: 'Showing',
+    searching: 'Searching',
     loadMore: 'Load more',
     findACv: 'Find a CV',
     nameRoleOrLocation: 'Name, role, locale, etc',
     noSearchQuery: 'There is no search query',
     showingResultsFor: 'Showing results for',
     theSearchFor: 'The search for',
-    hasNoResults: 'didn\' returned any results',
+    hasNoResults: 'didn\'t returned any results',
   }     
 }

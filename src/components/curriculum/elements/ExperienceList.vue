@@ -34,7 +34,15 @@
 					</p>
 
 					<p class="dates color-gray-light">
-						<strong>{{item.start}} - {{item.current ? 'Current' : item.end}}</strong>
+						<strong>
+							<span>
+								{{item.start}}
+							</span>
+							-
+							<span :class="`current-${item.current ? 'true' : 'false'}`">
+								{{item.current ? 'Current' : item.end}}
+							</span>
+						</strong>
 					</p>
 				</div>
 
@@ -203,6 +211,10 @@
 					.dates {
 						margin: 0;
 						font-size: 14px;
+						.current-true {
+							font-weight: 700;
+							color: var(--cv-color);
+						}
 					}
 				}
 				&__extra {
