@@ -124,5 +124,20 @@ export default {
     showingResultsFor: 'Mostrando resultados para',
     theSearchFor: 'A busca por',
     hasNoResults: 'não retornou nenhum resultado',
-  }          
+  },
+  support: {
+    donate: 'Doar',
+    becomeASupporter: 'Apoie este serviço',
+    bitcoinDonation: 'Doar bitcoins',
+    heresTheBitcoinAddress: 'Aqui está o endereço bitcoin,',
+    thanksForYourDonation: 'Obrigado por sua doação!',
+    pixDonation: 'Doar via PIX',
+    heresThePixKey: 'Aqui está a chave PIX,',
+    feature: {
+      thisIsA: 'Este é um',
+      freeServiceAndPlatform: 'serviço livre e gratuito',
+      createdWithHardWork: 'criado com um pouco de trabalho duro.',
+      considerDonate: 'Se tem sido útil aos seus propósitos, considere fazer uma doaçao em apoio.'
+    }
+  }
 }

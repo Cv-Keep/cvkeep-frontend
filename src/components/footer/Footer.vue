@@ -57,7 +57,7 @@
 					</li>
 
 					<li class="color-inherit link" @click="becomeSupporter = true">
-						Become a supporter
+						{{ $t('support.becomeASupporter') }}
 					</li>
 
 					<li>

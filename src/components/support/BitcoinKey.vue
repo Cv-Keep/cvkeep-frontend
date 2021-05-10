@@ -5,8 +5,8 @@
         <p><i class="fa fa-heart"></i></p>
 
         <p class="key-title">
-          Here is the bitcoin address,<br/>
-          Thanks for your donation!
+          {{$t('support.heresTheBitcoinAddress')}}<br/>
+          {{$t('support.thanksForYourDonation')}}
         </p>
 
         <p class="key-text">{{bitcoinKey}}</p>

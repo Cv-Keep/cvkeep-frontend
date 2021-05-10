@@ -1,5 +1,5 @@
 <template>
-  <cv-lightbox :title="'Bitcoin Donation'" v-if="active" @close="$emit('close')">
+  <cv-lightbox :title="$t('support.bitcoinDonation')" v-if="active" @close="$emit('close')">
     <slot/>
 
     <div slot="footer">
@@ -28,7 +28,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

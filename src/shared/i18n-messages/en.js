@@ -125,5 +125,20 @@ export default {
     showingResultsFor: 'Showing results for',
     theSearchFor: 'The search for',
     hasNoResults: 'didn\'t returned any results',
+  },
+  support: {
+    donate: 'Donate',
+    becomeASupporter: 'Become a supporter',
+    bitcoinDonation: 'Bitcoin donation',
+    heresTheBitcoinAddress: 'Here is the bitcoin address,',
+    thanksForYourDonation: 'Thanks for your donation!',
+    pixDonation: 'PIX donation',
+    heresThePixKey: 'Here is the PIX key,',
+    feature: {
+      thisIsA: 'This is a',
+      freeServiceAndPlatform: 'free service and platform',
+      createdWithHardWork: 'created with some hard work.',
+      considerDonate: 'If has been useful for your purposes, consider to make a donation.'
+    }
   }     
 }

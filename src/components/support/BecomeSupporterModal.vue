@@ -1,5 +1,5 @@
 <template>
-  <cv-lightbox :title="`<i class='fa fa-heart'></i> &nbsp; Become a supporter`" v-if="active" @close="$emit('close')">
+  <cv-lightbox :title="`<i class='fa fa-heart'></i> &nbsp; ${ $t('support.becomeASupporter') }`" v-if="active" @close="$emit('close')">
     <div class="modal-content">
       <support-box :blocked="true" :title="false"/>
     </div>
