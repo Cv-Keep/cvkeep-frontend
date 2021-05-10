@@ -39,13 +39,33 @@
       </div>
     </div>
 
-    <pix-donation-modal :active="pixDonationModal" @close="toggleModal('pixDonationModal')">
+    <component
+      v-if="pixDonationModal" 
+      :active="pixDonationModal" 
+      :class="blocked ? 'cover-all-blocked' : ''"
+      :is="blocked ? 'div' : 'pix-donation-modal'" 
+      @close="toggleModal('pixDonationModal')"
+    >
+      <span  class="go-back" v-if="blocked" @click="toggleModal('pixDonationModal')">
+        <i  class="fa fa-arrow-left"></i>
+      </span>
+
       <pix-key/>
-    </pix-donation-modal>
+    </component>
     
-    <bitcoin-donation-modal :active="bitcoinDonationModal" @close="toggleModal('bitcoinDonationModal')">
+    <component
+      v-if="bitcoinDonationModal" 
+      :active="bitcoinDonationModal"
+      :class="blocked ? 'cover-all-blocked' : ''"
+      :is="blocked ? 'div' : 'bitcoin-donation-modal'"
+      @close="toggleModal('bitcoinDonationModal')"
+    >
+      <span class="go-back" v-if="blocked" @click="toggleModal('bitcoinDonationModal')">
+        <i class="fa fa-arrow-left"></i>
+      </span>
+
       <bitcoin-key/>
-    </bitcoin-donation-modal>
+    </component>
   </div>
 </template>
 
@@ -97,6 +117,7 @@ export default {
 
 <style lang="scss" scoped>
   .support {
+    position: relative;
     @mixin block-content {
       display: block;
       li {
@@ -169,6 +190,29 @@ export default {
           &.blocked-true {
             @include block-content;
           }
+        }
+      }
+    }
+    div.cover-all-blocked {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      .go-back {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 2px #aaa;
+        border-radius: 100%;
+        color: #aaa;
+        cursor: pointer;
+        opacity: .7;
+        &:hover {
+          opacity: 1;
         }
       }
     }
