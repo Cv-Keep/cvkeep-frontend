@@ -6,10 +6,10 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
-    "serve:ssr": "npm install --prefix server && npm run lint --prefix server && npm run serve --prefix server",
+    "serve:ssr": "cd ./server && npm run lint && npm run serve",
     "serve:prod": "npm run build:local && npm run serve:ssr",
     "build:local": "mv .env.production .tmp.env && npm run build && mv .tmp.env .env.production",
-    "postinstall": "npm run build && npm run serve:ssr"
+    "postinstall": "cd ./server && npm install && npm run serve"
   },
   "dependencies": {
     "axios": "^0.21.1",
