@@ -4,16 +4,16 @@
       <div class="support__content__head" v-if="title">
         <p class="title">
           <i class="fa fa-heart"></i>
-          <span>{{$t('support.becomeASupporter')}}</span>
+          <span>{{$t('supportMessages.becomeASupporter')}}</span>
         </p>
       </div>
 
       <div class="support__content__body" :style="`text-align: ${blocked ? 'left' : 'center'}`">
         <p>
-          {{$t('support.feature.thisIsA')}} <strong>{{$t('support.feature.freeServiceAndPlatform')}}</strong> 
-          {{$t('support.feature.createdWithHardWork')}}<br/>
+          {{$t('supportMessages.feature.thisIsA')}} <strong>{{$t('supportMessages.feature.freeServiceAndPlatform')}}</strong> 
+          {{$t('supportMessages.feature.createdWithHardWork')}}<br/>
           
-          {{$t('support.feature.considerDonate')}}
+          {{$t('supportMessages.feature.considerDonate')}}
         </p>
       </div>
 
@@ -22,18 +22,18 @@
           <li class="paypal" v-if="paypalDonationUrl">
             <a :href="paypalDonationUrl" target="_blank">
               <img :src="require('@/assets/paypal.svg')" alt="Paypal logo">
-              <span>{{$t('support.donate')}}</span>
+              <span>{{$t('supportMessages.donate')}}</span>
             </a>
           </li>
 
           <li class="pix" v-if="pixKeyStr" @click="toggleModal('pixDonationModal')">
             <img :src="require('@/assets/pix.svg')" alt="Pix logo">
-            <span>{{$t('support.donate')}}</span>
+            <span>{{$t('supportMessages.donate')}}</span>
           </li>
 
           <li class="bitcoin" v-if="bitcoinKeyStr" @click="toggleModal('bitcoinDonationModal')">
             <img :src="require('@/assets/bitcoin.svg')" alt="Bitcoin logo">
-            <span>{{$t('support.donate')}}</span>
+            <span>{{$t('supportMessages.donate')}}</span>
           </li>
         </ul>
       </div>

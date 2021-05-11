@@ -10,6 +10,7 @@
 			<div class="container">
 				<edit-account :hasPassword="hasPassword"/>
 				<edit-privacy/>
+				<edit-searchable/>
 				<download-cv/>
 				<danger-zone :hasPassword="hasPassword"/>
 			</div>
@@ -25,6 +26,7 @@
 	const EditPrivacy = () => import(/* webpackChunkName: "EditPrivacy" */ '@/components/settings/Privacy.vue')
 	const DangerZone = () => import(/* webpackChunkName: "DangerZone" */ '@/components/settings/Deactivate.vue')
 	const DownloadCv = () => import(/* webpackChunkName: "DownloadCv" */ '@/components/settings/DownloadCv.vue')
+	const EditSearchable = () => import(/* webpackChunkName: "EditSearchable" */ '@/components/settings/Searchable.vue')
 
 	export default {
 		name: 'settings',
@@ -33,6 +35,7 @@
 			LoadingSpinner,
 			EditAccount,
 			EditPrivacy,
+			EditSearchable,
 			DangerZone,
 			DownloadCv
 		},
@@ -58,7 +61,7 @@
 			}
 		},
 
-		created () {
+		async created () {
 			if (!this.$logged) {
 				this.$router.push('/');
 
@@ -66,10 +69,9 @@
 			}
 
 			if (!this.$store.state.curriculum.username) {
-				this.$API.getCurriculum(this.username)
+				await this.$API.getCurriculum(this.username)
 					.then(cv => this.$store.commit('curriculum/load', cv))
-					.catch(this.$toasted.error)
-					.finally(this.loading = false);
+					.catch(this.$toasted.error);
 			}
 
 			this.loading = false;
@@ -133,7 +135,7 @@
 			max-width: 500px;
 		}
 		input[type="submit"] {
-			width: 230px;
+			min-width: 130px;
 		}
 		.submit, button.deactivate {
 			@media screen and (max-width: 600px) {

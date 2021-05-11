@@ -22,7 +22,7 @@
 					</div>
 
 					<div class="submit">
-						<input type="submit" class="button button-primary" name="Submit" :value="$t('save')">
+						<input type="submit" class="button" name="Submit" :value="$t('save')">
 					</div>				
 				</form>
 			</div>
@@ -123,10 +123,7 @@
 					margin: 0;
 					margin-bottom: var(--gutter);
 				}
-			}
-			input[type="submit"] {
-				min-width: 200px;
-			}			
+			}		
 		}
 	}
 </style>

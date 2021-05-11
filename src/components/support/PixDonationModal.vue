@@ -1,5 +1,5 @@
 <template>
-  <cv-lightbox :title="$t('support.pixDonation')" v-if="active" @close="$emit('close')">
+  <cv-lightbox :title="$t('supportMessages.pixDonation')" v-if="active" @close="$emit('close')">
     <slot/>
 
     <div slot="footer">

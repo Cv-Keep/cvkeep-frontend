@@ -173,3 +173,17 @@ th, td {
 	}
 }
 
+label.vue-js-switch {
+	input {
+		visibility: hidden;
+	}
+	&.disabled {
+		filter: grayscale(1);
+		.v-switch-label {
+			display: none !important;
+		}
+		.v-switch-button {
+			opacity: .5;
+		}
+	}
+} 

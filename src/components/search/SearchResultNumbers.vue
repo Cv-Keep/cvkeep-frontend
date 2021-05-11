@@ -2,12 +2,12 @@
   <div class="search-result-numbers">
     <div class="search-result-numbers__left">
       <div v-if="!subject && !result.totalItems" class="search-no-term" >
-        <p>{{ $t('search.noSearchQuery')}} </p>
+        <p>{{ $t('searchMessages.noSearchQuery')}} </p>
       </div>
 
       <p v-if="result.items && result.items.length > 0">
         <span class="showing-results-for">
-          {{ $t('search.showingResultsFor') }} 
+          {{ $t('searchMessages.showingResultsFor') }} 
         </span>
 
         <span class="primary-color">
@@ -20,23 +20,23 @@
       </p>
 
       <p v-if="subject && result && result.totalItems === 0">
-        {{ $t('search.theSearchFor') }}
+        {{ $t('searchMessages.theSearchFor') }}
         <span class="primary-color">
           <strong>{{ subject }}</strong>
         </span>
-        {{ $t('search.hasNoResults') }}
+        {{ $t('searchMessages.hasNoResults') }}
       </p>
 
       <p v-if="loading">
-        {{ $t('search.searching') }}...
+        {{ $t('searchMessages.searching') }}...
       </p>
     </div>
 
     <div class="search-result-numbers__right" v-if="result.totalItems > 0">
       <p>
-        {{ $t('search.showing') }} 
+        {{ $t('searchMessages.showing') }} 
         <span class="primary-color"><strong>{{result.items.length}}</strong></span>
-        {{ $t('search.of' )}}
+        {{ $t('searchMessages.of' )}}
         <span class="primary-color"><strong>{{result.totalItems}}</strong></span>
       </p>
     </div>

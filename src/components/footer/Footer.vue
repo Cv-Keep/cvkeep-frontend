@@ -24,7 +24,7 @@
 
 					<li>
 						<router-link to="/search">
-							{{ $t('search.call') }}
+							{{ $t('searchMessages.call') }}
 						</router-link>
 					</li>					
 
@@ -57,7 +57,7 @@
 					</li>
 
 					<li class="color-inherit link" @click="becomeSupporter = true">
-						{{ $t('support.becomeASupporter') }}
+						{{ $t('supportMessages.becomeASupporter') }}
 					</li>
 
 					<li>

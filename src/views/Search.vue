@@ -18,7 +18,7 @@
 
     <div class="search-view__askmore" v-if="result && result.items && subject && !loading && !result.isLastPage">
       <div class="container">
-        <button class="button" @click="searchMore">{{$t('search.loadMore')}}</button>
+        <button class="button" @click="searchMore">{{$t('searchMessages.loadMore')}}</button>
       </div>
     </div>
 

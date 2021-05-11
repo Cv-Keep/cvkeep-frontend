@@ -113,7 +113,7 @@ export default {
     'publication': 'Publication',
     'recognition': 'Recognition',
   },
-  search: {
+  searchMessages: {
     of: 'of',
     call: 'Search',
     showing: 'Showing',
@@ -125,8 +125,10 @@ export default {
     showingResultsFor: 'Showing results for',
     theSearchFor: 'The search for',
     hasNoResults: 'didn\'t returned any results',
+    nothingFound: 'Nothing found',
+    typeSomething: 'Type something to search',
   },
-  support: {
+  supportMessages: {
     donate: 'Donate',
     becomeASupporter: 'Become a supporter',
     bitcoinDonation: 'Bitcoin donation',

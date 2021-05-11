@@ -22,7 +22,7 @@
 			<li>
 				<router-link :to='`/search`'>
 					<i class="fa fa-search"></i>
-					<span>{{ $t('search.call') }}</span>
+					<span>{{ $t('searchMessages.call') }}</span>
 				</router-link>
 			</li>			
 			

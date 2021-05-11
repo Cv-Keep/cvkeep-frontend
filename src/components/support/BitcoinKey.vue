@@ -5,8 +5,8 @@
         <p><i class="fa fa-heart"></i></p>
 
         <p class="key-title">
-          {{$t('support.heresTheBitcoinAddress')}}<br/>
-          {{$t('support.thanksForYourDonation')}}
+          {{$t('supportMessages.heresTheBitcoinAddress')}}<br/>
+          {{$t('supportMessages.thanksForYourDonation')}}
         </p>
 
         <p class="key-text">{{bitcoinKey}}</p>

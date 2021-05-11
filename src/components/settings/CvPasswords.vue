@@ -41,7 +41,7 @@
       </div>
 
       <div class="submit">
-        <input type="submit" class="button button-primary" name="Submit" :value="$t('save')">
+        <input type="submit" class="button" name="Submit" :value="$t('save')">
       </div>
     </form>
   </div>  
@@ -137,7 +137,7 @@
           addNewPassword: 'Adicionar nova senha',
           protectCvWithPassword: 'Proteger meu currículo com senha',
           configurationsUpdated: 'Suas configurações foram atualizadas',
-          privateCvHelp: 'Pode ser que você queira restringir o acesso ao seu currículo, para tanto você pode habilitar esta opção e criar diversas senhas de acesso ao seu CV, fazendo com que ele possa ser visualizado apenas por quem possuir uma dessas senhas. Caso esta opção esteja habilitada sem nenhuma senha definida, seu CV estará visível apenas para você. Você pode revogar qualquer senha de acesso ou mesmo esta opção quantas vezes quiser a qualquer momento.',
+          privateCvHelp: 'Pode ser que você queira restringir o acesso ao seu currículo, para tanto você pode habilitar esta opção e criar diversas senhas de acesso ao seu CV, fazendo com que ele possa ser visualizado apenas por quem possuir uma dessas senhas. Caso esta opção esteja habilitada sem nenhuma senha definida, seu CV estará visível apenas para você. Seu CV não aparecerá em resultados de busca também. Você pode revogar qualquer senha de acesso ou mesmo esta opção quantas vezes quiser a qualquer momento.',
         },
 
         'en': {
@@ -149,7 +149,7 @@
           addNewPassword: 'Add new password',
           protectCvWithPassword: 'Protect my CV with passwords',
           configurationsUpdated: 'Your configurations has been updated',
-          privateCvHelp: 'You may want to restrict access to your CV, so you can enable this option and create several passwords for accessing your CV, making it visible to only those who have one of these passwords. If this option is enabled without any password defined, your CV will be visible only to you. You can revoke any password or even this option as many times as you want at any time.',
+          privateCvHelp: 'You may want to restrict access to your CV, so you can enable this option and create several passwords for accessing your CV, making it visible to only those who have one of these passwords. If this option is enabled without any password defined, your CV will be visible only to you. Your CV won\'t appear in search results also. You can revoke any password or even this option as many times as you want at any time.',
         }
       }
     }
@@ -204,9 +204,6 @@
       right: 38px;
       margin-right: 8px;
       background-color: var(--color-gray-medium);
-    }
-    input[type="submit"] {
-      min-width: 200px;
     }
   }
   .passwords {

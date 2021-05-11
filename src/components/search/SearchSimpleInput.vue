@@ -2,11 +2,11 @@
   <div class="field">
     <label for="subject">
       <i class="fa fa-search"></i>
-      {{ $t('search.findACv') }}
+      {{ $t('searchMessages.findACv') }}
     </label>
 
     <div class="search-input-holder" :disabled="disabled">
-      <input type="text" :name="name || 'subject'" :placeholder="$t('search.nameRoleOrLocation')" :value="value" :disabled="disabled" maxlength="54">
+      <input type="text" :name="name || 'subject'" :placeholder="$t('searchMessages.nameRoleOrLocation')" :value="value" :disabled="disabled" maxlength="54">
       
       <button type="submit">
         <i class="fa fa-arrow-right"></i>

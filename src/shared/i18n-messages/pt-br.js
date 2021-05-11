@@ -112,7 +112,7 @@ export default {
     'publication': 'Publicação',
     'recognition': 'Reconhecimento',
   },
-  search: {
+  searchMessages: {
     of: 'de',
     call: 'Buscar',
     showing: 'Mostrando',
@@ -124,6 +124,8 @@ export default {
     showingResultsFor: 'Mostrando resultados para',
     theSearchFor: 'A busca por',
     hasNoResults: 'não retornou nenhum resultado',
+    nothingFound: 'Nada encontrado',
+    typeSomething: 'Digite um termo para a busca',
   },
   support: {
     donate: 'Doar',

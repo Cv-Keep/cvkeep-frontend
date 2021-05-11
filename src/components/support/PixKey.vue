@@ -5,8 +5,8 @@
         <p><i class="fa fa-heart"></i></p>
 
         <p class="key-title">
-          {{$t('support.heresThePixKey')}}<br/>
-          {{$t('support.thanksForYourDonation')}}
+          {{$t('supportMessages.heresThePixKey')}}<br/>
+          {{$t('supportMessages.thanksForYourDonation')}}
         </p>
 
         <p class="key-text">{{pixKey}}</p>

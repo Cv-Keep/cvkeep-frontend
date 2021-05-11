@@ -11,7 +11,7 @@
 				</div>
 
 				<div class="submit">
-					<input type="submit" class="button button-primary" name="Submit" :value="$t('save')">
+					<input type="submit" class="button" name="Submit" :value="$t('save')">
 				</div>
 			</form>
 		</div>
@@ -30,25 +30,25 @@
 				</div>
 
 				<div class="submit">
-					<input type="submit" class="button button-primary" name="Submit" :value="$t('save')" :disabled="!hasPassword">
+					<input type="submit" class="button" name="Submit" :value="$t('save')" :disabled="!hasPassword">
 				</div>
 			</form>
 		</div>
 
-		<hr>
-
-		<div class="warning" v-if="!hasPassword">
-			<p>
-				<i class="fa fa-exclamation-triangle"></i>
-				{{ $t('passwordRequiredWarning') }}
-			</p>
-		</div>		
+		<hr>		
 		
 		<div class="create-password-form" v-if="!hasPassword"> 
 			<heading-tooltip
 				:title="$t('createPassword')"
 				:tooltipMessage="$t('help.createPassword')"/>
 
+			<div class="warning" v-if="!hasPassword">
+				<p>
+					<i class="fa fa-exclamation-triangle"></i>
+					{{ $t('passwordRequiredWarning') }}
+				</p>
+			</div>
+			
 			<form enctype="multipart/form-data" action="/" @submit.prevent="changePassword" novalidate>
 				<div>
 					<div class="field keep-label">
@@ -56,7 +56,7 @@
 					</div>
 
 					<div class="submit">
-						<input type="submit" class="button button-primary" name="Submit" :value="$t('createPassword')">
+						<input type="submit" class="button" name="Submit" :value="$t('create')">
 					</div>
 				</div>
 			</form>
@@ -79,7 +79,7 @@
 					</div>
 
 					<div class="submit">
-						<input type="submit" class="button button-primary" name="Submit" :value="$t('changePassword')">
+						<input type="submit" class="button" name="Submit" :value="$t('change')">
 					</div>
 				</div>
 			</form>
@@ -209,6 +209,8 @@
 			messages: {
 				'pt-br': {
 					save: 'Salvar',
+					change: 'Mudar',
+					create: 'Criar',
 					userName: 'Nome de usuário',
 					yourEmail: 'Seu e-mail',
 					createPassword: 'Criar senha',
@@ -234,6 +236,8 @@
 
 				'en': {
 					save: 'Save',
+					change: 'Change',
+					create: 'Create',
 					userName: 'User name',
 					yourEmail: 'Your e-mail',
 					createPassword: 'Create password',
@@ -264,17 +268,16 @@
 <style lang="scss" scoped>
 	.settings-account {
 		.warning {
+			max-width: 500px;
 			border-radius: 4px;
-			padding: 16px;
 			color: #ffffff;
 			font-weight: 600;
-			font-size: 16px;
-			margin-bottom: 30px;
-			background-color: var(--color-warning);
+			margin: 32px 0;
+			font-size: 14px;
+			color: var(--color-warning);
 			p {
 				margin: 0;
 				display: flex;
-				padding: 0 1vw;
 				align-items: center;
 				i {
 					font-size: 20px;

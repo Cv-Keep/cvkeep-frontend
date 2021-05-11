@@ -58,14 +58,16 @@
         const cv = JSON.parse(JSON.stringify(this.curriculum));
 
         [
+          'views',
+          'locked',
+          'created',
           'canEdit',
           'editing',
           'sections',
+          'searchable',
           'hiddenSections',
           'allowPublicMessages',
           'passwordProtected',
-          'locked',
-          'created'
         ].forEach(key => {
           delete cv[key];
         });
