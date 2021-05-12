@@ -5,10 +5,12 @@ const stage = process.env.NODE_ENV || '';
 
 module.exports = {
 	getEnv(debug = false) {
+		const env = process.env;
 		const envPath = this.getEnvPath();
 		const envContent = this.getEnvContent(envPath);
+		const dotEnv = this.parseEnv(envContent, debug);
 
-		return this.parseEnv(envContent, debug);
+		return Object.assign(env, dotEnv);
 	},
 
 	getEnvPath() {
@@ -20,7 +22,7 @@ module.exports = {
 	},
 
 	getEnvContent(envPath) {
-		return fs.readFileSync(envPath, 'utf-8');
+		return fs.existsSync(envPath) ? fs.readFileSync(envPath, 'utf-8') : '';
 	},
 
 	parseEnv(envContent, debug) {

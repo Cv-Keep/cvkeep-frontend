@@ -3,6 +3,7 @@ const stage = process.env.NODE_ENV || '';
 const envUtils = require('./envUtils.js');
 
 const env = envUtils.getEnv();
+console.log(env);
 const envPath = envUtils.getEnvPath();
 console.log(`Environment: "${stage}". Using .env file "${envPath}"`);
 
