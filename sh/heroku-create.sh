@@ -12,7 +12,6 @@ heroku config:set VUE_APP_CONTACT_EMAIL="contact@email.com"
 heroku config:set VUE_APP_DONATION_PAYPAL_URL=""
 heroku config:set VUE_APP_DONATION_PIX_KEY=""
 heroku config:set VUE_APP_DONATION_BITCOIN=""
-heroku config:set FRONT_SERVER_PORT=9090
 heroku config:set FRONT_SERVER_APP_URL="https://cvkeep-frontend.herokuapp.com/"
 heroku config:set SEO_CARD_IMAGE_URL="https://cvkeep-frontend.herokuapp.com/seo/card.png"
 heroku config:set SEO_TWITTER_USER="username"

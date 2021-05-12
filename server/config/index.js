@@ -7,8 +7,8 @@ const envPath = envUtils.getEnvPath();
 console.log(`Environment: "${stage}". Using .env file "${envPath}"`);
 
 module.exports = {
-	port: Number(env.FRONT_SERVER_PORT),
 	clientUrl: env.FRONT_SERVER_APP_URL,
+	port: Number(env.FRONT_SERVER_PORT) || process.env.PORT || 9090,
 
 	apiUrl: env.VUE_APP_API_URL,
 	brandName: env.VUE_APP_BRAND_NAME,
