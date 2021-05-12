@@ -10,7 +10,8 @@
     "serve:ssr": "cd ./server && npm run lint && npm run serve",
     "serve:prod": "npm run build:local && npm run serve:ssr",
     "build:local": "mv .env.production .tmp.env && npm run build && mv .tmp.env .env.production",
-    "postinstall": "npm install --prefix server"
+    "postinstall": "npm install --prefix server",
+    "heroku:create": "sh ./sh/heroku-create.sh"
   },
   "dependencies": {
     "axios": "^0.21.1",
