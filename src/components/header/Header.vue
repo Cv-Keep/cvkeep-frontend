@@ -4,7 +4,7 @@
 			<div class="left">
 				<div class="logo">
 					<router-link to="/">
-						<img src="@/assets/logo/logo.png">
+						<img :src="require(process.env.VUE_APP_LOGO_PATH)" alt="Application Logo">
 					</router-link>
 				</div>
 			</div>
