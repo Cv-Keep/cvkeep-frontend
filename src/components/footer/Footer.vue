@@ -88,18 +88,13 @@
 		components: {
 			ReportCv,
 			BecomeSupporter
-		},
-
-		computed: {
-			logo() {
-				return require(process.env.VUE_APP_LOGO_PATH);
-			}
 		},		
 
 		data () {
 			return {
 				reportCv: false,
-				becomeSupporter: false, 
+				becomeSupporter: false,
+				logo: require(process.env.VUE_APP_LOGO_PATH)
 			}
 		},
 

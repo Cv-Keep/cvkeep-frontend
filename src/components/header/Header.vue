@@ -42,9 +42,9 @@
 			LangMenu
 		},
 
-		computed: {
-			logo() {
-				return require(process.env.VUE_APP_LOGO_PATH);
+		data() {
+			return {
+				logo: require(process.env.VUE_APP_LOGO_PATH)
 			}
 		},
 
