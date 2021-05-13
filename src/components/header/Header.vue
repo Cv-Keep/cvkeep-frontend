@@ -44,7 +44,7 @@
 
 		data() {
 			return {
-				logo: require(process.env.VUE_APP_LOGO_PATH)
+				logo: require(process.env.VUE_APP_LOGO_PATH.replace('@', '../../..'))
 			}
 		},
 
