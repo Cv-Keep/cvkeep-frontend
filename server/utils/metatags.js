@@ -15,15 +15,15 @@ module.exports = {
 	},
 
 	getCurrentUrl(req) {
-		return req ? `${req.protocol}://${req.get('host')}${req.originalUrl}` : config.clientUrl;
+		return req ? `${req.protocol}://${req.get('host')}${req.originalUrl}` : '';
 	},
 
 	addDefaultMetaTagsOnPage(page, req) {
 		page = this.add(page, {
 			url: this.getCurrentUrl(req),
-			title: `${config.brandName.toUpperCase()} - Profile-like Résumé`,
 			author: config.brandName,
-			imageUrl: `${config.clientUrl}/seo/card.png`,
+			imageUrl: config.seo.cardUrl,
+			title: `${config.brandName.toUpperCase()} - Profile-like Résumé`,
 			description: `${config.brandName} - Your resume as an online profile`,
 		});
 
@@ -35,11 +35,11 @@ module.exports = {
 		const presentation = cv.presentation.description.substring(0, 180);
 
 		page = this.add(page, {
-			twitterUser: 'cvkeep',
 			url: this.getCurrentUrl(req),
+			imageUrl: config.seo.cardUrl,
+			twitterUser: config.seo.twitterUsername,
 			title: `${cv.basics.fullname} @ ${config.brandName}`,
 			author: `${config.brandName} : ${cv.basics.fullname}`,
-			imageUrl: `${config.clientUrl}/seo/card.png`,
 			description: `${ presentation || description }...`,
 		});
 

@@ -5,12 +5,11 @@ const stage = process.env.NODE_ENV || '';
 
 module.exports = {
 	getEnv(debug = false) {
-		const env = process.env;
 		const envPath = this.getEnvPath();
 		const envContent = this.getEnvContent(envPath);
-		const dotEnv = this.parseEnv(envContent, debug);
+		const dotEnv = this.parseEnvFile(envContent, debug);
 
-		return Object.assign(env, dotEnv);
+		return Object.assign(process.env, dotEnv);
 	},
 
 	getEnvPath() {
@@ -25,19 +24,7 @@ module.exports = {
 		return fs.existsSync(envPath) ? fs.readFileSync(envPath, 'utf-8') : '';
 	},
 
-	parseEnv(envContent, debug) {
-		const envJsonNotations = envContent.match(/{([^}])*}\s}|\{([^}])*}.*/gm);
-
-		envJsonNotations && envJsonNotations.forEach(objNotation => {
-			// remove line breaks from all json notations on the env
-			const objNotationMinified = objNotation
-				.replace(/\r?\n|\r/g, '')
-				.replace(/  +/g, '')
-				.replace(/\t/g, '');
-
-			envContent = envContent.replace(objNotation, objNotationMinified);
-		});
-
+	parseEnvFile(envContent, debug) {
 		return dotenv.parse(envContent, { debug });
 	},
 };

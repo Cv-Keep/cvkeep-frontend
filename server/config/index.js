@@ -7,12 +7,13 @@ const envPath = envUtils.getEnvPath();
 console.log(`Environment: "${stage}". Using .env file "${envPath}"`);
 
 module.exports = {
-	clientUrl: env.FRONT_SERVER_APP_URL,
-	port: Number(env.FRONT_SERVER_PORT) || process.env.PORT || 9090,
-
+	port: Number(env.FRONT_PROD_SERVER_PORT) || process.env.PORT,
 	apiUrl: env.VUE_APP_API_URL,
 	brandName: env.VUE_APP_BRAND_NAME,
-
 	serverPath: path.resolve(__dirname, '..'),
 	distPath: path.resolve(__dirname, '../..', 'dist'),
+	seo: {
+		cardUrl: env.FRONT_PROD_SERVER_SEO_CARD_URL,
+		twitterUsername: env.VUE_APP_TWITTER_USERNAME,
+	},
 };

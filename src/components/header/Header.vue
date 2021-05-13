@@ -4,7 +4,7 @@
 			<div class="left">
 				<div class="logo">
 					<router-link to="/">
-						<img :src="require(process.env.VUE_APP_LOGO_PATH)" alt="Application Logo">
+						<img :src="logo" alt="Application Logo">
 					</router-link>
 				</div>
 			</div>
@@ -40,6 +40,12 @@
 		components: {
 			UserMenu,
 			LangMenu
+		},
+
+		computed: {
+			logo() {
+				return require(process.env.VUE_APP_LOGO_PATH);
+			}
 		},
 
 		i18n: {

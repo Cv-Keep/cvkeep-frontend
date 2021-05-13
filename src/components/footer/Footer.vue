@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="logo">
 					<router-link to="/">
-						<img :src="require(process.env.VUE_APP_LOGO_PATH)" alt="Application Logo">
+						<img :src="logo" alt="Application Logo">
 						<span>{{$brandName}}</span>
 					</router-link>
 				</div>
@@ -89,6 +89,12 @@
 			ReportCv,
 			BecomeSupporter
 		},
+
+		computed: {
+			logo() {
+				return require(process.env.VUE_APP_LOGO_PATH);
+			}
+		},		
 
 		data () {
 			return {
