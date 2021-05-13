@@ -94,7 +94,7 @@
 			return {
 				reportCv: false,
 				becomeSupporter: false,
-				logo: require(process.env.VUE_APP_LOGO_PATH.replace('@', '../../..'))
+				logo: require(process.env.VUE_APP_LOGO_PATH.replace('@', '../../../'))
 			}
 		},
 
