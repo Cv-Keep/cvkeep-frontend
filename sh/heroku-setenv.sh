@@ -30,7 +30,7 @@ else
     if [$KEY != 'PORT']; then
       echo "Enter value for env key $KEY:"
       read VALUE </dev/tty
-      heroku config:set $KEY=${VALUE}
+      heroku config:set $KEY="${VALUE}"
     fi
   done < $SCRIPTPATH/../.env
 
