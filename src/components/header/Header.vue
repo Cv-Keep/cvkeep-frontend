@@ -4,7 +4,7 @@
 			<div class="left">
 				<div class="logo">
 					<router-link to="/">
-						<img :src="logo" alt="Application Logo">
+						<img :src="require(`@/${logoPath}`)" alt="Application Logo">
 					</router-link>
 				</div>
 			</div>
@@ -44,7 +44,7 @@
 
 		data() {
 			return {
-				logo: require(`@/${process.env.VUE_APP_LOGO_PATH.replace('@', '')}`)
+				logoPath: process.env.VUE_APP_LOGO_PATH.replace('@', '')
 			}
 		},
 
