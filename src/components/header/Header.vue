@@ -30,6 +30,7 @@
 </template>
 
 <script>
+	const logo = require(process.env.VUE_APP_LOGO_PATH);
 
 	import UserMenu from './UserMenu.vue'
 	import LangMenu from './LangMenu.vue'
@@ -44,7 +45,7 @@
 
 		data() {
 			return {
-				logo: require(process.env.VUE_APP_LOGO_PATH.replace('@', '../../../'))
+				logo
 			}
 		},
 

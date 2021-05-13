@@ -79,6 +79,8 @@
 </template>
 
 <script>
+	const logo = require(process.env.VUE_APP_LOGO_PATH);
+
 	import ReportCv from '@/components/curriculum/reportCv/ReportCv.vue'
 	import BecomeSupporter from '@/components/support/BecomeSupporterModal.vue'
 
@@ -92,9 +94,9 @@
 
 		data () {
 			return {
+				logo,
 				reportCv: false,
 				becomeSupporter: false,
-				logo: require(process.env.VUE_APP_LOGO_PATH.replace('@', '../../../'))
 			}
 		},
 
