@@ -46,7 +46,7 @@
 			return {
 				logoPath: process.env.VUE_APP_LOGO_PATH
 					.replace('@/', '')
-					.replace(/'"/g, '');
+					.replace(/'"/g, '')
 			}
 		},
 
