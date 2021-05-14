@@ -9,7 +9,7 @@ if test -f "$SCRIPTPATH/../.env.production"; then
   while read line || [ -n "$line" ];
   do 
     KEY=$(echo $line | cut -d'=' -f1)
-    VALUE=$(echo $line | cut -d'=' -f2)
+    VALUE=$(echo $line | cut -d'=' -f 2-)
 
     VALUE=${VALUE%\"}
     VALUE=${VALUE#\"}
