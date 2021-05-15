@@ -2,7 +2,7 @@
 	<div class="terms" style="background-image:url('/img/backgrounds/000.jpg')">
 		<div class="content container">
 			<div class="terms__body">
-				<component :is="`terms-${$appLang}`"/>
+				<component :is="`terms-${$appLang || 'en'}`"/>
 			</div>
 		</div>
 	</div>
