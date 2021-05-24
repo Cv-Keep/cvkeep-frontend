@@ -109,7 +109,7 @@
 				'pt-br': {
 					knowMore: 'Saiba mais',
 					institution: 'Instituição',
-					achievements: 'Conquistas',
+					achievements: 'Realizações',
 				},
 
 				'en': {

@@ -35,7 +35,7 @@
 		i18n: {
 			messages: {
 				'pt-br': {
-					prizes: 'Conquistas',
+					prizes: 'Realizações',
 					prizesHelpText: 'Adicione aqui os reconhecimentos que você possa ter recebido ao longo de sua tragetória. Procure inserir uma descrição contextualizando o feito em questão.'
 				},
 

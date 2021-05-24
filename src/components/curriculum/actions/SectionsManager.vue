@@ -63,7 +63,7 @@
 					'section-experience': 'Experiencia',
 					'section-languages': 'Idiomas',
 					'section-skills': 'Competências',
-					'section-prizes': 'Conquistas',
+					'section-prizes': 'Realizações',
 					'section-find-me-at': 'Links',
 					'section-portfolio': 'Portfolio',
 				},
