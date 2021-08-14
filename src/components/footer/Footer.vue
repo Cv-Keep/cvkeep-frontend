@@ -166,7 +166,7 @@
 					list-style: circle;
 					padding: 0 36px;
 					color: #ffffff;		
-					a {
+					li, a {
 						color: #ffffff;
 						text-decoration: none;
 						&:hover {
