@@ -5,7 +5,7 @@
 				<h1>{{ $t('contact') }}</h1>
 				<hr>
 				<p>{{ $t('subtitle') }}</p>
-				<h4><strong>{{process.env.CONTACT_EMAIL}}</strong></h4>
+				<h4><strong>{{contactEmail}}</strong></h4>
 			</div>
 
 			<div class="image">
@@ -18,6 +18,12 @@
 <script>
 	export default {
 		name: 'Contact',
+
+		data () {
+			return {
+				contactEmail: process.env.CONTACT_EMAIL
+			}
+		},
 
 		i18n: {
 			messages: {
