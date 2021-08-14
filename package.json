@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "compress-base64": "^1.0.2",
     "file-saver": "^2.0.2",
     "form-serialize": "^0.7.2",
     "html-to-image": "^1.3.20",

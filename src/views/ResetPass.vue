@@ -82,7 +82,7 @@
 				this.$root.$el.style.opacity = '.5';
 				this.$root.$el.style.pointerEvents = 'none';
 
-				setTimeout(() => { window.loaction.href = '/' }, 5000);
+				setTimeout(() => { window.location.href = '/' }, 5000);
 			},
 
 			validate () {

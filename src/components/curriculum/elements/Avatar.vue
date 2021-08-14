@@ -28,6 +28,7 @@
 </template>
 
 <script>
+	import compress from 'compress-base64';
 	import Utils from '@/shared/script/helpers/utils.js'
 	import LoadingSpinner from '@/components/loading/LoadingSpinner.vue'
 	
@@ -80,6 +81,7 @@
 		data () {
 			return {
 				loading: false,
+				sendAs: 'base64',
 			}
 		},
 		
@@ -88,21 +90,28 @@
 				this.avatar = '';
 			},
 
-			upload (e) {
-				if (this.validateFile(e.target.files[0])) {
-					const data = new FormData(this.$refs.avatarForm);
-					console.log(this.$refs.avatarForm);
+			async upload (e) {
+				let data = {};
+				const file = e.target.files[0];
+
+				if (this.validateFile(file)) {
 					this.loading = true;
+					
+					data = this.sendAs === 'file' ?
+						data = new FormData(this.$refs.avatarForm) :
+						data = { avatar: await this.fileToBase64(file) };
 	
-					this.$API.setUserAvatar(data)
+					data && this.$API.setUserAvatar(data)
 						.then(this.setAvatar)
 						.catch(this.raiseError)
 						.finally(this.loading = false);
+
+					if (!data) { this.loading = false }
 				}
 			},
 
 			validateFile (file) {
-				const maxSizeInMB = 20;
+				const maxSizeInMB = 5;
 				const fileSizeInMB = Utils.bytesToMB(file.size);
 
 				if (fileSizeInMB > maxSizeInMB) {
@@ -113,8 +122,30 @@
 				return true;
 			},
 
+			fileToBase64 (file) {
+				return new Promise((resolve, reject) => {
+					if (typeof FileReader === 'function') {
+						const reader = new FileReader();
+						
+						reader.onload = event => {
+							compress(event.target.result, {
+								width: 350,
+								quality: 0.9,
+								type: 'image/png'
+							}).then(resolve);
+						};
+
+						reader.readAsDataURL(file);
+					} else {
+						reject(false);
+					}
+				});
+			},
+
 			setAvatar (data) {
-				this.avatar = `${data.avatarUrl}?${Date.now()}`;
+				const avatar = this.sendAs === 'file' ? `${data.avatarUrl}?${Date.now()}` : data.avatarUrl;
+
+				this.avatar = avatar;
 			},
 
 			raiseError (error) {
