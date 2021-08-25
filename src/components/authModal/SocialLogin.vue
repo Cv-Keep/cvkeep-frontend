@@ -15,13 +15,6 @@
         </facebook-login>
       </li>
       
-      <li v-if="canAuthWith('likedin')" @click="loading=true">
-        <linked-in-login>
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn</span>
-        </linked-in-login>
-      </li>
-      
       <li v-if="canAuthWith('github')" @click="loading=true">
         <github-login>
           <i class="fab fa-github"></i>
@@ -39,7 +32,6 @@
 import LoadingSpinner from '@/components/loading/LoadingSpinner.vue'
 import GithubLogin from '@/components/authModal/socials/GithubLogin.vue'
 import FacebookLogin from '@/components/authModal/socials/FacebookLogin.vue'
-import LinkedInLogin from '@/components/authModal/socials/LinkedInLogin.vue'
 
 export default {
   name: "social-login",
@@ -48,7 +40,6 @@ export default {
     LoadingSpinner,
     GithubLogin,
     FacebookLogin,
-    LinkedInLogin,
   },
 
   props: {
@@ -131,9 +122,6 @@ export default {
           &.fa-github {
             background-color: var(--color-github);
           }
-          &.fa-linkedin {
-            background-color: var(--color-linkedin);
-          }          
         }
         span {
           display: block;

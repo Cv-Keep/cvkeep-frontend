@@ -2,7 +2,8 @@
 	<div class="avatar-root" v-if="!loading">
 		<div class="avatar pointer" @click="$editing ? $refs.uploader.click() : false">
 			
-			<img v-if="avatar" :src="avatar"><i v-else class="fa fa-camera"></i>
+			<img v-if="avatar" :src="avatar">
+			<i v-else class="fa fa-camera"></i>
 			
 			<div v-if="$editing">
 				<div class="avatar-uploader-label">

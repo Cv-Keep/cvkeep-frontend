@@ -43,11 +43,6 @@
 						Pinterest
 					</network>
 
-					<network network="linkedin">
-						<i class="fab fa-linkedin color-linkedin"></i>
-						LinkedIn
-					</network>
-
 					<network network="vk">
 						<i class="fab fa-vk color-vk"></i>
 						VKontakte
