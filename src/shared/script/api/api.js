@@ -303,6 +303,16 @@ export default {
 		});
 	},
 
+	removeUserAvatar() {
+		return new Promise((resolve, reject) => {
+			this.get({
+				endpoint: 'account/removeavatar',
+				success: resolve,
+				error: reject,
+			})
+		});		
+	},
+
 	changeAppLocale (lang, logged) {
 		return new Promise((resolve, reject) => {
 			i18n.locale = lang;

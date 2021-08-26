@@ -1,5 +1,17 @@
 <template>
 	<div class="prizes-list-root">
+		<text-limited :limit="introMaxLen" v-if="$editing" class="editable" v-contenteditable:introduction="$editing" :data-placeholder="$t('placeholder')">
+			{{introduction}}
+		</text-limited>
+
+		<div v-else>
+			<see-more v-if="introduction">
+				<p class="no-margin-bottom">{{introduction.substring(0, this.introMaxLen)}}</p>
+			</see-more>
+		</div>
+
+		<hr v-if="introduction">
+
 		<is-draggable :list="items" tag="ul" class="prizes-list">
 			
 			<li
@@ -55,17 +67,21 @@
 
 <script>
 	import { mapState } from 'vuex'
+	import SeeMore from '@/components/seeMore/seeMore.vue'
 	import prizesIconsByType from '@/shared/script/data/prizesIconsByType.js'
 	import IsDraggable from '@/components/curriculum/elements/IsDraggable.vue'
 	import AddBar from '@/components/curriculum/elements/AddBar.vue'
 	import CvPrizesForm from '@/components/curriculum/forms/CvPrizesForm.vue'
+	import TextLimited from '@/components/curriculum/elements/TextLimited.vue'
 
 	export default {
 		name: 'prizes-list',
 
 		components: {
 			AddBar,
+			SeeMore,
 			IsDraggable,
+			TextLimited,
 			CvPrizesForm,
 		},
 
@@ -80,12 +96,18 @@
 			...mapState('curriculum', {
 				items: cv => cv.prizes.items,
 			}),
+
+			introduction: {
+				get () { return this.$store.state.curriculum.prizes.introduction },
+				set (value) { this.$store.state.curriculum.prizes.introduction = value; }
+			},			
 		},
 
 		data () {
 			return {
 				editModal: false,
 				index: undefined,
+				introMaxLen: 1000,				
 			}
 		},
 
@@ -110,12 +132,14 @@
 					knowMore: 'Saiba mais',
 					institution: 'Instituição',
 					achievements: 'Realizações',
+					placeholder: 'Este é um texto opcional. Você pode falar sobre projetos pessoais, realizações, contribuições, momentos marcantes de sua carreira, etc. Utilize o botão "Adicionar" para incluir links para seu portfolio online.'
 				},
 
 				'en': {
 					knowMore: 'Know more',
 					institution: 'Institution',
 					achievements: 'Achievements',
+					placeholder: 'This is an optional text. You can talk about your side projects, realizations, contributions, important moments on your career, etc. Use the "Add new item" button to include links to your online portfolio.'
 				}
 			}
 		}

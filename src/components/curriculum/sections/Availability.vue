@@ -1,5 +1,5 @@
 <template>
-	<section class="availability">
+	<section class="availability" v-if="$editing || badges.find(item => isActive(item.key))">
 		<div class="availability__content">
 			<div v-for="(badge, index) in badges" :key="index" @click="toggleItem(badge.key)" v-show="shouldShow(badge)">
 				

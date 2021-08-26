@@ -9,6 +9,7 @@
 				<div class="avatar-uploader-label">
 					<span>{{ $t('loadImage') }}</span>
 				</div>
+
 				<form ref="avatarForm" @submit.prevent hidden>
 					<input ref="uploader" type="file" accept="image/*" name="avatar" @change="upload"/>
 				</form>
@@ -88,7 +89,15 @@
 		
 		methods: {
 			removeAvatar () {
-				this.avatar = '';
+				this.loading = true;
+
+				this.$API.removeUserAvatar()
+					.then(() => {
+						this.avatar = '';
+						this.$toasted.success(this.$i18n.t('saveSuccess'));
+					})
+					.catch(this.raiseError)
+					.finally(this.loading = false);					
 			},
 
 			async upload (e) {
@@ -130,7 +139,7 @@
 						
 						reader.onload = event => {
 							compress(event.target.result, {
-								width: 350,
+								width: 250,
 								quality: 0.9,
 								type: 'image/png'
 							}).then(resolve);
@@ -147,6 +156,7 @@
 				const avatar = this.sendAs === 'file' ? `${data.avatarUrl}?${Date.now()}` : data.avatarUrl;
 
 				this.avatar = avatar;
+				this.$toasted.success(this.$i18n.t('saveSuccess'));
 			},
 
 			raiseError (error) {
@@ -157,11 +167,13 @@
 		i18n: {
 			messages: {
 				'pt-br': {
-					loadImage: 'Carregar Foto'
+					loadImage: 'Carregar Foto',
+					saveSuccess: 'Avatar salvo com sucesso',
 				},
 
 				'en': {
-					loadImage: 'Load image'
+					loadImage: 'Load image',
+					saveSuccess: 'Avatar successfully saved',
 				}
 			}
 		}

@@ -81,7 +81,8 @@
 			},
 
 			success () {
-				this.$toasted.success(this.$i18n.t('sendSuccess'))
+				this.$toasted.success(this.$i18n.t('sendSuccess'));
+				this.close();
 			},
 
 			raiseError (error) {
