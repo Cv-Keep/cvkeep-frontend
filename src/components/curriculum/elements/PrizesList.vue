@@ -203,5 +203,8 @@
 				}
 			}
 		}
+		p.editable + ul {
+			margin-top: 28px;
+		}
 	}
 </style>

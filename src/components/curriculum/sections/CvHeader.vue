@@ -141,8 +141,12 @@
 	border-top-left-radius: 18px;
 	border-top-right-radius: 18px;
 	.information {
-		h1, h5 {
+		> h5 {
 			margin-bottom: calc(var(--gutter) / 2);
+		}
+		> h1 {
+			font-size: 3em;
+			margin: 0;
 		}
 		hr {
 			margin: var(--gutter) 0;
