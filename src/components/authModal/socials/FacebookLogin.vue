@@ -29,6 +29,7 @@ export default {
               window.location.href = "/cv";
             })
             .catch(error => {
+              console.error(error);
               this.$parent.loading = false;
               this.$toasted.error(this.$i18n.t('facebookLoginError'));
             })
