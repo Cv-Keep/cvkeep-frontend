@@ -295,7 +295,7 @@ export default {
 	setUserAvatar (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
-				endpoint: 'upload/setuseravatar',
+				endpoint: 'avatar/setuseravatar',
 				data: data,
 				success: resolve,
 				error: reject,
@@ -306,7 +306,7 @@ export default {
 	removeUserAvatar() {
 		return new Promise((resolve, reject) => {
 			this.get({
-				endpoint: 'account/removeavatar',
+				endpoint: 'avatar/removeavatar',
 				success: resolve,
 				error: reject,
 			})

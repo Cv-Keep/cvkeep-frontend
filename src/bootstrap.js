@@ -43,7 +43,7 @@ export default async Vue => {
       $username: () => store.state.credentials.username,
       $cvLang: () => store.state.curriculum.lang || API.getDefaultLocale(), 
       $loadedCredentials: () => Object.keys(store.state.credentials).length > 0,
-      
+            
       $isOwnCv: function () {
         return this.$logged && this.$route.params.user === this.$username;
       },

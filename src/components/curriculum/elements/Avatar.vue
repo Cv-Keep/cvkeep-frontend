@@ -1,9 +1,8 @@
 <template>
 	<div class="avatar-root" v-if="!loading">
 		<div class="avatar pointer" @click="$editing ? $refs.uploader.click() : false">
-			
-			<img v-if="avatar" :src="avatar">
-			<i v-else class="fa fa-camera"></i>
+			<img :src="avatarUrl">
+			<i v-if="$editing" class="fa fa-camera"></i>
 			
 			<div v-if="$editing">
 				<div class="avatar-uploader-label">
@@ -14,10 +13,9 @@
 					<input ref="uploader" type="file" accept="image/*" name="avatar" @change="upload"/>
 				</form>
 			</div>
-
 		</div>
 
-		<span v-if="avatar && $editing" @click="removeAvatar" class="remove-photo">
+		<span v-if="$editing" @click="removeAvatar" class="remove-photo">
 			<i class="fa fa-times"></i>
 		</span>
 	</div>
@@ -30,8 +28,8 @@
 </template>
 
 <script>
-	import compress from 'compress-base64';
 	import Utils from '@/shared/script/helpers/utils.js'
+	import { readAndCompressImage } from 'browser-image-resizer';
 	import LoadingSpinner from '@/components/loading/LoadingSpinner.vue'
 	
 	export default {
@@ -59,31 +57,14 @@
 
 			source: {
 				type: String,
-				default: 'curriculum'
+				default: 'curriculum',
 			}
-		},
-
-		computed: {
-			avatar: {
-				get () { return this.source === 'curriculum' ? this.cvPhoto : this.userPhoto },
-				set (value) { this.cvPhoto = value; this.userPhoto = value; }
-			},
-
-			cvPhoto: {
-				get () { return this.$store.state.curriculum.basics.photo },
-				set (value) { this.$store.state.curriculum.basics.photo = value; }
-			},
-
-			userPhoto: {
-				get () { return this.$store.state.credentials.photo },
-				set (value) { this.$store.state.credentials.photo = value; }
-			},
 		},
 
 		data () {
 			return {
 				loading: false,
-				sendAs: 'base64',
+				avatarUrl: this.getAvatarUrl(),
 			}
 		},
 		
@@ -93,7 +74,7 @@
 
 				this.$API.removeUserAvatar()
 					.then(() => {
-						this.avatar = '';
+						this.updateAvatar();
 						this.$toasted.success(this.$i18n.t('saveSuccess'));
 					})
 					.catch(this.raiseError)
@@ -101,67 +82,83 @@
 			},
 
 			async upload (e) {
-				let data = {};
 				const file = e.target.files[0];
 
 				if (this.validateFile(file)) {
-					this.loading = true;
-					
-					data = this.sendAs === 'file' ?
-						data = new FormData(this.$refs.avatarForm) :
-						data = { avatar: await this.fileToBase64(file) };
+					this.loading = true;			
+					const resized = await this.resizeImage(file);
+					const data = new FormData();
+					data.append('avatar', resized);
 	
-					data && this.$API.setUserAvatar(data)
-						.then(this.setAvatar)
+					data && await this.$API.setUserAvatar(data)
+						.then(() => {
+							this.$toasted.success(this.$i18n.t('saveSuccess'));
+							this.updateAvatar();
+						})
 						.catch(this.raiseError)
-						.finally(this.loading = false);
 
-					if (!data) { this.loading = false }
+					this.loading = false;
 				}
 			},
 
 			validateFile (file) {
-				const maxSizeInMB = 5;
+				const maxSizeInMB = 10;
 				const fileSizeInMB = Utils.bytesToMB(file.size);
 
 				if (fileSizeInMB > maxSizeInMB) {
-					this.$toasted.error(`Este arquivo excede o tamanho máximo de ${maxSizeInMB} MB`);
+					this.$toasted.error(`${this.$i18n.t('maxFileSizeExceeded')} ${maxSizeInMB} MB`);
 					return false;
 				}
 				
 				return true;
 			},
 
-			fileToBase64 (file) {
-				return new Promise((resolve, reject) => {
-					if (typeof FileReader === 'function') {
-						const reader = new FileReader();
-						
-						reader.onload = event => {
-							compress(event.target.result, {
-								width: 250,
-								quality: 0.9,
-								type: 'image/png'
-							}).then(resolve);
-						};
+			resizeImage(file, width = 300) {
+				return new Promise(resolve => {
+					readAndCompressImage(file, {
+						width,						
+						quality: 0.9,
+					})
+						.then(resolve)
+						.catch(error => {
+							console.error(error);
 
-						reader.readAsDataURL(file);
-					} else {
-						reject(false);
-					}
+							resolve(file);
+						});
 				});
 			},
 
-			setAvatar (data) {
-				const avatar = this.sendAs === 'file' ? `${data.avatarUrl}?${Date.now()}` : data.avatarUrl;
+			getAvatarUrl(updating) {
+				const apiUrl = process.env.VUE_APP_API_URL;
+				const username = this.$store.state[this.source].username;
+				let url = `${apiUrl}/avatar/getuseravatar/${username}`;
 
-				this.avatar = avatar;
-				this.$toasted.success(this.$i18n.t('saveSuccess'));
+				if (updating) {
+					url += `?update=${Date.now()}`;
+				}
+
+				return url;
+			},
+
+			updateAvatar(notify = true) {
+				this.avatarUrl = this.getAvatarUrl(true);
+				
+				if (notify) {
+					const event = new Event('updateAvatar');
+					window.dispatchEvent(event);
+				}
 			},
 
 			raiseError (error) {
-				return this.$toasted.error(error || 'Um erro inesperado ocorreu :(');
-			}
+				return this.$toasted.error(error || 'Internal unexpected error');
+			},
+
+		},
+
+		mounted() {
+			window.addEventListener('updateAvatar', () => {
+				this.updateAvatar(false);
+			});
 		},
 
 		i18n: {
@@ -169,11 +166,13 @@
 				'pt-br': {
 					loadImage: 'Carregar Foto',
 					saveSuccess: 'Avatar salvo com sucesso',
+					maxFileSizeExceeded: 'Este arquivo excede o tamanho máximo de',
 				},
 
 				'en': {
 					loadImage: 'Load image',
 					saveSuccess: 'Avatar successfully saved',
+					maxFileSizeExceeded: 'The file exceed the maximum size of',
 				}
 			}
 		}
