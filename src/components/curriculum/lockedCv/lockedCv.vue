@@ -3,7 +3,7 @@
 		<div class="locked-cv__content">
 			
 			<div class="user-profile">
-				<img :src="photo">
+				<img :src="getAvatarUrl()">
 			</div>
 			
 			<h4>
@@ -44,7 +44,6 @@
 
 		computed: {
 			...mapState('curriculum', {
-				photo: cv => cv.basics.photo,
 				username: cv => cv.username,
 				background: cv => `url(${ cv.background || '/img/backgrounds/000.jpg' })`,
 			}),
@@ -102,6 +101,10 @@
 
 			uncache () {
 				sessionStorage.removeItem(`locked-cv-${this.username}`);
+			},
+
+			getAvatarUrl() {
+				return `${process.env.VUE_APP_API_URL}/avatar/getuseravatar/${this.username}`;
 			},
 
 			raiseError (error) {
