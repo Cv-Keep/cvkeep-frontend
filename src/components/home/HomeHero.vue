@@ -109,10 +109,11 @@ export default {
 		.feature-img {
 			top: 0;
 			left: -200px;
+			bottom: 0;
 			overflow: hidden;
 			position: absolute;
-			border-radius: 100%;
-			border: solid 20px #ffffff;
+			border: none;
+			border-bottom-right-radius: 35%;
 		}
 		@media screen and (max-width: 1286px) {
 			.container {
