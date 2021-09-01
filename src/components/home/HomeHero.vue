@@ -114,6 +114,10 @@ export default {
 			position: absolute;
 			border: none;
 			border-bottom-right-radius: 35%;
+			img {
+				height: 100%;
+				display: block;
+			}
 		}
 		@media screen and (max-width: 1286px) {
 			.container {
