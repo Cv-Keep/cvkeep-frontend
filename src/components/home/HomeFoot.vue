@@ -56,6 +56,7 @@
 				width: auto;
 				height: 56px;
 				font-size: 18px;
+				font-weight: 700;
 				margin-top: 24px;
 				color: #ffffff;
 				transition: 100ms;

@@ -8,7 +8,7 @@
 		</div>
 
 		<div class="privacy-form">
-			<form enctype="multipart/form-data" action="/" @submit.prevent="deactivate" novalidate>
+			<form ref="deactivateForm" enctype="multipart/form-data" action="/" @submit.prevent="deactivate" novalidate>
 				<button class="button button-primary deactivate" @click.prevent="toggleModal">{{ $t('deactivateMyAccount') }}</button>
 
 				<cv-lightbox :title="$t('deactivateAccount')" v-if="modalOpened" @close="toggleModal">
@@ -27,7 +27,15 @@
 						</div>
 
 						<div class="password field" v-if="hasPassword">
-							<input type="password" name="current_password" required :disabled="!hasPassword" :placeholder="$t('enterYourPassword')" autofocus>
+							<input 
+								required
+								autofocus
+								type="password"
+								name="current_password"
+								:disabled="!hasPassword"
+								@keypress.enter.prevent="deactivate"
+								:placeholder="$t('enterYourPassword')"
+							/>
 						</div>
 					</div>
 
@@ -74,8 +82,8 @@
 				this.modalOpened = !this.modalOpened
 			},
 
-      deactivate (e) {
-				const form = e.target;
+      deactivate () {
+				const form = this.$refs.deactivateForm;
 				const formValidity = validateForm(form, { report: true });
 
 				if (formValidity.valid) {

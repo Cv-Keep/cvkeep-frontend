@@ -97,6 +97,7 @@ export default {
 			font-size: 18px;
 			transition: 100ms;
 			border-width: 2px;
+			font-weight: 700;
 			background-color: #ffffff;
 			color: var(--secondary-color);
 			border-color: var(--secondary-color);
