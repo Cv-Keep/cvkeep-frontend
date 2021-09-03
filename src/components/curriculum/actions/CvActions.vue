@@ -32,7 +32,7 @@
 						<label v-if="!$editing">{{ $t('edit') }}</label>
 					</li>
 
-					<li @click="save" v-if="$editing" :title="$t('save')">
+					<li @click="!saving && save()" v-if="$editing" :title="$t('save')">
 						<span class="icon">
 							<loading-spinner v-if="saving"/>
 							<i v-else class="fa fa-save"></i>
@@ -125,15 +125,15 @@
 		},
 
 		methods: {
-			save () {
+			async save () {
 				if (this.$logged) {
 					this.saving = true;
 
-					this.$API.saveCv({ curriculum: this.curriculum })
+					await this.$API.saveCv({ curriculum: this.curriculum })
 						.then(this.saveSuccess)
-						.catch(this.raiseError)
-						.finally(this.saving = false);
-
+						.catch(this.raiseError);
+					
+					this.saving = false;
 				} else {
 					this.requireLogin();
 				}

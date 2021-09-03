@@ -40,8 +40,14 @@
 					</div>
 
 					<div slot="footer">
-						<button class="button-seamless" @click.prevent="toggleModal">{{ $t('cancel') }}</button>
-						<input type="submit" class="button button-primary" name="Submit" :value="$t('deactivate')" :disabled="!hasPassword">
+						<div class="deactivation-footer">							
+							<button class="button-seamless" @click.prevent="toggleModal">{{ $t('cancel') }}</button>
+							
+							<button type="submit" class="button button-primary" name="Submit" :disabled="!hasPassword">
+								<span v-if="!loading">{{$t('deactivate')}}</span>
+								<loading-spinner color="#fff" v-else/>
+							</button>
+						</div>
 					</div>
 				</cv-lightbox>
 			</form>
@@ -51,9 +57,10 @@
 
 <script>
 	import CvLightbox from '@/components/lightbox/Lightbox.vue'
-	import HeadingTooltip from '@/components/settings/HeadingTooltip.vue';
+	import HeadingTooltip from '@/components/settings/HeadingTooltip.vue'
 	import validateForm from '@/shared/script/helpers/validate-form.js'
 	import AnimatedIcon from '@/components/animated-icon/AnimatedIcon.vue'
+	import LoadingSpinner from '@/components/loading/LoadingSpinner.vue'
 
 	export default {
 		name: 'account',
@@ -61,7 +68,8 @@
 		components: {
 			CvLightbox,
 			AnimatedIcon,
-			HeadingTooltip
+			HeadingTooltip,
+			LoadingSpinner,
 		},
 
 		props: {
@@ -73,6 +81,7 @@
 
 		data () {
 			return {
+				loading: false,
 				modalOpened: false
 			}
 		},
@@ -82,19 +91,24 @@
 				this.modalOpened = !this.modalOpened
 			},
 
-      deactivate () {
+      async deactivate () {
 				const form = this.$refs.deactivateForm;
 				const formValidity = validateForm(form, { report: true });
 
 				if (formValidity.valid) {
+					this.loading = true;
 					const pass = new FormData(form).get('current_password');
 					
-					this.$API.deactivateAccount({ pass })
+					await this.$API.deactivateAccount({ pass })
 						.then(() => {
 							this.toastWithConfirmation(`<p>Uma solicitação de <strong>DESATIVAÇÂO</strong> desta conta foi enviada para o seu E-Mail.
-							Por favor, cheque sua caixa de entrada e confirme esta ação para desativar a sua conta.</p>`)
+							Por favor, cheque sua caixa de entrada e confirme esta ação para desativar a sua conta.</p>`);
+
+							this.toggleModal();
 						})
 						.catch(this.$toasted.error);
+					
+					this.loading = false;
 				}
 			},
 
@@ -187,6 +201,21 @@
 				}
 				h4 + p {
 					margin-bottom: var(--gutter);
+				}
+			}
+		}
+		.deactivation-footer {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			button {
+				width: 140px;
+				align-items: center;
+				display: inline-flex;
+				justify-content: center;
+				svg {
+					height: 22px;
+					color: rgb(255, 255, 255);
 				}
 			}
 		}

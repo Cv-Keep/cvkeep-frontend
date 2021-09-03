@@ -127,7 +127,7 @@ export default {
     nothingFound: 'Nada encontrado',
     typeSomething: 'Digite um termo para a busca',
   },
-  support: {
+  supportMessages: {
     donate: 'Doar',
     becomeASupporter: 'Apoie este serviço',
     bitcoinDonation: 'Doar bitcoins',

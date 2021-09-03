@@ -101,8 +101,8 @@ export default {
 	signInWithEmail (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: 'auth/signin',
-				data: data,
 				success: resolve,
 				error: reject
 			});
@@ -112,8 +112,8 @@ export default {
 	signInWithFacebook (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: '/auth/facebook',
-				data: data,
 				success: resolve,
 				error: reject
 			});
@@ -123,8 +123,8 @@ export default {
 	register (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: 'auth/register',
-				data: data,
 				success: data => data.errors && data.errors.length ? reject(data.errors) : resolve(data),
 				error: reject,
 			});
@@ -144,11 +144,12 @@ export default {
 
 	saveCv (data) {
 		return new Promise((resolve, reject) => {
-			return this.post({
+			this.post({
+				data,
 				endpoint: '/curriculum/save',
-				data: data,
-				success: data => (data && data.saved) ? resolve(data) : reject(data.error || i18n.t('errors.unexpectedError')),
 				error: reject,
+				success: data => data && data.saved ?
+					resolve(data) : reject(data.error || i18n.t('errors.unexpectedError')),
 			});
 		});
 	},
@@ -156,8 +157,8 @@ export default {
 	unlockCv (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: '/curriculum/get',
-				data: data,
 				success: resolve,
 				error: reject,
 			})
@@ -167,8 +168,8 @@ export default {
 	sendEmailToUser (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: '/curriculum/sendemail',
-				data: data,
 				success: resolve,
 				error: reject
 			});
@@ -178,8 +179,8 @@ export default {
 	changeUsername (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: '/account/changeusername',
-				data: data,
 				success: data => data.updated ? resolve(data) : reject(false),
 				error: reject,
 			});
@@ -189,8 +190,8 @@ export default {
 	changeUserEmail (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: '/account/changeemail',
-				data: data,
 				success: data => data.updated ? resolve(data) : reject(false),
 				error: reject,
 			})
@@ -200,8 +201,8 @@ export default {
 	changeUserPassword (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: '/account/changepassword',
-				data: data,
 				success: data => data.updated ? resolve(data) : reject(false),
 				error: reject
 			})
@@ -225,8 +226,8 @@ export default {
 	deactivateAccount (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: '/account/deactivate',
-				data: data,
 				success: resolve,
 				error: reject
 			});		
@@ -236,8 +237,8 @@ export default {
 	confirmRegistration (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: 'auth/confirm',
-				data: data,
 				error: reject,
 				success: data => (data.ok && !data.errors ? resolve(data) : reject(i18n.t('errors.unexpectedError'))),
 			});
@@ -247,8 +248,8 @@ export default {
 	checkUsername (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: 'account/checkusername',
-				data: data,
 				success: resolve,
 				error: reject
 			});		
@@ -260,8 +261,8 @@ export default {
 
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: 'account/forgotpassword',
-				data: data,
 				error: reject,
 				success: data => data.ok ? resolve(data) : reject(i18n.t('errors.operationFailed')),
 			});			
@@ -273,8 +274,8 @@ export default {
 
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: 'account/forgotpassword',
-				data: data,
 				error: reject,
 				success: data => data.ok ? resolve(data) : reject(i18n.t('errors.operationFailed')),
 			});		
@@ -284,8 +285,8 @@ export default {
 	uploadFile (data, url) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: url,
-				data: data,
 				success: resolve,
 				error: reject,
 			})
@@ -295,8 +296,8 @@ export default {
 	setUserAvatar (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: 'avatar/setuseravatar',
-				data: data,
 				success: resolve,
 				error: reject,
 			})
@@ -338,8 +339,8 @@ export default {
 	reportCv (data) {
 		return new Promise((resolve, reject) => {
 			this.post({
+				data,
 				endpoint: 'curriculum/report',
-				data: data,
 				success: resolve,
 				error: reject
 			})
