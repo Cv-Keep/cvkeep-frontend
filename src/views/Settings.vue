@@ -7,6 +7,12 @@
 		</div>
 
 		<div v-else class="settings__content">
+			<div class="container stats">
+				<i class="fa fa-eye"></i>
+				{{$t('viewsPrefixPhrase')}}
+				<strong>{{cvViews}}</strong>
+			</div>
+
 			<div class="container">
 				<edit-account :hasPassword="hasPassword"/>
 				<edit-privacy/>
@@ -42,11 +48,17 @@
 
 		computed: {
 			...mapState('credentials', [ 'hasPassword', 'username' ]),
+
+			cvViews() {
+				const views = this.$store.state.curriculum.views;
+				
+				return views < 50 ? `${this.$i18n.t('lessThan')} 50` : views;
+			}
 		},
 
 		data () {
 			return {
-				loading: true
+				loading: true,
 			}
 		},
 
@@ -83,6 +95,20 @@
 
 		updated () {
       this.scrollToAnchor();
+		},
+
+		i18n: {
+			messages: {
+				'pt-br': {
+					lessThan: 'Menos de',
+					viewsPrefixPhrase: 'Número de vezes que seu CV foi visualizado: ',
+				},
+
+				'en': {
+					lessThan: 'Less than',
+					viewsPrefixPhrase: 'Number of times your CV has been visualized: ',
+				}				
+			}
 		}
 	}
 </script>
@@ -103,7 +129,26 @@
 			overflow: auto;
 			padding: calc(var(--gutter) * 2);
 			border: solid 1px var(--hover-color);
-			min-height: calc(100vh - calc(var(--header-height) + calc(var(--gutter) *2)));
+			&:not(:last-child) {
+				margin-bottom: 28px;
+			}
+			&.stats {
+				i {
+					width: 40px;
+					width: 40px;
+					height: 40px;
+					height: 40px;
+					color: #fff;
+					font-size: 18px;
+					cursor: pointer;
+					border-radius: 100%;
+					align-items: center;
+					display: inline-flex;
+					justify-content: center;
+					margin-right: var(--gutter);
+					background-color: var(--primary-color);					
+				}
+			}
 		}
 	}
 	hr {
