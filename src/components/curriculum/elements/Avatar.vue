@@ -1,7 +1,7 @@
 <template>
 	<div class="avatar-root" v-if="!loading">
 		<div class="avatar pointer" @click="$editing ? $refs.uploader.click() : false">
-			<img :src="avatarUrl">
+			<img ref="avatarImg" :data-src="avatarUrl">
 			<i v-if="$editing" class="fa fa-camera"></i>
 			
 			<div v-if="$editing">
@@ -159,6 +159,8 @@
 			window.addEventListener('updateAvatar', () => {
 				this.updateAvatar(false);
 			});
+
+			this.$refs.avatarImg.src = this.$refs.avatarImg.dataset.src;
 		},
 
 		i18n: {
