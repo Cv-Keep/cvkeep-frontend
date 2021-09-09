@@ -87,7 +87,8 @@ export default new Router({
 			component: NotFound,
 			beforeEnter: (to, from, next) => {
 				const pathTo = to.params.pathMatch;
-				const tryToCv = pathTo && pathTo.split('/').filter(x => x.length).length === 1;
+				const tryToCv = pathTo && !pathTo.includes('service-worker.js') &&
+					pathTo.split('/').filter(x => x.length).length === 1;
 	
 				tryToCv ? (window.location.href = `cv/${to.params.pathMatch.replace(/\//g, '')}`) : next();
 			}			
