@@ -21,6 +21,10 @@ app.use((req, res, next) => {
 	next();
 });
 
+app.get('/service-worker.js', (req, res) => {
+  res.sendFile(path.resolve(config.distPath, 'service-worker.js'));
+});
+
 // -----------------------------------------
 
 app.get('/cv/:user', async (req, res, next) => {
