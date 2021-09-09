@@ -2,11 +2,7 @@
   <a :href="`cv/${info.username}`" class="result-card" rel="noopener noreferrer">
     <div class="result-card__content">
       <div class="result-card__head">
-        <img v-if="info.basics.photo" :src="info.basics.photo" :alt="`${info.basics.fullname}'s profile image`" class="profile-photo">
-        
-        <div v-else class="profile-photo">
-          <i class="fa fa-user"></i>
-        </div>
+        <img :src="getAvatarUrl()" :alt="`${info.basics.fullname}'s profile image`" class="profile-photo">
 
         <div class="fast-info">
           <div class="fast-info__left">
@@ -50,6 +46,15 @@ export default {
 
     badges() {
       return availabilityBadges.filter(item => this.info.availability[item.key]);
+    }
+  },
+
+  methods: {
+    getAvatarUrl() {
+      const apiUrl = process.env.VUE_APP_API_URL;
+      const username = this.info.username;
+      
+      return `${apiUrl}/avatar/getuseravatar/${username}`;
     }
   },
 
