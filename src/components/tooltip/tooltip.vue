@@ -13,7 +13,7 @@
         </div>
 
         <footer>
-          <button class="button-outline" @click.stop="tooltip(false)">
+          <button class="button-outline button-tooltip" @click.stop="tooltip(false)">
             <strong>{{ $t('ok') }}</strong>
           </button>
         </footer>
@@ -111,7 +111,9 @@
 
       footer {
         text-align: right;
-        button {
+        button,
+        .button-tooltip, 
+        button.button-tooltip {
           margin: 0;
           color: #444;
           font-weight: 600;
