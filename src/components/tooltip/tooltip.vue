@@ -111,11 +111,10 @@
 
       footer {
         text-align: right;
-        button,
-        .button-tooltip, 
-        button.button-tooltip {
+        button {
           margin: 0;
           color: #444;
+          font-size: 16px;
           font-weight: 600;
           padding: 0 var(--gutter);
         }
