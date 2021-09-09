@@ -13,7 +13,7 @@ import i18n from './i18n.js'
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@/shared/style/index.scss'
 import 'swiper/swiper-bundle.css'
-//import './registerServiceWorker'
+import './registerServiceWorker'
 
 export default async Vue => {
   broadcast.listen();
