@@ -23,6 +23,10 @@ if (process.env.VUE_APP_SW_ENABLE && process.env.VUE_APP_SW_ENABLE !== 'false') 
       });    
     },    
 
+    offline () {
+      console.log('No internet connection found. App is running in offline mode.')
+    },
+    
     // registered () {
     //   console.log('Service worker has been registered.')
     // },
@@ -35,9 +39,6 @@ if (process.env.VUE_APP_SW_ENABLE && process.env.VUE_APP_SW_ENABLE !== 'false') 
     //   console.log('New content is downloading.')
     // },
 
-    // offline () {
-    //   console.log('No internet connection found. App is running in offline mode.')
-    // },
   });
 }
 
