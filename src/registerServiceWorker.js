@@ -2,7 +2,7 @@
 
 import { register } from 'register-service-worker'
 
-if (process.env.VUE_APP_SW_ENABLE && process.env.NODE_ENV === 'production') {
+if (process.env.VUE_APP_SW_ENABLE && process.env.VUE_APP_SW_ENABLE !== 'false') {
   register(`./service-worker.js`, {
     ready () {
       console.log(
@@ -18,7 +18,7 @@ if (process.env.VUE_APP_SW_ENABLE && process.env.NODE_ENV === 'production') {
     updated () {
       console.log('New content is available, the outdated cache has been deleted; please refresh.')
       
-      caches.keys().then(function(names) {
+      caches.keys().then(names => {
         for (let name of names) caches.delete(name);
       });    
     },    

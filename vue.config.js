@@ -4,5 +4,9 @@ module.exports = {
   devServer: {
     host: 'localhost',
     https: true,   
+  },
+
+  pwa: {
+    skipWaiting: true
   }
 }

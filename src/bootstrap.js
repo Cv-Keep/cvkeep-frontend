@@ -69,36 +69,23 @@ export default async Vue => {
 
   // --------------------------------------------------------------------
 
-  const preFetchUrls = [ 'cv', 'settings' ];
-  const locationPath = window.location.pathname;  
+  API.getCredentials()
+    .then(credentials => {
+      store.state.credentials = credentials || {};
 
-  if (preFetchUrls.some(item => locationPath.includes(item))) {
-    
-    const credentials = await API.getCredentials();
-    store.state.credentials = credentials || {};
+      i18n.locale = credentials.lang;
+    })
+    .catch(error => {
+      console.error(error);
 
-    i18n.locale = credentials.lang;
-
-  } else {
-    
-    API.getCredentials()
-      .then(credentials => {
-        store.state.credentials = credentials || {};
-
-        i18n.locale = credentials.lang;
-      })
-      .catch(error => {
-        console.error(error);
-        
-        Vue.toasted.error(i18n.t('errors.fatalErrorWhenInitializing'), {
-          duration: 30000,
-          action: {
-            text : 'OK',
-            onClick : (e, toastObject) => toastObject.goAway(0)
-          },
-        });
+      Vue.toasted.error(i18n.t('errors.fatalErrorWhenInitializing'), {
+        duration: 30000,
+        action: {
+          text : 'OK',
+          onClick : (e, toastObject) => toastObject.goAway(0)
+        },
       });
-  }
+    });
 
   // --------------------------------------------------------------------
   

@@ -21,18 +21,15 @@ app.use((req, res, next) => {
 	next();
 });
 
-app.get('/service-worker.js', (req, res) => {
+app.get('*/service-worker.js', (req, res) => {
 	res.sendFile(path.resolve(config.distPath, 'service-worker.js'));
 });
 
 // -----------------------------------------
 
 app.get('/cv/:user', async (req, res, next) => {
-	app.set('etag', false);
-	res.set('Cache-Control', 'no-store');
-
-	const user = req.params.user || '';
-	const cv = user ? await functions.getCv(user) : false;
+	const user = req.params.user;
+	const cv = user && await functions.getCv(user);
 
 	if (cv && !cv.locked) {
 		res.$index = functions.addCvJsonDataOnPage(cv, res.$index);
