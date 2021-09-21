@@ -38,9 +38,9 @@ module.exports = {
 			url: this.getCurrentUrl(req),
 			imageUrl: config.seo.cardUrl,
 			twitterUser: config.seo.twitterUsername,
-			title: `${cv.basics.fullname} @ ${config.brandName}`,
-			author: `${config.brandName} : ${cv.basics.fullname}`,
+			author: cv.basics.fullname || config.brandName,
 			description: `${ presentation || description }...`,
+			title: `${cv.basics.fullname} @ ${config.brandName}`,
 		});
 
 		return page;

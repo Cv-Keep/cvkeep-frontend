@@ -59,14 +59,6 @@
 		
 		methods: {
 			cvFetchAndRender (username) {
-				if (!this.$logged && this.cvUrlUsername) {
-					const tag = document.querySelector(`script#cv-data`);
-					const data = tag ? JSON.parse(tag.innerText) : false;
-					tag && tag.remove();
-
-					if (data) return this.renderCv(data);
-				}
-
 				return this.$API.getCurriculum(username)
 					.then(this.renderCv)
 					.catch(this.showError)
