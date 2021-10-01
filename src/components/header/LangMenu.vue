@@ -7,12 +7,12 @@
 		<ul class="dropdown" @click="hideMenu">
 			<li @click="changeLocale('pt-br')">
 				<img src="/img/flags/pt-br.webp" alt="pt-br menu flag">
-				<span>Português</span>
+				<span>{{$t('portuguese')}}</span>
 			</li>
 
 			<li @click="changeLocale('en')">
 				<img src="/img/flags/en.webp" alt="pt-br menu flag">
-				<span>Inglês</span>
+				<span>{{$t('english')}}</span>
 			</li>
 		</ul>
 	</div>
