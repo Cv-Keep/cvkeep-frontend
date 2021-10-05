@@ -4,4 +4,4 @@ CV Keep is a **Free and Open Source Platform** intended to hold **Online Resumé
 
 # Self Hosting Your Platform
 
-This is the Fron End repository of the platform. Since it is free and open source, you can clone it and do what you want since you use your own brand. For documentation about architecture, stack, advanced usage, development, contribution and self hosting, please [CLICK HERE](https://cv-keep.github.io/cvkeep-docs/).
+This is the Front End repository of the platform. Since it is free and open source, you can clone it and do what you want since you use your own brand. For documentation about architecture, stack, advanced usage, development, contribution and self hosting, please [CLICK HERE](https://cv-keep.github.io/cvkeep-docs/).
