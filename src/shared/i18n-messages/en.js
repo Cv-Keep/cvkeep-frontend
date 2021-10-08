@@ -26,6 +26,7 @@ export default {
     certification: 'Certification',
     trainingEvent: 'Training Event',
     technologist: 'Technologist',
+    technician: 'Technician',
     doctorateDegree: 'Doctorate Degree',
     postgraduateStudies: 'Postgraduate',
     master: 'Mater',

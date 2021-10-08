@@ -6,6 +6,7 @@ export default [
   'certification',
   'trainingEvent',
   'technologist',
+  'technician',
   'doctorateDegree',
   'postgraduateStudies',
   'master',
