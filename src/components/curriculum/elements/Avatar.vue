@@ -1,7 +1,7 @@
 <template>
 	<div class="avatar-root" v-if="!loading">
 		<div class="avatar pointer" @click="$editing ? $refs.uploader.click() : false">
-			<img ref="avatarImg" :data-src="avatarUrl">
+			<img ref="avatarImg" :src="avatarUrl" :key="avatarUrl">
 			<i v-if="$editing" class="fa fa-camera"></i>
 			
 			<div v-if="$editing">
@@ -74,7 +74,7 @@
 
 				this.$API.removeUserAvatar()
 					.then(() => {
-						this.updateAvatar();
+						this.updateAvatar(true);
 						this.$toasted.success(this.$i18n.t('saveSuccess'));
 					})
 					.catch(this.raiseError)
@@ -93,7 +93,7 @@
 					data && await this.$API.setUserAvatar(data)
 						.then(() => {
 							this.$toasted.success(this.$i18n.t('saveSuccess'));
-							this.updateAvatar();
+							this.updateAvatar(true);
 						})
 						.catch(this.raiseError)
 
@@ -131,13 +131,9 @@
 			getAvatarUrl(updating) {
 				const apiUrl = process.env.VUE_APP_API_URL;
 				const username = this.$store.state[this.source].username;
-				let url = `${apiUrl}/avatar/getuseravatar/${username}`;
+				const timestamp = updating ? Date.now() : '';
 
-				if (updating) {
-					url += `?update=${Date.now()}`;
-				}
-
-				return url;
+				return `${apiUrl}/avatar/getuseravatar/${username}?v=${timestamp}`;
 			},
 
 			updateAvatar(notify = true) {
