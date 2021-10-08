@@ -65,6 +65,7 @@ export default {
           display: block;
           font-size: 18px;
           font-weight: 600;
+          word-break: break-all;
           padding: var(--gutter) 56px;
           margin-bottom: 100px;
           border: dashed 2px var(--color-gray-medium);
