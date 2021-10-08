@@ -1,7 +1,7 @@
 <template>
 	<div class="avatar-root" v-if="!loading">
 		<div class="avatar pointer" @click="$editing ? $refs.uploader.click() : false">
-			<img ref="avatarImg" :src="avatarUrl" :key="avatarUrl">
+			<img ref="avatarImg" :data-src="avatarUrl" :src="avatarUrl" :key="avatarUrl">
 			<i v-if="$editing" class="fa fa-camera"></i>
 			
 			<div v-if="$editing">
