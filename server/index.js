@@ -16,8 +16,11 @@ functions.readDir(config.distPath).map(item => item.name).forEach(_static => {
 });
 
 app.use((req, res, next) => {
-	res.$index = template;
+	if (config.forceHttps) {
+		return res.redirect(`https://${req.headers.host + req.url}`);
+	}
 
+	res.$index = template;
 	next();
 });
 
