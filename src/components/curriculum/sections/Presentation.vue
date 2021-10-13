@@ -82,7 +82,7 @@
 		position: relative;
 		&__content {
 			.main-paragraph {
-				white-space: pre-wrap;
+				white-space: pre-line;
 			}
 		}
 	}
