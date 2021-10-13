@@ -10,7 +10,9 @@
 			</text-limited>
 			
 			<see-more v-else>
-				<p>{{description.substring(0, this.maxlen)}}</p>
+				<p class="main-paragraph">
+					{{description.substring(0, this.maxlen)}}
+				</p>
 			</see-more>
 		</div>
 	</section>
@@ -78,5 +80,10 @@
 <style lang="scss" scoped>
 	.cv-presentation {
 		position: relative;
+		&__content {
+			.main-paragraph {
+				white-space: pre-wrap;
+			}
+		}
 	}
 </style>
