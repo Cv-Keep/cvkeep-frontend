@@ -16,8 +16,8 @@ functions.readDir(config.distPath).map(item => item.name).forEach(_static => {
 });
 
 app.use((req, res, next) => {
-	if (config.forceHttps && !req.secure) {
-		return res.redirect(`https://${req.headers.host + req.url}`).end();
+	if (config.forceHttps && !req.secure && req.get('x-forwarded-proto') !== 'https') {
+		return res.redirect(`https://${req.headers.host + req.url}`);
 	}
 
 	res.$index = template;
