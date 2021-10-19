@@ -29,19 +29,23 @@
       },
 
       markTextLimit (e) {
-        if (e.target && !e.isComposing) {
-          const $el = e.target || e;
+        const $el = e.target || e;
+        
+        if ($el && !e.isComposing) {
           const text = $el.innerText;
 
-          const textOk = text.slice(0, this.limit);
-          const textRm = text.slice(this.limit);  
-          
-          const $caret = new Caret($el);
-          const caretPos = $caret.getPos();
-          
-          $el.innerHTML = `${textOk}${textRm ? `<mark class="bg-soft-red">${text.slice(this.limit)}</mark>` : ''}`;
-          
-          $caret.setPos(caretPos);
+          if (text.length > this.limit) {
+            const textOk = text.slice(0, this.limit);            
+            const $caret = new Caret($el);
+            const caretPos = $caret.getPos();
+            const noXss = str => str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+            $el.innerHTML = `<span>${noXss(textOk)}</span><span class="bg-soft-red">${noXss(text.slice(this.limit))}</span>`;
+            $caret.setPos(caretPos);
+          } else {
+            const marked = $el.querySelector('.bg-soft-red');
+            marked && marked.classList.remove('bg-soft-red');
+          }
         }        
       },
 
