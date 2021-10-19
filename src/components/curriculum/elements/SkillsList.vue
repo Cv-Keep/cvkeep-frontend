@@ -6,7 +6,7 @@
 		</text-limited>
 
 		<see-more v-else>
-			<p class="no-margin-bottom">
+			<p class="no-margin-bottom pre-line">
 				{{introduction.substring(0, this.introMaxLen).trim()}}
 			</p>
 		</see-more>

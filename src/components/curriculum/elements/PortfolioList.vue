@@ -7,7 +7,7 @@
 
 		<div v-else>
 			<see-more v-if="introduction">
-				<p class="no-margin-bottom">{{introduction.substring(0, this.introMaxLen)}}</p>
+				<p class="no-margin-bottom pre-line">{{introduction.substring(0, this.introMaxLen)}}</p>
 			</see-more>
 		</div>
 

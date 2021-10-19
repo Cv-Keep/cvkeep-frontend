@@ -10,7 +10,7 @@
 			</text-limited>
 			
 			<see-more v-else>
-				<p class="main-paragraph">
+				<p class="pre-line">
 					{{description.substring(0, this.maxlen)}}
 				</p>
 			</see-more>
@@ -80,10 +80,5 @@
 <style lang="scss" scoped>
 	.cv-presentation {
 		position: relative;
-		&__content {
-			.main-paragraph {
-				white-space: pre-line;
-			}
-		}
 	}
 </style>

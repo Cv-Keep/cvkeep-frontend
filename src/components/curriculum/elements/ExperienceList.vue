@@ -5,7 +5,7 @@
 		</text-limited>
 
 		<see-more v-else-if="introduction">
-			<p>{{introduction.substring(0, this.introMaxLen)}}</p>
+			<p class="pre-line">{{introduction.substring(0, this.introMaxLen)}}</p>
 		</see-more>
 
 		<hr/>
