@@ -1,9 +1,9 @@
 <template>
 	<div class="addbar" v-if="$editing">
-		<span class="incrementor">
+		<button class="incrementor">
 			<span><i class="icon fa fa-plus"></i></span>
 			<span>{{ label || $t('add') }}</span>
-		</span>
+		</button>
 	</div>
 </template>
 
@@ -37,12 +37,10 @@
 		margin: 28px 0;
 		max-width: 200px;
 		.incrementor {
-			display: block;
-			margin-top: var(--gutter);
+			display: flex;
+			place-items: center;
 			border: dashed 2px var(--cv-color);
 			border-radius: 25px;
-			cursor: pointer;
-			padding: 2px var(--gutter);
 			opacity: .8;
 			font-weight: 700;
 			color: var(--cv-color);
