@@ -7,5 +7,5 @@ Add your name after the line
 ---
 
 Emanuel  
-Saulo\n
+Saulo
 Eduardo
