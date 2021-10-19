@@ -34,7 +34,7 @@
     <div class="field">
       <label for="primaryNumber">{{ $t('contactNumber') }}</label>
       
-      <input type="text" name="primaryNumber" v-mask="'(##) #########'" v-model="curriculum.contact.primaryNumber">
+      <input type="text" name="primaryNumber" maxlength="25" v-model="curriculum.contact.primaryNumber">
     </div>
 
     <div class="field">
