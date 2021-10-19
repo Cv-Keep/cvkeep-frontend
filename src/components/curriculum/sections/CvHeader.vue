@@ -3,25 +3,20 @@
 		<cv-avatar/>
 
 		<div class="information">
-			<h1 class="editable break-word" @keypress.enter.prevent v-contenteditable:fullname="$editing" :data-placeholder="$t('yourName')">
-				{{ fullname }}
-			</h1>
-
-			<h5 class="editable pointer-all" @click="edit(true)" :data-placeholder="$t('yourRole')">
-				{{ role }}
-			</h5>
+			<h1 class="editable break-word" @keypress.enter.prevent v-contenteditable:fullname="$editing" :data-placeholder="$t('yourName')">{{ fullname }}</h1>
+			<h5 class="editable break-word pointer-all" @click="edit(true)" :data-placeholder="$t('yourRole')">{{ role }}</h5>
 			
 			<hr>
 
 			<ul class="editable pointer" @click="edit(true)">
-				<li>
+				<li v-if="location.city || location.region">
 					<div><i class="fa fa-home"></i></div>
 					<div>{{location.city}} - <span class="region">{{location.region}}</span></div>
 				</li>
 
 				<li>
 					<div><i class="fa fa-flag"></i></div>
-					<div>{{location.country}}</div>
+					<div :data-placeholder="$t('addYourLocation')">{{location.country}}</div>
 				</li>
 
 				<li v-if="civilState && civilState !== 'doNotInform'">
@@ -118,6 +113,7 @@
 					'pt-br': 'Português',
 					yourName: 'Seu nome',
 					yourRole: 'Sua ocupação',
+					addYourLocation: 'Sua localidade',
 					privacyPreferences: 'Preferencias de Privacidade',
 					cvLangPreference: 'O proprietário deste CV preferiu exibi-lo em ',
 					cvLangPreferenceLogged: 'Idioma em que este CV será exibido para os visitantes - '
@@ -128,6 +124,7 @@
 					'pt-br': 'Portuguese',
 					yourName: 'Your name',
 					yourRole: 'Your occupation',
+					addYourLocation: 'Your location',
 					privacyPreferences: 'Privacy preferences',
 					cvLangPreference: 'The owner of this CV preferred to display it in',
 					cvLangPreferenceLogged: 'Language in which this CV will be displayed to visitors - ',
@@ -151,8 +148,8 @@
 			margin-bottom: calc(var(--gutter) / 2);
 		}
 		> h1 {
-			font-size: 3em;
 			margin: 0;
+			font-size: 3em;
 		}
 		hr {
 			margin: var(--gutter) 0;

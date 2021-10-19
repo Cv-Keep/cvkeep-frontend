@@ -116,8 +116,8 @@
 	.cv-view.cv-editing {
 		.editable {
 			&:focus,
-			&:empty,
-			&:hover {
+			&:hover, 
+			&:empty:not([data-placeholder]) {
 				outline: dashed 2px rgba(0,0,0,.2);
 			}
 		}
