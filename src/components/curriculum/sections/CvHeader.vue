@@ -3,8 +3,14 @@
 		<cv-avatar/>
 
 		<div class="information">
-			<h1 class="editable" v-contenteditable:fullname="$editing" :data-placeholder="$t('yourName')">{{ fullname.trim() }}</h1>
-			<h5 class="editable pointer-all" @click="edit(true)" :data-placeholder="$t('yourRole')">{{ role.trim() }}</h5>
+			<h1 class="editable break-word" @keypress.enter.prevent v-contenteditable:fullname="$editing" :data-placeholder="$t('yourName')">
+				{{ fullname }}
+			</h1>
+
+			<h5 class="editable pointer-all" @click="edit(true)" :data-placeholder="$t('yourRole')">
+				{{ role }}
+			</h5>
+			
 			<hr>
 
 			<ul class="editable pointer" @click="edit(true)">
@@ -67,7 +73,7 @@
 			}),
 
 			fullname: {
-				get() { return this.$store.state.curriculum.basics.fullname.replace(/\r?\n|\r/g, '').substr(0, 60) },
+				get() { return this.$store.state.curriculum.basics.fullname },
 				
 				set(value) { 
 					this.$store.state.credentials.fullname = value;

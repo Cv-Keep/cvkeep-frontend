@@ -104,6 +104,7 @@
 			text-overflow: ellipsis;
 			overflow: hidden;
 			width: 300px;
+			white-space: nowrap;
 			color: #444444;
 			@media screen and (max-width: 425px) {
 				width: 114px;
