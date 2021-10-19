@@ -4,7 +4,7 @@ This is a file used by the ["Beginners Friendly Issue"](https://github.com/Cv-Ke
 
 Add your name after the line
 
-***
+---
 
 Emanuel
-
+Saulo
