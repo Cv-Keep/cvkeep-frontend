@@ -7,6 +7,6 @@ Add your name after the line
 ---
 
 Emanuel  
-Saulo
-
-Nayara Silva
+Saulo  
+Eduardo  
+Nayara Silva  
