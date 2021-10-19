@@ -47,7 +47,7 @@
 				</div>
 
 				<div class="experience-item__extra">
-					<div class="xp-about color-gray-medium" v-if="item.about.trim().length">
+					<div class="xp-about color-gray-medium pre-line" v-if="item.about.trim().length">
 						{{item.about}}
 					</div>	
 
