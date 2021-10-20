@@ -4,5 +4,14 @@ This is a file used by the ["Beginners Friendly Issue"](https://github.com/Cv-Ke
 
 Add your name after the line
 
-***
+---
 
+Emanuel  
+Saulo  
+Eduardo  
+Nayara Silva  
+João de Souza  
+Renan Rosa  
+Hugo Esteves  
+Rodrigo Nascimento  
+Cleyson Diego
