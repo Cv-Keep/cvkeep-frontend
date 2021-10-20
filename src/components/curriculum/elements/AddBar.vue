@@ -45,6 +45,7 @@
 			font-weight: 700;
 			padding: 10px 26px;
 			line-height: 0;
+			height: auto;
 			color: var(--cv-color);
 			.icon {
 				margin-right: calc(var(--gutter) / 2);
