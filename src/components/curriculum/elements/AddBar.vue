@@ -41,8 +41,10 @@
 			place-items: center;
 			border: dashed 2px var(--cv-color);
 			border-radius: 25px;
-			opacity: .8;
+			opacity: .9;
 			font-weight: 700;
+			padding: 10px 26px;
+			line-height: 0;
 			color: var(--cv-color);
 			.icon {
 				margin-right: calc(var(--gutter) / 2);
