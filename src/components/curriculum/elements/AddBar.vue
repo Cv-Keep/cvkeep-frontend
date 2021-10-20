@@ -1,7 +1,7 @@
 <template>
 	<div class="addbar" v-if="$editing">
 		<button class="incrementor">
-			<span><i class="icon fa fa-plus"></i></span>
+			<i class="icon fa fa-plus"></i>
 			<span>{{ label || $t('add') }}</span>
 		</button>
 	</div>
