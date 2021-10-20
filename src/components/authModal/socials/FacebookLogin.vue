@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import Utils from '@/shared/script/helpers/utils.js'
+
 export default {
   /* eslint-disable */
   name: 'facebook-login',
