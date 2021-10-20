@@ -10,5 +10,7 @@ Emanuel
 Saulo  
 Eduardo  
 Nayara Silva  
-Renan Rosa
-João de Souza
+João de Souza  
+Renan Rosa  
+Hugo Esteves  
+Rodrigo Nascimento  
