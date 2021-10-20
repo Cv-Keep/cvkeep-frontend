@@ -4,6 +4,7 @@ import contentEditable from 'vue-contenteditable-directive'
 import Toasted from 'vue-toasted'
 import AuthModal from '@/plugins/AuthModal.js'
 import API from '@/shared/script/api/api.js'
+import Utils from '@/shared/script/helpers/utils.js'
 import broadcast from '@/shared/script/helpers/broadcast.js'
 import ClickOutside from 'vue-click-outside'
 import VueObserveVisibility from 'vue-observe-visibility'
@@ -88,6 +89,10 @@ export default async Vue => {
     });
 
   // --------------------------------------------------------------------
+
+  if (process.env.VUE_APP_JWT_LOCAL_STORAGE !== 'true') {
+    Utils.storeJWTTokenSet(false);
+  }
   
   return { store, i18n };
 }

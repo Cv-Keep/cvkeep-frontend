@@ -1,6 +1,7 @@
 import axios from 'axios'
 import store from '@/store'
 import API from './api.js'
+import Utils from '../helpers/utils.js'
 
 const HttpClient = axios.create({
 	timeout: 30000,
@@ -9,9 +10,15 @@ const HttpClient = axios.create({
 });
 
 HttpClient.interceptors.request.use(
-  config => {
+	config => {
+		const token = Utils.storeJWTTokenGet();
+		
 		config.headers['Content-Type'] = `application/json`;
 		config.headers['Application-Language'] = store.state.credentials.lang || API.getDefaultLocale();
+		
+		if (token) {
+			config.headers['Authorization'] = `Bearer ${token}`;
+		}
 
 		return config;
   },

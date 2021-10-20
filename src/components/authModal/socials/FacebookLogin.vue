@@ -26,6 +26,7 @@ export default {
 
           this.$API.signInWithFacebook(data)
             .then(() => {
+              Utils.storeJWTTokenSet(data.token);
               window.location.href = "/cv";
             })
             .catch(error => {

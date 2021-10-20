@@ -27,6 +27,7 @@
 </template>
 
 <script>
+	import Utils from '@/shared/script/helpers/utils.js'
   import validateForm from '@/shared/script/helpers/validate-form.js'
   import AuthForm from './AuthForm.vue'
   import serialize from 'form-serialize'
@@ -56,7 +57,7 @@
           this.$API.signInWithEmail(data)
             .then(data => {
               const username = data.user.username;
-              
+              Utils.storeJWTTokenSet(data.token);
               window.location.href = `/cv/${username}`;
             })
             .catch(error => {

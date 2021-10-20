@@ -1,6 +1,7 @@
 import i18n from '@/i18n'
 import store from '@/store'
 import HttpClient from './httpClient.js'
+import Utils from '@/shared/script/helpers/utils.js'
 
 export default {
 
@@ -211,6 +212,8 @@ export default {
 
 	signOut (refresh = true) {
 		return new Promise((resolve, reject) => {
+			Utils.storeJWTTokenSet(false);
+
 			this.post({
 				endpoint: 'auth/signout',
 				success: () => { 

@@ -90,6 +90,24 @@ export default {
 		});
 	},
 
+	storeJWTTokenKeyName() {
+		return '__9221ba8ac6a7abefd89d307e8832ca66__';
+	},
+
+	storeJWTTokenSet(token) {
+		const tokenStorageKey = this.storeJWTTokenKeyName();
+
+		token && process.env.VUE_APP_JWT_LOCAL_STORAGE === 'true' ?
+			window.localStorage.setItem(tokenStorageKey, token.split('').reverse().join('')) :
+			window.localStorage.removeItem(tokenStorageKey);
+	},
+
+	storeJWTTokenGet() {
+		const token = window.localStorage.getItem(this.storeJWTTokenKeyName());
+
+		return token && token.split('').reverse().join('');
+	},
+
 	serializeForm (form, empties = true) {
 		return serialize(form, { hash: true, empty: empties });
 	},
