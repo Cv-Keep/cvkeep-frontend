@@ -10,6 +10,7 @@ Emanuel
 Saulo  
 Eduardo  
 Nayara Silva  
+João de Souza  
 Renan Rosa  
 Hugo Esteves  
 Rodrigo Nascimento  
