@@ -18,5 +18,6 @@ Cleyson Diego
 Meghwant singh  
 Ezequiel Demetras  
 Meghwant singh  
-James Martzen
+James Martzen  
+Victor Lopes  
 Igor de Jesus Santos  
