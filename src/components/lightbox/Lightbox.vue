@@ -1,7 +1,7 @@
 <template>
 	<transition name="lb-transition">
-		<div class="cv-lightbox" @click.self="close" @keyup.esc="close" tabindex="0" v-observe-visibility="visibilityChanged">
-			<div class="cv-lightbox__content">
+		<div class="cv-lightbox" @click.self="backdropClick" @keyup.esc="close" tabindex="0" v-observe-visibility="visibilityChanged">
+			<div class="cv-lightbox__content" ref="lbContent">
 				<header v-if="title">
 					<h4 v-html="title"></h4>
 					<span @click="close"><i class="fa fa-times"></i></span>
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+	import Utils from '@/shared/script/helpers/utils.js'
 	import Vue from 'vue'
 	
 	export default {
@@ -38,7 +39,7 @@
 		},
 
 		methods: {
-			close: function () {
+			close () {
 				this.$emit('close');
 			},
 
@@ -48,6 +49,10 @@
 			
 			hideBodyScroll (flag) {
 				document.body.style.overflow = flag ? 'hidden' : 'initial';
+			},
+
+			backdropClick() {
+				Utils.elShake(this.$refs.lbContent);
 			}
 		},
 
@@ -98,9 +103,6 @@
 			background-color: #ffffff;
 			display: flex;
 			flex-direction: column;
-			@media screen and (min-height: 900px) {
-				transform: translateY(-30px);
-			}
 			header {
 				min-height: 60px;
 				height: 60px;

@@ -151,15 +151,7 @@ export default {
 			if(this.$refs.sw) this.$refs.sw.swiper.slideTo(index, 200);
 		},
 
-		shake () {
-			const authModal = this.$refs.authModal.$el.querySelector('.cv-lightbox__content');
-			authModal.classList.add('shake');
-			setTimeout(() => { authModal.classList.remove('shake') }, 600);
-		},
-
 		error (error) {
-			this.shake();
-
 			if (!error || !Array.from(error).length) {
 				error = [ this.$i18n.t('errors.unexpectedError') ];
 			}
@@ -263,12 +255,6 @@ export default {
 
 <style lang="scss">
 	.app-auth-modal {
-		.shake {
-			animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-			transform: translate3d(0, 0, 0);
-			backface-visibility: hidden;
-			perspective: 1000px;
-		}
 		.close-it {
 			position: absolute;
 			right: var(--gutter);
@@ -282,23 +268,6 @@ export default {
 		}
 		.cv-lightbox__content {
 			height: auto;
-		}
-		@keyframes shake {
-			10%, 90% {
-				transform: translate3d(-1px, 0, 0);
-			}
-
-			20%, 80% {
-				transform: translate3d(2px, 0, 0);
-			}
-
-			30%, 50%, 70% {
-				transform: translate3d(-4px, 0, 0);
-			}
-
-			40%, 60% {
-				transform: translate3d(4px, 0, 0);
-			}
 		}
 	}
 </style>

@@ -126,5 +126,14 @@ export default {
 		const urlParts = url.split('/cv/');
 
 		return urlParts.filter(k => k.trim().length).length === 2;
-	}	
+	},
+
+	elShake(el) {
+		const $el = typeof el === 'string' ? document.querySelector(el) : el; 
+
+		if ($el) {
+			$el.classList.add('shake');
+			setTimeout(() => { $el.classList.remove('shake') }, 400);
+		}
+	}
 }
