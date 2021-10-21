@@ -38,6 +38,17 @@ input[type="button"] {
 			border-color: var(--primary-color);
 		}
 	}
+
+	&.button-secondary {
+		color: #FFF;
+		background-color: var(--secondary-color);
+		border-color: var(--secondary-color);
+		&:hover, &:focus {
+			color: #FFF;
+			background-color: var(--secondary-color);
+			border-color: var(--secondary-color);
+		}
+	}	
 	
 	&.button-seamless {
 		border: none;

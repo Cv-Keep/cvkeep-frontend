@@ -13,8 +13,12 @@
         </div>
 
         <footer>
-          <button class="button-outline button-tooltip" @click.stop="tooltip(false)">
-            <strong>{{ $t('ok') }}</strong>
+          <button v-if="showCancel" class="button-outline button-tooltip" @click.stop="cancel">
+            {{ cancelText || $t('cancel') }}
+          </button>
+
+          <button class="button-primary" @click.stop="confirm">
+            <strong>{{ confirmText || $t('ok') }}</strong>
           </button>
         </footer>
       </div>
@@ -30,7 +34,32 @@
       title: {
         type: String,
         default: '',
-      }
+      },
+
+      confirmText: {
+        type: String,
+        default: '',
+      },
+
+      onConfirm: {
+        type: Function,
+        default: () => {}
+      },
+
+      showCancel: {
+        type: Boolean,
+        default: false
+      },
+
+      cancelText: {
+        type: String,
+        default: '',
+      },
+
+      onCancel: {
+        type: Function,
+        default: () => {}
+      },      
     },
 
     data () {
@@ -55,17 +84,29 @@
 
           this.tooltip(false);
         }
+      },
+
+      confirm() {
+        this.tooltip(false);
+        this.onConfirm && this.onConfirm(this);
+      },
+
+      cancel() {
+        this.tooltip(false);
+        this.onCancel && this.onCancel(this);
       }
     },
 
     i18n: {
       messages: {
         'pt-br': {
-          ok: 'Entendi'
+          ok: 'Entendi',
+          cancel: 'Cancelar'
         },
 
         'en': {
-          ok: 'Ok'
+          ok: 'Ok',
+          cancel: 'Cancel'
         },        
       }
     }
@@ -117,6 +158,12 @@
           font-size: 14px;
           font-weight: 600;
           padding: 0 var(--gutter);
+          &.button-primary {
+            color: #fff;
+          }
+          &:not(:last-child) {
+            margin-right: 8px;
+          }
         }
       }
 

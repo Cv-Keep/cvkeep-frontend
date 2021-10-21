@@ -37,9 +37,23 @@
 			{{cvLang === 'pt-br' ? 'BR' : 'EN'}}
 		</span>
 
-		<router-link to="/settings/#privacy" class="cv-top-right-badge privacy-settings-badge" :title="$t('privacyPreferences')" v-if="$logged && $editing">
-			<i :class="`fa fa-${locked || lockedOnCredentials ? 'lock' : 'unlock'}`"></i>
-		</router-link>
+		<simple-tooltip 
+			v-if="$logged && $editing"
+			:showCancel="true"
+			:title="$t('privacyPreferences')"
+			:onConfirm="() => $router.push('/settings/#privacy')"
+		>
+			<span 
+				slot="summary"
+				:title="$t('privacyPreferences')" 
+				class="cv-top-right-badge privacy-settings-badge" 
+			>
+				<i :class="`fa fa-${locked || lockedOnCredentials ? 'lock' : 'unlock'}`"></i>
+			</span>
+
+
+			{{$t('leavingCv')}}
+		</simple-tooltip>		
 	</header>
 </template>
 
@@ -47,6 +61,7 @@
 	import { mapState } from 'vuex'
 	import CvAvatar from '../elements/Avatar.vue'
 	import i18nMessages from '@/shared/i18n-messages'
+	import SimpleTooltip from '@/components/tooltip/tooltip.vue'
 	import CvHeaderForm from '@/components/curriculum/forms/CvHeaderForm.vue'
 
 	export default {
@@ -55,6 +70,7 @@
 		components: {
 			CvAvatar,
 			CvHeaderForm,
+			SimpleTooltip,
 		},
 
 		computed: {
@@ -101,7 +117,7 @@
 		methods: {
 			edit (state) {
 				this.editModal = this.$editing ? state : false;
-			},
+			}
 		},
 
 		i18n: {
@@ -116,7 +132,8 @@
 					addYourLocation: 'Sua localidade',
 					privacyPreferences: 'Preferencias de Privacidade',
 					cvLangPreference: 'O proprietário deste CV preferiu exibi-lo em ',
-					cvLangPreferenceLogged: 'Idioma em que este CV será exibido para os visitantes - '
+					cvLangPreferenceLogged: 'Idioma em que este CV será exibido para os visitantes - ',
+					leavingCv: 'Você está prestes a deixar a edicão do CV e ir para a tela de Configurações de Privacidade. Dados não salvos serão perdidos. Deseja continuar?'
 				},
 
 				'en': {
@@ -128,6 +145,7 @@
 					privacyPreferences: 'Privacy preferences',
 					cvLangPreference: 'The owner of this CV preferred to display it in',
 					cvLangPreferenceLogged: 'Language in which this CV will be displayed to visitors - ',
+					leavingCv: 'You are about to leave the CV editing and go to the Privacy Settings. Non saved data will be lost. Do yout want to proceed?'
 				}
 			}
 		}
