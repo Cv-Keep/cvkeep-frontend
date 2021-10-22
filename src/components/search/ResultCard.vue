@@ -1,5 +1,5 @@
 <template>
-  <a :href="`cv/${info.username}`" class="result-card" rel="noopener noreferrer">
+  <a v-if="info" :href="`cv/${info.username}`" class="result-card" rel="noopener noreferrer">
     <div class="result-card__content">
       <div class="result-card__head">
         <img :src="getAvatarUrl()" :alt="`${info.basics.fullname}'s profile image`" class="profile-photo">
@@ -41,7 +41,12 @@ export default {
 
   computed: {
     info() {
-      return this.item.cv[0];
+      const hasCv = typeof this.item === 'object' 
+        && this.item.cv 
+        && Array.isArray(this.item.cv) 
+        && this.item.cv.length;
+
+      return hasCv ? this.item.cv[0] : null;
     },
 
     badges() {

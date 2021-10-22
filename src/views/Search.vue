@@ -94,17 +94,22 @@ export default {
     async search(term, page = 0) {
       this.loading = true;
       
-      const response = await this.$API.cvSearchSimple(term, page)
-        .catch(err => { this.reset(); console.err(err) });
+      this.$API.cvSearchSimple(term, page)
+        .then(response => {
+          const _data = response.data;
 
-      const _data = response.data;
-
-      if (this.result.items) {
-        _data.items = [ ...this.result.items, ..._data.items ];
-      }
-       
-      this.result = _data;
-      this.loading = false    
+          if (this.result.items) {
+            _data.items = [ ...this.result.items, ..._data.items ];
+          }
+           
+          this.result = _data;
+          this.loading = false    
+        })
+        .catch(err => { 
+          this.reset();
+          console.err(err);
+          alert('Unexpected Search Error'); 
+        });
     },
 
     searchMore() {
