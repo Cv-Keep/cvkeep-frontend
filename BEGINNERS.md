@@ -22,3 +22,4 @@ James Martzen
 Victor Lopes  
 Igor de Jesus Santos  
 Jean Eduardo Higa
+Renan Luz
