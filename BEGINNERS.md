@@ -24,3 +24,4 @@ Igor de Jesus Santos
 Jean Eduardo Higa  
 Renan Luz  
 Michel Ruan Alves Carvalho  
+Renato Vicente
