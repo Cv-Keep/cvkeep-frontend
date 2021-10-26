@@ -56,7 +56,7 @@ export default (holder, options) => {
     const min = +input.getAttribute('minlength');
     
     if (input.value.length < min) {
-      addError(input, i18n.t('errors.validateForm.minLengh'));
+      addError(input, `${i18n.t('errors.validateForm.minLength')}: ${min}`);
     }
   });
   

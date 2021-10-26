@@ -14,7 +14,7 @@ export default {
       emptyFields: 'There are empty required fields',
       invalidEmail: 'Invalid E-Mail',
       invalidUrl: 'Invalid URL',
-      minLength: 'The value cannot be less than minimum',
+      minLength: 'The value size cannot be less than minimum',
       noEmptyChoices: 'At least one option must be selected',
     },  
   },

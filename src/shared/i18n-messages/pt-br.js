@@ -13,7 +13,7 @@ export default {
       emptyFields: 'Ops, há campos obrigatórios vazios',
       invalidEmail: 'E-Mail Inválido',
       invalidUrl: 'URL Inválida',
-      minLength: 'O valor não pode ser menor do que o mínimo',
+      minLength: 'O tamanho do valor não pode ser menor do que o mínimo',
       noEmptyChoices: 'Uma opção deve ser selecionada',
     }
   },

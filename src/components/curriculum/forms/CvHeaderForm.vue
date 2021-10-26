@@ -36,7 +36,8 @@
       
       <input
         type="text"
-        maxlength="25" 
+        minlength="4"
+        maxlength="25"
         name="primaryNumber"
         v-model="curriculum.contact.primaryNumber"
         @input="curriculum.contact.primaryNumber = curriculum.contact.primaryNumber.replace(/[^\d.\-\(\)\+\#\*\ ]/g, '')"
