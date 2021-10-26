@@ -21,4 +21,8 @@ Meghwant singh
 James Martzen  
 Victor Lopes  
 Igor de Jesus Santos  
-Jean Eduardo Higa
+Jean Eduardo Higa  
+Renan Luz  
+Michel Ruan Alves Carvalho  
+Renato Vicente  
+Leo Fabiano Alves
