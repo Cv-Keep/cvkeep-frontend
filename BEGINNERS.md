@@ -25,5 +25,5 @@ Jean Eduardo Higa
 Renan Luz  
 Michel Ruan Alves Carvalho  
 Renato Vicente  
-Leo Fabiano Alves
+Leo Fabiano Alves  
 Lucas Pierre de Alencar
