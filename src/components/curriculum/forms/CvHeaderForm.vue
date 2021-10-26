@@ -34,7 +34,13 @@
     <div class="field">
       <label for="primaryNumber">{{ $t('contactNumber') }}</label>
       
-      <input type="text" name="primaryNumber" maxlength="25" v-model="curriculum.contact.primaryNumber">
+      <input
+        type="text"
+        maxlength="25" 
+        name="primaryNumber"
+        v-model="curriculum.contact.primaryNumber"
+        @input="curriculum.contact.primaryNumber = curriculum.contact.primaryNumber.replace(/[^\d.\-\(\)\+\#\*\ ]/g, '')"
+      />
     </div>
 
     <div class="field">
