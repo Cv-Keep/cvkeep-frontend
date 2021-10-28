@@ -142,6 +142,10 @@
 
 				'en': {
 					placeholder: 'This is an optional text. Your can describe your skills more broadly and generally, discuss your area and expertise, etc. Click on the "Add new item" button to create a list of skills.'
+				},
+
+				'fr-fr': {
+					placeholder: 'Il s\'agit d\'un texte facultatif. Vous pouvez décrire vos compétences de manière plus large et générale, parler de votre domaine et de votre expertise, etc. Cliquez sur le bouton "Ajouter un nouvel élément" pour créer une liste de compétences.'
 				}
 			}
 		}

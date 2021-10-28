@@ -204,7 +204,19 @@ export default {
 				stillNotRegistered: 'Not registered?',
 				forgotPasswordNoProb: 'No problem! Please, inform your e-mail',
 				termsAndConditionAgreement: 'By using this platform you automatically agree with our',
-			}			
+			},
+			
+			'fr-fr': {
+				doLogin: 'Se connecter',
+				registerYourself: 'S\'enregistrer',
+				forgotPassword: 'Mot de passe oublié',
+				registerUsing: 'S\'enregistrer en utilisant',
+				alreadyRegistered: 'Déjà inscrit ?',
+				termsAndConditions: 'Conditions générales d\'utilisation',
+				stillNotRegistered: 'Vous n\'êtes pas enregistré ?',
+				forgotPasswordNoProb: 'Pas de problème ! Veuillez indiquer votre e-mail',
+				termsAndConditionAgreement: 'En utilisant cette plateforme, vous acceptez automatiquement notre',
+			}
 		}
 	}
 }

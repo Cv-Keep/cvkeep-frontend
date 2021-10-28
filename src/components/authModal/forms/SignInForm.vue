@@ -86,6 +86,13 @@
           goBack: 'Back',
           password: 'Password',
           forgotPass: 'Forgot password?',          
+        },
+
+         'fr-fr': {
+          send: 'Envoyer',
+          goBack: 'Retour',
+          password: 'Mot de passe',
+          forgotPass: 'Mot de passe oublié ?',          
         }
       }
     }

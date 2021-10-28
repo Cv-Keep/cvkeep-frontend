@@ -148,6 +148,15 @@
 					privateCv: 'Private CV',
 					enterAPassword: 'Enter a password',
 					enterThePassword: 'Enter the password to unlock this content',
+				},
+
+				'fr-fr': {
+					password: 'Mot de passe',
+					unlock: 'Déverrouiller',
+					unlocked: 'Cv déverrouillé !',
+					privateCv: 'CV privé',
+					enterAPassword: 'Entrez un mot de passe',
+					enterThePassword: 'Entrez le mot de passe pour déverrouiller ce contenu',
 				}
 			}
 		}

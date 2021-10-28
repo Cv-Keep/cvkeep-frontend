@@ -149,7 +149,20 @@
 					youNeedPassword: 'You need to create a password to unblock this action',
 					deactivateWarning: 'This action can be undone if a login is made within 30 days. When you deactivate your account your username will be available for use.',
 					deactivateMyAccountHelp: 'Here you can deactivate your account. Please note that by disabling it, your username will be available for others to use. You can reactivate your account within 30 days, after which it will be deleted from our database. Once the exclusion process has started, your resume will be immediately removed from the internet. If you do not have a password, you will need to create it before proceeding',
-				},				
+				},
+
+				'fr-fr': {
+					atention: 'Attention',
+					cancel: 'Annuler',
+					deactivate: 'Désactiver',
+					deactivateAccount: 'Désactiver compte',
+					deactivateMyAccount: 'Désactiver mon compte',
+					enterYourPassword: 'Entrez votre mot de passe pour continuer',
+					areYouSureToDeactivate: 'Êtes-vous sûr de vouloir désactiver votre compte ?',
+					youNeedPassword: 'Vous devez entrer le mot de passe pour débloquer cette action.',
+					deactivateWarning: 'Cette action peut être annulée si une connexion est effectuée dans les 30 jours. Lorsque vous désactivez votre compte, votre nom d\'utilisateur sera disponible pour être utilisé.',
+					deactivateMyAccountHelp: 'Vous pouvez ici désactiver votre compte. Veuillez noter qu\'en le désactivant, votre nom d\'utilisateur sera disponible pour d\'autres personnes. Vous pouvez réactiver votre compte dans les 30 jours, après quoi il sera supprimé de notre base de données. Une fois le processus d\'exclusion lancé, votre CV sera immédiatement retiré de l\'internet. Si vous ne disposez pas d\'un mot de passe, vous devrez le créer avant de poursuivre.',
+				},
 			}
 		}
 	}

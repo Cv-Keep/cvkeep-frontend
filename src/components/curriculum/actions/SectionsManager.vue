@@ -78,6 +78,18 @@
 					'section-prizes': 'Prizes',
 					'section-find-me-at': 'Links',
 					'section-portfolio': 'Portfolio',					
+				},
+
+				'fr-fr': {
+					'manage-sessions': 'Gérer les sessions',
+					'section-presentation': 'Présentation',
+					'section-education': 'Éducation',
+					'section-experience': 'Expérience',
+					'section-languages': 'Langues',
+					'section-skills': 'Compétences',
+					'section-prizes': 'Réalisations',
+					'section-find-me-at': 'Liens',
+					'section-portfolio': 'Portfolio',					
 				}
 			}
 		}

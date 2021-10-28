@@ -140,6 +140,13 @@
 					institution: 'Institution',
 					achievements: 'Achievements',
 					placeholder: 'This is an optional text. You can talk about your side projects, realizations, contributions, important moments on your career, etc. Use the "Add new item" button to include links to your online portfolio.'
+				},
+
+				'fr-fr': {
+					knowMore: 'En savoir plus',
+					institution: 'Institution',
+					achievements: 'Réalisations',
+					placeholder: 'Ce texte est facultatif. Vous pouvez parler de vos projets parallèles, de vos réalisations, de vos contributions, des moments importants de votre carrière, etc. Utilisez le bouton "Ajouter un nouvel élément" pour inclure des liens vers votre portfolio en ligne.'
 				}
 			}
 		}

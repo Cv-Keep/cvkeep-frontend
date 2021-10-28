@@ -58,6 +58,14 @@
           simple: 'Simple',
           pretty: 'Beautiful',
           featuredText: 'Keep your CV at hand, complete, updated, beautiful and accessible from anywhere in the world.'
+        },
+
+        'fr-fr': {
+          modern: 'Moderne',
+          secure: 'Sécurisé',
+          simple: 'Simple',
+          pretty: 'Beau',
+          featuredText: 'Gardez votre CV à portée de main, complet, mis à jour, beau et accessible de n\'importe où dans le monde.'
         }
       }
     }

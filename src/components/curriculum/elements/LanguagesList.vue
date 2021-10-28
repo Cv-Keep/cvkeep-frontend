@@ -95,6 +95,10 @@
 				
 				'en': {
 					languages: 'Languages'
+				},
+
+				'fr-fr': {
+					languages: 'Langues'
 				}
 			},
 

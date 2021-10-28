@@ -107,7 +107,12 @@
         'en': {
           ok: 'Ok',
           cancel: 'Cancel'
-        },        
+        }, 
+        
+        'fr-fr': {
+          ok: 'Ok',
+          cancel: 'Annuler'
+        }
       }
     }
   }

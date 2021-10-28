@@ -107,6 +107,10 @@
 
 				'en': {
 					placeholder: 'This is an optional text. You can talk about your portfolio, special projects, important moments on your career, etc. Use the "Add new item" button to include links to your online portfolio.'
+				},
+
+				'fr-fr': {
+					placeholder: 'Ce texte est facultatif. Vous pouvez parler de votre portfolio, de projets spéciaux, de moments importants de votre carrière, etc. Utilisez le bouton "Ajouter un nouvel élément" pour inclure des liens vers votre portfolio en ligne.'
 				}
 			}
 		}

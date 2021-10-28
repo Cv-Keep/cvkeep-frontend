@@ -58,6 +58,10 @@
 
 				'en': {
 					register: 'Register',
+				},
+
+				'fr-fr': {
+					register: 'S\'enregistrer',
 				}
 			}
 		}		

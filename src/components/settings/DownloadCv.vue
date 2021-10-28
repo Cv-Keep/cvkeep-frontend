@@ -104,6 +104,12 @@
           title: 'Download my curriculum',
           preparingDownload: 'Preparing file...',
           downloadCvHelp: 'Here you can download your resume as PDF, PNG or JSON. Whenever possible, avoid sending your resume this way as you will need to send new versions every time you update it.',
+				},
+
+        'fr-fr': {
+          title: 'Télécharger mon CV',
+          preparingDownload: 'Préparation du fichier...',
+          downloadCvHelp: 'Vous pouvez télécharger ici votre CV au format PDF, PNG ou JSON. Dans la mesure du possible, évitez d\'envoyer votre CV de cette manière, car vous devrez envoyer de nouvelles versions à chaque fois que vous le mettrez à jour.',
 				}
 			}
 		}    

@@ -163,6 +163,30 @@
             badBehaviorImplicit: 'Insinuates or encourages criminal behavior',
             Another: 'Other (Please add in description)',
           }                    
+        },
+
+        'fr-fr': {
+          reason: 'Raison',
+          cvUrl: 'URL du CV',
+          cancel: 'Annuler',
+          report: 'Reporter',
+          yourName: 'Votre nom',
+          yourEmail: 'Votre E-Mail',
+          description: 'Description',
+          reportCv: 'Reporter le CV',
+          invalidUrl: 'Veuillez entrer une URL valide',
+          reportSuccess: 'Rapport envoyé avec succès',
+          describeTheProblem: 'Veuillez décrire le problème',
+          reportCvReasons: {
+            ofensiveInformation: 'Ce CV contient des informations choquantes',
+            pretendeingToBeMe: 'Cette personne se fait passer pour moi',
+            pretendingToBeSomeone: 'Cette personne se fait passer pour quelqu\'un d\'autre',
+            personDoesntExists: 'Cette personne n\'existe pas dans le monde réel',
+            itsABotOrSeemsToBe: 'C\'est un robot, ça semble l\'être ou c\'est du spam ',
+            absuseOrHateContent: 'Contient des contenus abusifs ou haineux',
+            badBehaviorImplicit: 'Insinue ou encourage un comportement criminel',
+            Another: 'Autre (veuillez ajouter dans la description)',
+          }                    
         }
       }
     }

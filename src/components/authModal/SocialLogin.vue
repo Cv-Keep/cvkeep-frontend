@@ -76,6 +76,10 @@ export default {
 
       'en': {
         enterUsing: 'Enter using'
+      },
+
+      'fr-fr': {
+        enterUsing: 'Entrez en utilisant'
       }
     }
   }

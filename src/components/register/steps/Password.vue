@@ -114,6 +114,15 @@
 					passwordsMatchWarn: 'The passwords doesn\'t match',
 					minimumCharsWarn: 'The password must contain at least 8 (eight) characters',
 					nowDefineYourPassword: 'Now define your password'
+				},
+
+				'fr-fr': {
+					title: 'Définissez votre mot de passe',
+					password: 'Mot de passe',
+					confirmPassword: 'Confirmer le mot de passe',
+					passwordsMatchWarn: 'Les mots de passe ne correspondent pas.',
+					minimumCharsWarn: 'Le mot de passe doit contenir au moins 8 (huit) caractères.',
+					nowDefineYourPassword: 'Définissez maintenant votre mot de passe'
 				}
 			}
 		}

@@ -105,7 +105,18 @@
 						passDoesntMatch: 'The passwords entered are different',
 						passMinLength: 'The password must contain at least 8 (eight) characters',
 					}
-				}				
+				},
+
+				'fr-fr': {
+					register: 'S\'enregistrer',
+					errors: {
+						noUsername: 'Vous devez définir un nom d\'utilisateur',
+						noPassword: 'Vous devez entrer un mot de passe',
+						confirmPassword: 'Vous devez confirmer le mot de passe',
+						passDoesntMatch: 'Les mots de passe saisis sont différents',
+						passMinLength: 'Le mot de passe doit contenir au moins 8 (huit) caractères.',
+					}
+				}
 			}
 		}
 	}

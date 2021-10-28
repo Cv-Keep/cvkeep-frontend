@@ -32,6 +32,10 @@
 
 				'en': {
 					homepage: 'Homepage'
+				},
+
+				'fr-fr': {
+					homepage: 'Page d\'accueil'
 				}
 			}
 		}

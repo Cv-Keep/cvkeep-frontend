@@ -100,6 +100,15 @@
 					changeSuccess: 'Your configurations has been updated',
 					allowSearching: 'Allow people to find my CV by	',
 					messagesHelp: 'By checking this option you allow your CV to be displayed in search results on this site. (If your CV has a password, this option will be automatically disabled).',
+				},
+
+				'fr-fr': {
+					save: 'Sauvegarder',
+					title: 'Recherche',
+					search: 'recherche',
+					changeSuccess: 'Vos configurations ont été mises à jour',
+					allowSearching: 'Permettre aux gens de trouver mon CV en ',
+					messagesHelp: 'En cochant cette option, vous autorisez l\'affichage de votre CV dans les résultats de recherche sur ce site. (Si votre CV a un mot de passe, cette option sera automatiquement désactivée).',
 				}
 			}
 		}

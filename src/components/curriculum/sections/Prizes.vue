@@ -42,7 +42,12 @@
 				'en': {
 					prizes: 'Achievements',
 					prizesHelpText: 'Add here the acknowledgments you may have received during your career. Try to insert a description contextualizing the feat in question.'
-				}				
+				},
+
+				'fr-fr': {
+					prizes: 'Réalisations',
+					prizesHelpText: 'Ajoutez ici les remerciements que vous avez pu recevoir au cours de votre carrière. Essayez d\'insérer une description contextualisant l\'exploit en question.'
+				},
 			}
 		}
 	}

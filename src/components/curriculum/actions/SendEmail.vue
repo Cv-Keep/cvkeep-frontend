@@ -114,6 +114,16 @@
 					message: 'Message',
 					sendMessageTo: 'Send message to',
 					sendSuccess: 'Message successfully sent!',					
+				},
+
+				'fr-fr': {
+					send: 'Envoyer',
+					yourName: 'Votre nom',
+					yourEmail: 'Votre E-Mail',
+					subject: 'Sujet',
+					message: 'Message',
+					sendMessageTo: 'Envoyer le message à',
+					sendSuccess: 'Message envoyé avec succès !',					
 				}
 			}
 		}

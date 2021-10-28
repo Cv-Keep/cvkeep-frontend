@@ -122,6 +122,17 @@
 					myCurriculum: 'My CV',
 					configurations: 'Settings',
 					termsAndConditions: 'Terms and Conditions',
+				},
+
+				'fr-fr': {
+					login: 'Se connecter',
+					contact: 'Contact',
+					register: 'S\'enregistrer',
+					goHome: 'Page d\'accueil',
+					reportCv: 'Reporter le CV',
+					myCurriculum: 'Mon CV',
+					configurations: 'Paramètres',
+					termsAndConditions: 'Conditions générales d\'utilisation',
 				}
 			}
 		}

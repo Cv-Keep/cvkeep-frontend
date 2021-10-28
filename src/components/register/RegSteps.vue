@@ -103,6 +103,13 @@
 					next: 'Next',
 					previous: 'Previous',
 					confirmRegister: 'Confirm Registration',
+				},
+
+				'fr-fr': {
+					step: 'Étape',
+					next: 'Suivant',
+					previous: 'Précédent',
+					confirmRegister: 'Confirmer l\'inscription',
 				}
 			}
 		}

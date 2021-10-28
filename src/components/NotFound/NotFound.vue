@@ -34,6 +34,11 @@
 				'en': {
 					goHome: 'Homepage',
 					notFoundText: 'This content does not exist or has been moved',
+				},
+
+				'fr-fr': {
+					goHome: 'Page d\'accueil',
+					notFoundText: 'Ce contenu n\'existe pas ou a été déplacé',
 				}
 			}
 		}

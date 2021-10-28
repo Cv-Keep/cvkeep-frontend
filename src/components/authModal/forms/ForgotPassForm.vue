@@ -78,7 +78,14 @@
           doLogin: 'Login',
           register: 'Register',
           forgotPasswordEmailSent: 'An e-mail was sent to you. Please, check your inbox',
-        },        
+        },
+        
+         'fr-fr': {
+          send: 'Envoyer',
+          doLogin: 'Se connecter',
+          register: 'S\'enregistrer',
+          forgotPasswordEmailSent: 'Un e-mail vous a été envoyé. Veuillez vérifier votre boîte de réception',
+        },
       }
     }
   }

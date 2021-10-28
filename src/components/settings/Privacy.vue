@@ -97,6 +97,14 @@
 					changeSuccess: 'Your configurations has been updated',
 					allowPeopleSendMessage: 'Allow people to send me messages',
 					messagesHelp: 'By allowing people to send messages, you open up a range of possibilities for receiving feedback, opportunities and networking with thousands of people. However, it may be that you prefer an extra layer of privacy, for this you can disable the receipt of messages that the button (as well as the functionality) of sending messages will no longer appear in your online CV.',
+				},
+
+				'fr-fr': {
+					save: 'Sauvegarder',
+					title: 'Messages',
+					changeSuccess: 'Vos configurations ont été mises à jour',
+					allowPeopleSendMessage: 'Permettre aux gens de m\'envoyer des messages',
+					messagesHelp: 'En autorisant les gens à envoyer des messages, vous ouvrez un éventail de possibilités pour recevoir des commentaires, des opportunités et pour vous mettre en réseau avec des milliers de personnes. Cependant, il se peut que vous préfériez une couche supplémentaire de confidentialité. Pour cela, vous pouvez désactiver la réception de messages : le bouton (ainsi que la fonctionnalité) d\'envoi de messages n\'apparaîtra plus dans votre CV en ligne.',
 				}
 			}
 		}

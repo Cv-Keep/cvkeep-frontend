@@ -171,6 +171,12 @@
 					loadImage: 'Load image',
 					saveSuccess: 'Avatar successfully saved',
 					maxFileSizeExceeded: 'The file exceed the maximum size of',
+				},
+
+				'fr-fr': {
+					loadImage: 'Charger l\'image',
+					saveSuccess: 'Avatar sauvegardé avec succès',
+					maxFileSizeExceeded: 'Le fichier dépasse la taille maximale de',
 				}
 			}
 		}

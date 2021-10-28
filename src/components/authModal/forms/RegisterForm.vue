@@ -95,7 +95,14 @@
           goBack: 'Back',
           confirmYourEmail: 'Confirm your e-mail',
           emailsMatchError: 'The entered emails are different',
-        }        
+        },
+        
+         'fr-fr': {
+          send: 'Envoyer',
+          goBack: 'Retour',
+          confirmYourEmail: 'Confirmer votre e-mail',
+          emailsMatchError: 'Les emails saisis sont différents',
+        }       
       }
     }
   }

@@ -14,6 +14,11 @@
 				<img src="/img/flags/en.webp" alt="pt-br menu flag">
 				<span>{{$t('english')}}</span>
 			</li>
+
+			<li @click="changeLocale('fr-fr')">
+				<img src="/img/flags/fr-fr.webp" alt="fr-fr menu flag">
+				<span>{{$t('french')}}</span>
+			</li>
 		</ul>
 	</div>
 </template>
@@ -52,13 +57,22 @@
 				'pt-br': {
 					'portuguese': 'Português',
 					'english': 'Inglês',
+					'french': 'Francês',
 					'localeChanged': 'Idioma atualizado com sucesso'
 				},
 
 				'en': {
 					'portuguese': 'Portuguese',
 					'english': 'English',
+					'french': 'French',
 					'localeChanged': 'Language successfully changed'
+				},
+
+				'fr-fr': {
+					'portuguese': 'Portugais',
+					'english': 'Anglais',
+					'french': 'Français',
+					'localeChanged': 'Changement de langue réussi'
 				}
 			}
 		}

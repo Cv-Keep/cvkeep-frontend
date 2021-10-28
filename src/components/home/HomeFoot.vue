@@ -37,6 +37,15 @@
 					curriculum: 'Resumé',
 					increasesYourChances: 'increases your chances of getting a good job.',
 					imagineAGreatOne: 'Imagine a great one?',					
+				},
+
+				'fr-fr': {
+					goToCv: 'Accéder à mon CV',
+					startNow: 'Commencez maintenant',
+					aGoodCv: 'Un bon',
+					curriculum: 'Curriculum vitae',
+					increasesYourChances: 'augmente vos chances d\'obtenir un bon emploi.',
+					imagineAGreatOne: 'Imaginez en grand ?',					
 				}
 			}
 		}
