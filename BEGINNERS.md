@@ -27,3 +27,4 @@ Michel Ruan Alves Carvalho
 Renato Vicente  
 Leo Fabiano Alves  
 Lucas Pierre de Alencar
+Weslley Fratini
