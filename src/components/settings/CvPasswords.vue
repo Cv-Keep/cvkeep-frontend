@@ -150,6 +150,18 @@
           protectCvWithPassword: 'Protect my CV with passwords',
           configurationsUpdated: 'Your configurations has been updated',
           privateCvHelp: 'You may want to restrict access to your CV, so you can enable this option and create several passwords for accessing your CV, making it visible to only those who have one of these passwords. If this option is enabled without any password defined, your CV will be visible only to you. Your CV won\'t appear in search results also. You can revoke any password or even this option as many times as you want at any time.',
+        },
+
+        'fr-fr': {
+          save: 'Sauvegarder',
+          privateCv: 'CV privé',
+          showPass: 'Afficher le mot de passe',
+          hidePass: 'Cacher le mot de passe',
+          removePass: 'Supprimer le mot de passe',
+          addNewPassword: 'Ajouter un nouveau mot de passe',
+          protectCvWithPassword: 'Protéger mon CV avec des mots de passe',
+          configurationsUpdated: 'Vos configurations ont été mises à jour',
+          privateCvHelp: 'Si vous souhaitez restreindre l\'accès à votre CV, vous pouvez activer cette option et créer plusieurs mots de passe pour accéder à votre CV, le rendant visible uniquement à ceux qui possèdent l\'un de ces mots de passe. Si cette option est activée sans qu\'aucun mot de passe ne soit défini, votre CV ne sera visible que par vous. Votre CV n\'apparaîtra pas non plus dans les résultats de recherche. Vous pouvez révoquer tout mot de passe ou même cette option autant de fois que vous le souhaitez et à tout moment.',
         }
       }
     }

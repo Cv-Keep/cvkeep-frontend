@@ -127,6 +127,7 @@
 				'pt-br': {
 					en: 'Inglês',
 					'pt-br': 'Português',
+					'fr-fr': 'Francês',
 					yourName: 'Seu nome',
 					yourRole: 'Sua ocupação',
 					addYourLocation: 'Sua localidade',
@@ -139,6 +140,7 @@
 				'en': {
 					en: 'English',
 					'pt-br': 'Portuguese',
+					'fr-fr': 'French',
 					yourName: 'Your name',
 					yourRole: 'Your occupation',
 					addYourLocation: 'Your location',
@@ -146,6 +148,19 @@
 					cvLangPreference: 'The owner of this CV preferred to display it in',
 					cvLangPreferenceLogged: 'Language in which this CV will be displayed to visitors - ',
 					leavingCv: 'You are about to leave the CV editing and go to the Privacy Settings. Non saved data will be lost. Do yout want to proceed?'
+				},
+
+				'fr-fr': {
+					en: 'Anglais',
+					'pt-br': 'Portugais',
+					'fr-fr': 'Français',
+					yourName: 'Votre nom',
+					yourRole: 'Votre occupation',
+					addYourLocation: 'Votre localisation',
+					privacyPreferences: 'Préférences en matière de confidentialité',
+					cvLangPreference: 'Le propriétaire de ce CV a préféré l\'exposer en',
+					cvLangPreferenceLogged: 'Langue dans laquelle ce CV sera affiché aux visiteurs - ',
+					leavingCv: 'Vous êtes sur le point de quitter l\'édition du CV et d\'accéder aux paramètres de confidentialité. Les données non sauvegardées seront perdues. Voulez-vous continuer ?'
 				}
 			}
 		}

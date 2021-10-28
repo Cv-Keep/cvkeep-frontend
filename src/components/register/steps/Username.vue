@@ -148,6 +148,14 @@
 					chooseYourUsername: 'Choose your username',
 					usernameAvailable: 'Username available for use',
 					usernameNotAvailable: 'This username is not available',					
+				},
+
+				'fr-fr': {
+					username: 'Nom de l\'utilisateur',
+					usernameExample: 'Exemple: johndoe123',
+					chooseYourUsername: 'Choisissez votre nom d\'utilisateur',
+					usernameAvailable: 'Nom d\'utilisateur disponible pour l\'utilisation',
+					usernameNotAvailable: 'Ce nom d\'utilisateur n\'est pas disponible',					
 				}
 			}
 		}

@@ -52,13 +52,22 @@
 				'pt-br': {
 					'portuguese': 'Português',
 					'english': 'Inglês',
+					'french': 'Francês',
 					'localeChanged': 'Idioma atualizado com sucesso'
 				},
 
 				'en': {
 					'portuguese': 'Portuguese',
 					'english': 'English',
+					'french': 'French',
 					'localeChanged': 'Language successfully changed'
+				},
+
+				'fr-fr': {
+					'portuguese': 'Portugais',
+					'english': 'Anglais',
+					'french': 'Français',
+					'localeChanged': 'Changement de langue réussi'
 				}
 			}
 		}

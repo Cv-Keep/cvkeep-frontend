@@ -58,7 +58,11 @@
 
 				'en': {
 					background: 'Background'
-				}
+				},
+
+				'fr-fr': {
+					background: 'Arrière plan'
+				},
 			}
 		}
 	}

@@ -75,6 +75,12 @@
 					'myResume': 'My CV',
 					'settings': 'Settings',
 					'signOut': 'Sign Out'
+				},
+
+				'fr-fr': {
+					'myResume': 'Mon CV',
+					'settings': 'Paramètres',
+					'signOut': 'Se déconnecter'
 				}
 			}
 		}

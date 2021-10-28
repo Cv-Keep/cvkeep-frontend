@@ -167,6 +167,13 @@
 					current: 'Current',
 					experience: 'Experience',
 					placeholder: 'This is an optional text. You can use it to describe your experience, add cases, highlight your value to the coorporations, etc. Use the "Add new item" button to create your story.'
+				},
+
+				'fr-fr': {
+					role: 'Rôle',
+					current: 'Actuel',
+					experience: 'Expérience',
+					placeholder: 'Il s\'agit d\'un texte facultatif. Vous pouvez l\'utiliser pour décrire votre expérience, ajouter des cas, mettre en évidence votre valeur pour les coorporations, etc. Utilisez le bouton "Ajouter un nouvel élément" pour créer votre histoire.'
 				}
 			},
 

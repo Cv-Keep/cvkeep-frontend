@@ -25,6 +25,10 @@
 
 				'en': {
 					add: 'Add new item'
+				},
+
+				'fr-fr': {
+					add: 'Ajouter un nouvel élément'
 				}
 			}
 		}

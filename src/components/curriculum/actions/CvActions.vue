@@ -185,6 +185,19 @@
 					structure: 'Structure',
 					saveSuccess: 'CV successfully saved',
 					unsignedShare: 'You must be logged in to save and share your CV',
+				},
+
+				'fr-fr': {
+					message: 'Message',
+					share: 'Partager',
+					preview: 'Prévisualisation',
+					edit: 'Editer',
+					save: 'Sauvegarder',
+					bg: 'Arrière plan',
+					cvColor: 'Couleurs',
+					structure: 'Structure',
+					saveSuccess: 'CV sauvegardé avec succès',
+					unsignedShare: 'Vous devez être connecté pour enregistrer et partager votre CV.',
 				}
 			}
 		}

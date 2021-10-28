@@ -51,7 +51,13 @@ export default {
       'en': {
         seeMore: 'See more',
         seeLess: 'Less',        
-      }
+      },
+
+      'fr-fr': {
+        seeMore: 'Voir plus',
+        seeLess: 'Moins',        
+      },
+
     }
   }
 }

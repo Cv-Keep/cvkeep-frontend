@@ -71,6 +71,12 @@
 					presentation: 'Presentation',
 					presentationHelpText: 'Talk about yourself objectively and concisely. Tell us who is the person behind your resume. You can tell your story, what you do or would like to do, your aspirations and goals, for example. It can also be a good place to briefly demonstrate who you are outside of work. Writing a presentation is especially important if you have little or no experience.',
 					placeholder: 'Write a presentation. You can tell your story, your achievements and your goals. Mantain objectivety and show your personality'
+				},
+
+				'fr-fr': {
+					presentation: 'Présentation',
+					presentationHelpText: 'Parlez de vous de manière objective et concise. Dites-nous qui est la personne qui se cache derrière votre CV. Vous pouvez raconter votre histoire, ce que vous faites ou aimeriez faire, vos aspirations et vos objectifs, par exemple. Cela peut aussi être un bon endroit pour montrer brièvement qui vous êtes en dehors du travail. La rédaction d\'une présentation est particulièrement importante si vous avez peu ou pas d\'expérience.',
+					placeholder: 'Rédigez une présentation. Vous pouvez raconter votre histoire, vos réalisations et vos objectifs. Restez objectif et montrez votre personnalité.'
 				}
 			}
 		}

@@ -84,6 +84,10 @@
 
 				'en': {
 					cancel: 'Cancel'
+				},
+
+				'fr-fr': {
+					cancel: 'Annuler'
 				}
 			}
 		}		

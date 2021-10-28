@@ -259,6 +259,33 @@
 						changeEmail: '<p> Your <strong> e-Mail exchange </strong> request has been successfully sent. <strong> A confirmation link has been sent to your current e-Mail </strong>, please check your inbox to confirm this request </p>',
 						changeUserPassword: '<p> Your request was sent successfully. <strong> This action requires confirmation via e-Mail </strong>, please check your inbox </p>',
 					}					
+				},
+
+				'fr-fr': {
+					save: 'Sauvegarder',
+					change: 'Changer',
+					create: 'Créer',
+					userName: 'Nom d\'utilisateur',
+					yourEmail: 'Votte e-mail',
+					createPassword: 'Créer un mot de passe',
+					newPassword: 'Nouveau mot de passe',
+					changePassword: 'Modifier le mot de passe',
+					currentPassword: 'Mot de passe actuel',
+					alreadyCurrentUsername: 'Il s\'agit de votre nom d\'utilisateur actuel',
+					alreadyCurrentEmail: 'Voici votre e-mail actuel',
+					invalidPassword: 'Désolé, votre nouveau mot de passe n\'est pas valide.',
+					passwordRequiredWarning: 'Certains paramètres peuvent être indisponibles car ils nécessitent une confirmation par mot de passe. Créez un mot de passe utilisateur pour les déverrouiller.',
+					help: {
+						userName: 'Ici, vous pouvez modifier votre nom d\'utilisateur. N\'oubliez pas que votre nom d\'utilisateur apparaît dans l\'adresse de votre cursus en ligne. Préférez un nom court, convivial et descriptif.',
+						yourEmail: 'Vous pouvez modifier ici l\'adresse électronique liée à votre compte. Si vous utilisez la connexion sociale, lorsque vous modifiez votre adresse électronique, vos réseaux sociaux seront déconnectés de ce profil. Pour modifier votre e-Mail, il est nécessaire que vous ayez défini un mot de passe utilisateur, si vous ne l\'avez pas encore fait, vous pouvez le créer dans la section "Créer un mot de passe" de cette page.',
+						createPassword: 'Vous n\'avez pas encore de mot de passe, en créer un vous permettra d\'accéder à des fonctions administratives avancées sur votre CV et vous assurera une plus grande sécurité.',
+						changePassword: 'Vous pouvez modifier ici le mot de passe que vous utilisez pour vous connecter à votre CV. N\'oubliez pas d\'utiliser un mot de passe sûr et de ne le communiquer à personne.',
+					},
+					success: {
+						changeUsername: '<p> Votre <strong> changement de nom d\'utilisateur </strong> la demande a été envoyée avec succès. <strong> Cette action nécessite une confirmation par courrier électronique </strong>, veuillez vérifier votre boîte de réception pour confirmer votre demande </p>',
+						changeEmail: '<p> Votre <strong> changement d\'e-mail </strong> la demande a été envoyée avec succès. <strong> Un lien de confirmation a été envoyé à votre adresse électronique actuelle. </strong>, veuillez vérifier votre boîte de réception pour confirmer cette demande </p>',
+						changeUserPassword: '<p> Votre demande a été envoyée avec succès. <strong> Cette action nécessite une confirmation par courrier électronique </strong>, veuillez vérifier votre boîte de réception </p>',
+					}					
 				}
 			}
 		}

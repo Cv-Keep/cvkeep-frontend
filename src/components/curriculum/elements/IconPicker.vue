@@ -99,6 +99,11 @@
 				'en': {
 					defaultIcon: 'Default icon',
 					searchIcon: 'Search icon...',
+				},
+
+				'fr-fr': {
+					defaultIcon: 'Icône par défaut',
+					searchIcon: 'Icône de recherche...',
 				}
 			}
 		}
