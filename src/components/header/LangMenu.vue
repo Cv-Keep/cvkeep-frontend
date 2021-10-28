@@ -14,6 +14,11 @@
 				<img src="/img/flags/en.webp" alt="pt-br menu flag">
 				<span>{{$t('english')}}</span>
 			</li>
+
+			<li @click="changeLocale('fr-fr')">
+				<img src="/img/flags/fr-fr.webp" alt="fr-fr menu flag">
+				<span>{{$t('french')}}</span>
+			</li>
 		</ul>
 	</div>
 </template>
