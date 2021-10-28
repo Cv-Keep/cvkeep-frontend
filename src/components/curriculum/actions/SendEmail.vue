@@ -116,7 +116,7 @@
 					sendSuccess: 'Message successfully sent!',					
 				},
 
-				'fr-fr': {
+				'fr': {
 					send: 'Envoyer',
 					yourName: 'Votre nom',
 					yourEmail: 'Votre E-Mail',

@@ -116,7 +116,7 @@
 					nowDefineYourPassword: 'Now define your password'
 				},
 
-				'fr-fr': {
+				'fr': {
 					title: 'Définissez votre mot de passe',
 					password: 'Mot de passe',
 					confirmPassword: 'Confirmer le mot de passe',

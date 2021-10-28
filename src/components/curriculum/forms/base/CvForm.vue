@@ -86,7 +86,7 @@
 					cancel: 'Cancel'
 				},
 
-				'fr-fr': {
+				'fr': {
 					cancel: 'Annuler'
 				}
 			}

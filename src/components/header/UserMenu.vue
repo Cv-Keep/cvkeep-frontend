@@ -77,7 +77,7 @@
 					'signOut': 'Sign Out'
 				},
 
-				'fr-fr': {
+				'fr': {
 					'myResume': 'Mon CV',
 					'settings': 'Paramètres',
 					'signOut': 'Se déconnecter'

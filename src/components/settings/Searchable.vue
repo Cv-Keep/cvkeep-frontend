@@ -102,7 +102,7 @@
 					messagesHelp: 'By checking this option you allow your CV to be displayed in search results on this site. (If your CV has a password, this option will be automatically disabled).',
 				},
 
-				'fr-fr': {
+				'fr': {
 					save: 'Sauvegarder',
 					title: 'Recherche',
 					search: 'recherche',

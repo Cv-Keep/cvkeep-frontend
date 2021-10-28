@@ -124,7 +124,7 @@
 					termsAndConditions: 'Terms and Conditions',
 				},
 
-				'fr-fr': {
+				'fr': {
 					login: 'Se connecter',
 					contact: 'Contact',
 					register: 'S\'enregistrer',

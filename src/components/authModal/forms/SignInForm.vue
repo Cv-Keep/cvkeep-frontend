@@ -88,7 +88,7 @@
           forgotPass: 'Forgot password?',          
         },
 
-         'fr-fr': {
+         'fr': {
           send: 'Envoyer',
           goBack: 'Retour',
           password: 'Mot de passe',

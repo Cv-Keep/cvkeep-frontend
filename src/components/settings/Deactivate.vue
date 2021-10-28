@@ -151,7 +151,7 @@
 					deactivateMyAccountHelp: 'Here you can deactivate your account. Please note that by disabling it, your username will be available for others to use. You can reactivate your account within 30 days, after which it will be deleted from our database. Once the exclusion process has started, your resume will be immediately removed from the internet. If you do not have a password, you will need to create it before proceeding',
 				},
 
-				'fr-fr': {
+				'fr': {
 					atention: 'Attention',
 					cancel: 'Annuler',
 					deactivate: 'Désactiver',

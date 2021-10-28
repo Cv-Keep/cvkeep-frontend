@@ -146,7 +146,7 @@
 					'loadCvUnexpectedError': 'An error has occurred while loading CV'
 				},
 
-				'fr-fr': {
+				'fr': {
 					'error': 'Erreur',
 					'atention': 'Attention',
 					'unknown': 'Inconnu',

@@ -169,7 +169,7 @@
 					placeholder: 'This is an optional text. You can use it to describe your experience, add cases, highlight your value to the coorporations, etc. Use the "Add new item" button to create your story.'
 				},
 
-				'fr-fr': {
+				'fr': {
 					role: 'Rôle',
 					current: 'Actuel',
 					experience: 'Expérience',

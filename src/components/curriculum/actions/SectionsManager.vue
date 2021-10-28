@@ -80,7 +80,7 @@
 					'section-portfolio': 'Portfolio',					
 				},
 
-				'fr-fr': {
+				'fr': {
 					'manage-sessions': 'Gérer les sessions',
 					'section-presentation': 'Présentation',
 					'section-education': 'Éducation',

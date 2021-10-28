@@ -60,7 +60,7 @@
 					register: 'Register',
 				},
 
-				'fr-fr': {
+				'fr': {
 					register: 'S\'enregistrer',
 				}
 			}

@@ -118,7 +118,7 @@
           describeYourXp: 'Describe your experience'                
         },
 
-        'fr-fr': {
+        'fr': {
           type: 'Type',
           start: 'Start',
           end: 'End',

@@ -150,7 +150,7 @@
 					enterThePassword: 'Enter the password to unlock this content',
 				},
 
-				'fr-fr': {
+				'fr': {
 					password: 'Mot de passe',
 					unlock: 'Déverrouiller',
 					unlocked: 'Cv déverrouillé !',

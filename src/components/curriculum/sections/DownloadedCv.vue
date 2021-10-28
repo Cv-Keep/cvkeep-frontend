@@ -20,7 +20,7 @@
           info: `This curriculum is available online at <strong>${window.location.href}</strong>`
         },
 
-        'fr-fr': {  
+        'fr': {  
           info: `Ce programme est disponible en ligne à l'adresse suivante <strong>${window.location.href}</strong>`
         }
       }

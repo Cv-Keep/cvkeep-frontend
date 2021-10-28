@@ -94,7 +94,7 @@
           institution: 'Institution'
         },
 
-        'fr-fr': {
+        'fr': {
           'achievement': 'Réussite',
           'title': 'Titre',
           'date': 'Date',

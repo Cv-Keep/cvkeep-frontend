@@ -68,7 +68,7 @@
 					'disability': 'PWD',					
 				},
 
-				'fr-fr': {
+				'fr': {
 					'lookingForWork': 'Recherche d\'un travail',
 					'freelance': 'Accepter le freelancing',
 					'onlyRemote': 'Seulement à distance',

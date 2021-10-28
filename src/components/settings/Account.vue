@@ -261,7 +261,7 @@
 					}					
 				},
 
-				'fr-fr': {
+				'fr': {
 					save: 'Sauvegarder',
 					change: 'Changer',
 					create: 'Créer',

@@ -109,7 +109,7 @@
 					viewsPrefixPhrase: 'Number of times your CV has been visualized: ',
 				},
 
-				'fr-fr': {
+				'fr': {
 					lessThan: 'Moins que',
 					viewsPrefixPhrase: 'Nombre de fois où votre CV a été visualisé :',
 				},

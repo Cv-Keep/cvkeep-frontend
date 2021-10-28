@@ -150,7 +150,7 @@
 					usernameNotAvailable: 'This username is not available',					
 				},
 
-				'fr-fr': {
+				'fr': {
 					username: 'Nom de l\'utilisateur',
 					usernameExample: 'Exemple: johndoe123',
 					chooseYourUsername: 'Choisissez votre nom d\'utilisateur',

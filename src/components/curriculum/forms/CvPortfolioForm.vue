@@ -114,7 +114,7 @@
           suggestions: 'Suggestions',
         },
 
-        'fr-fr': {
+        'fr': {
           'icon': 'Icône',
           'title': 'Titre',
           'suggestions': 'Suggestions',

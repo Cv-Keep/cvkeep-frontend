@@ -187,7 +187,7 @@
 					unsignedShare: 'You must be logged in to save and share your CV',
 				},
 
-				'fr-fr': {
+				'fr': {
 					message: 'Message',
 					share: 'Partager',
 					preview: 'Prévisualisation',

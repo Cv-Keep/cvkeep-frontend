@@ -99,7 +99,7 @@
 					messagesHelp: 'By allowing people to send messages, you open up a range of possibilities for receiving feedback, opportunities and networking with thousands of people. However, it may be that you prefer an extra layer of privacy, for this you can disable the receipt of messages that the button (as well as the functionality) of sending messages will no longer appear in your online CV.',
 				},
 
-				'fr-fr': {
+				'fr': {
 					save: 'Sauvegarder',
 					title: 'Messages',
 					changeSuccess: 'Vos configurations ont été mises à jour',

@@ -105,7 +105,7 @@
 					confirmRegister: 'Confirm Registration',
 				},
 
-				'fr-fr': {
+				'fr': {
 					step: 'Étape',
 					next: 'Suivant',
 					previous: 'Précédent',

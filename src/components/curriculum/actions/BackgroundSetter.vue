@@ -60,7 +60,7 @@
 					background: 'Background'
 				},
 
-				'fr-fr': {
+				'fr': {
 					background: 'Arrière plan'
 				},
 			}

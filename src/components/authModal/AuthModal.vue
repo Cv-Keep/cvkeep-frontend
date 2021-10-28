@@ -206,7 +206,7 @@ export default {
 				termsAndConditionAgreement: 'By using this platform you automatically agree with our',
 			},
 			
-			'fr-fr': {
+			'fr': {
 				doLogin: 'Se connecter',
 				registerYourself: 'S\'enregistrer',
 				forgotPassword: 'Mot de passe oublié',

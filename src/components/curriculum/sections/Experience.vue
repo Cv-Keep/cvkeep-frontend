@@ -44,7 +44,7 @@
 					'experienceHelpText': 'Inform here the companies in which you worked, or other activities that added to your professional experience such as projects carried out, volunteering, among others. If possible, add a brief description of your activities, highlighting important points and achievements in the role. It is not necessary to inform all your professional experience, especially if it is very extensive.'
 				},
 
-				'fr-fr': {
+				'fr': {
 					'experience': 'Expérience',
 					'experienceHelpText': 'Informez ici les entreprises dans lesquelles vous avez travaillé, ou d\'autres activités qui ont ajouté à votre expérience professionnelle comme les projets réalisés, le bénévolat, entre autres. Si possible, ajoutez une brève description de vos activités, en soulignant les points importants et les réalisations dans le rôle. Il n\'est pas nécessaire d\'indiquer toute votre expérience professionnelle, surtout si elle est très étendue.'
 				}

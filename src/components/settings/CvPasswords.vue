@@ -152,7 +152,7 @@
           privateCvHelp: 'You may want to restrict access to your CV, so you can enable this option and create several passwords for accessing your CV, making it visible to only those who have one of these passwords. If this option is enabled without any password defined, your CV will be visible only to you. Your CV won\'t appear in search results also. You can revoke any password or even this option as many times as you want at any time.',
         },
 
-        'fr-fr': {
+        'fr': {
           save: 'Sauvegarder',
           privateCv: 'CV privé',
           showPass: 'Afficher le mot de passe',

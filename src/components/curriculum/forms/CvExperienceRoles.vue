@@ -111,7 +111,7 @@
           addRole: 'Add Role'
         },
 
-        'fr-fr': {
+        'fr': {
           roles: 'Un autre rôle',
           role: 'Rôle',
           yes: 'Oui',

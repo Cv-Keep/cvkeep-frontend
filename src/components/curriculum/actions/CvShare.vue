@@ -108,7 +108,7 @@
 					title: 'Send this URL to share this CV',					
 				},
 
-				'fr-fr': {
+				'fr': {
 					shareCv: 'Partager le CV',
 					copyHelp: 'Copier dans le presse-papiers',
 					title: 'Envoyer cette URL pour partager ce CV',					

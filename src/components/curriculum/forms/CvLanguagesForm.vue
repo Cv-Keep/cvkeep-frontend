@@ -62,7 +62,7 @@
           language: 'Language'
         },
 
-        'fr-fr': {
+        'fr': {
           language: 'Langue'
         }
       }

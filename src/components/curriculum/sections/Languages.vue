@@ -44,7 +44,7 @@
 					'languagesHelpText': 'Insert foreign languages ​​that you have mastery here. Try to inform your ability to speak, read and write carefully.'
 				},
 
-				'fr-fr': {
+				'fr': {
 					'languages': 'Langues',
 					'languagesHelpText': 'Insérez ici les langues étrangères que vous maîtrisez. Essayez de renseigner soigneusement votre capacité à parler, lire et écrire.'
 				}

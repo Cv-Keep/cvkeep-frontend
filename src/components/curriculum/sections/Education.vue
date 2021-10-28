@@ -45,7 +45,7 @@
 					'educationHelpText': 'Enter your formal educational trajectory here. College, courses, postgraduate, etc. Try to maintain a chronological order to simplify the reading and understanding of your resume.'
 				},
 
-				'fr-fr': {
+				'fr': {
 					'education': 'Éducation',
 					'educationHelpText': 'Indiquez ici votre parcours éducatif formel. Collège, cours, études supérieures, etc. Essayez de maintenir un ordre chronologique pour simplifier la lecture et la compréhension de votre CV.'
 				}

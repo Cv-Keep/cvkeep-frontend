@@ -142,7 +142,7 @@
 					placeholder: 'This is an optional text. You can talk about your side projects, realizations, contributions, important moments on your career, etc. Use the "Add new item" button to include links to your online portfolio.'
 				},
 
-				'fr-fr': {
+				'fr': {
 					knowMore: 'En savoir plus',
 					institution: 'Institution',
 					achievements: 'Réalisations',

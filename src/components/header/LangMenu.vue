@@ -15,8 +15,8 @@
 				<span>{{$t('english')}}</span>
 			</li>
 
-			<li @click="changeLocale('fr-fr')">
-				<img src="/img/flags/fr-fr.webp" alt="fr-fr menu flag">
+			<li @click="changeLocale('fr')">
+				<img src="/img/flags/fr.webp" alt="fr menu flag">
 				<span>{{$t('french')}}</span>
 			</li>
 		</ul>
@@ -68,7 +68,7 @@
 					'localeChanged': 'Language successfully changed'
 				},
 
-				'fr-fr': {
+				'fr': {
 					'portuguese': 'Portugais',
 					'english': 'Anglais',
 					'french': 'Français',

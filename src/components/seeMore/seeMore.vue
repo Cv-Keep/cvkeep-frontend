@@ -53,7 +53,7 @@ export default {
         seeLess: 'Less',        
       },
 
-      'fr-fr': {
+      'fr': {
         seeMore: 'Voir plus',
         seeLess: 'Moins',        
       },

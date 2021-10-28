@@ -97,7 +97,7 @@
           emailsMatchError: 'The entered emails are different',
         },
         
-         'fr-fr': {
+         'fr': {
           send: 'Envoyer',
           goBack: 'Retour',
           confirmYourEmail: 'Confirmer votre e-mail',

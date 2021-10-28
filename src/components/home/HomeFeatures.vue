@@ -60,7 +60,7 @@
           featuredText: 'Keep your CV at hand, complete, updated, beautiful and accessible from anywhere in the world.'
         },
 
-        'fr-fr': {
+        'fr': {
           modern: 'Moderne',
           secure: 'Sécurisé',
           simple: 'Simple',

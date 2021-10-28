@@ -97,7 +97,7 @@
 					languages: 'Languages'
 				},
 
-				'fr-fr': {
+				'fr': {
 					languages: 'Langues'
 				}
 			},

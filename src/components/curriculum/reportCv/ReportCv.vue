@@ -165,7 +165,7 @@
           }                    
         },
 
-        'fr-fr': {
+        'fr': {
           reason: 'Raison',
           cvUrl: 'URL du CV',
           cancel: 'Annuler',

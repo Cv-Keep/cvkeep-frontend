@@ -73,7 +73,7 @@
 					placeholder: 'Write a presentation. You can tell your story, your achievements and your goals. Mantain objectivety and show your personality'
 				},
 
-				'fr-fr': {
+				'fr': {
 					presentation: 'Présentation',
 					presentationHelpText: 'Parlez de vous de manière objective et concise. Dites-nous qui est la personne qui se cache derrière votre CV. Vous pouvez raconter votre histoire, ce que vous faites ou aimeriez faire, vos aspirations et vos objectifs, par exemple. Cela peut aussi être un bon endroit pour montrer brièvement qui vous êtes en dehors du travail. La rédaction d\'une présentation est particulièrement importante si vous avez peu ou pas d\'expérience.',
 					placeholder: 'Rédigez une présentation. Vous pouvez raconter votre histoire, vos réalisations et vos objectifs. Restez objectif et montrez votre personnalité.'

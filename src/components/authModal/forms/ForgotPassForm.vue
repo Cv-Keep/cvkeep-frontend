@@ -80,7 +80,7 @@
           forgotPasswordEmailSent: 'An e-mail was sent to you. Please, check your inbox',
         },
         
-         'fr-fr': {
+         'fr': {
           send: 'Envoyer',
           doLogin: 'Se connecter',
           register: 'S\'enregistrer',

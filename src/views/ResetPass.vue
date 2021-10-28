@@ -117,7 +117,7 @@
 					'resetPassSuccessMessage': 'Password changed, this page will be redirected in 5 seconds',
 				},
 
-				'fr-fr': {
+				'fr': {
 					'defineYourNewPass': 'Définissez votre nouveau passe',
 					'definePass': 'Définir le mot de passe',
 					'invalidPassword': 'Mot de passe incorrect',

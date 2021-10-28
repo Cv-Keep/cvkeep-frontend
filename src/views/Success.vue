@@ -53,7 +53,7 @@ export default {
         'goHome': 'Homepage'        
       },
 
-      'fr-fr': {
+      'fr': {
         'allRight': 'D\'accord',
         'goHome': 'Page d\'accueil'
       },

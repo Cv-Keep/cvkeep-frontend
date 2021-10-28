@@ -39,7 +39,7 @@
 					imagineAGreatOne: 'Imagine a great one?',					
 				},
 
-				'fr-fr': {
+				'fr': {
 					goToCv: 'Accéder à mon CV',
 					startNow: 'Commencez maintenant',
 					aGoodCv: 'Un bon',

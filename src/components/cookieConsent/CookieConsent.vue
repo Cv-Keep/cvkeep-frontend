@@ -54,7 +54,7 @@
           cookieConsentText: 'This site uses Cookies and other methods of data persistence to improve the navigation experience and create personalized content for you. For more information on how we manage data, cookies and sensitive information, please read our <a href="/terms">Terms and Conditions</a>. By continuing to browse this site you will be in compliance with this Policy.',
         },
 
-         'fr-fr': {
+         'fr': {
           atention: 'Attention',
           understood: 'Je suis d\'accord.',
           cookieConsentText: 'Ce site utilise des Cookies et d\'autres méthodes de persistance des données pour améliorer l\'expérience de navigation et créer un contenu personnalisé pour vous. Pour plus d\'informations sur la manière dont nous gérons les données, les cookies et les informations sensibles, veuillez lire nos <a href="/terms">Termes et conditions</a>. En continuant à naviguer sur ce site, vous vous conformerez à cette politique.',

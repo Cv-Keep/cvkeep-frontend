@@ -34,7 +34,7 @@
 					homepage: 'Homepage'
 				},
 
-				'fr-fr': {
+				'fr': {
 					homepage: 'Page d\'accueil'
 				}
 			}

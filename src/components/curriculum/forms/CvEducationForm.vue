@@ -102,7 +102,7 @@
           titleCourse: 'Title / Course',
         },
 
-        'fr-fr': {
+        'fr': {
           degree: 'Degré',
           start: 'Début',
           situation: 'Situation',

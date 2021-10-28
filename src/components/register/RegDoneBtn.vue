@@ -107,7 +107,7 @@
 					}
 				},
 
-				'fr-fr': {
+				'fr': {
 					register: 'S\'enregistrer',
 					errors: {
 						noUsername: 'Vous devez définir un nom d\'utilisateur',

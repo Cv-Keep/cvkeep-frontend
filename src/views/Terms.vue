@@ -11,7 +11,7 @@
 <script>
 	const TermsEn = () => import( /* webpackChunkName: "Terms-En" */ '@/components/terms/terms-en.vue' )
 	const TermsPtBr = () => import( /* webpackChunkName: "Terms-Pt-Br" */ '@/components/terms/terms-pt-br.vue' )
-	const TermsFrFr = () => import( /* webpackChunkName: "Terms-Fr-Fr" */ '@/components/terms/terms-fr-fr.vue' )
+	const TermsFr = () => import( /* webpackChunkName: "Terms-fr" */ '@/components/terms/terms-fr.vue' )
 
 	export default {
 		name: 'Terms',
@@ -19,7 +19,7 @@
 		components: {
 			TermsEn,
 			TermsPtBr,
-			TermsFrFr
+			TermsFr
 		}
 	}
 </script>

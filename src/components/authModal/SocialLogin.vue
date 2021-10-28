@@ -78,7 +78,7 @@ export default {
         enterUsing: 'Enter using'
       },
 
-      'fr-fr': {
+      'fr': {
         enterUsing: 'Entrez en utilisant'
       }
     }

@@ -127,7 +127,7 @@
 				'pt-br': {
 					en: 'Inglês',
 					'pt-br': 'Português',
-					'fr-fr': 'Francês',
+					'fr': 'Francês',
 					yourName: 'Seu nome',
 					yourRole: 'Sua ocupação',
 					addYourLocation: 'Sua localidade',
@@ -140,7 +140,7 @@
 				'en': {
 					en: 'English',
 					'pt-br': 'Portuguese',
-					'fr-fr': 'French',
+					'fr': 'French',
 					yourName: 'Your name',
 					yourRole: 'Your occupation',
 					addYourLocation: 'Your location',
@@ -150,10 +150,10 @@
 					leavingCv: 'You are about to leave the CV editing and go to the Privacy Settings. Non saved data will be lost. Do yout want to proceed?'
 				},
 
-				'fr-fr': {
+				'fr': {
 					en: 'Anglais',
 					'pt-br': 'Portugais',
-					'fr-fr': 'Français',
+					'fr': 'Français',
 					yourName: 'Votre nom',
 					yourRole: 'Votre occupation',
 					addYourLocation: 'Votre localisation',

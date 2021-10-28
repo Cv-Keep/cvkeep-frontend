@@ -44,7 +44,7 @@
 					'addLinksHelpText': 'Add links here to your social networks, personal websites, blogs or any other type of service or information related to you that is relevant to your resume.'
 				},
 				
-				'fr-fr': {
+				'fr': {
 					'aditionalLinks': 'Liens',
 					'addLinksHelpText': 'Ajoutez ici des liens vers vos réseaux sociaux, vos sites Web personnels, vos blogs ou tout autre type de service ou d\'information vous concernant et pertinent pour votre CV.'
 				}

@@ -82,7 +82,7 @@
           icon: 'Icon',
         },
 
-        'fr-fr': {
+        'fr': {
           title: 'Titre',
           icons: 'Icône'
         }

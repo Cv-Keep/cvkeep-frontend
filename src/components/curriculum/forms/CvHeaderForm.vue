@@ -115,7 +115,7 @@
           contactPreference: 'Contact preference'
         },
 
-        'fr-fr': {
+        'fr': {
           country: 'Pays',
           state: 'État',
           city: 'Ville',

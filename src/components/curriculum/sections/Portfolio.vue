@@ -43,7 +43,7 @@
 					'portfolioHelpText': 'It may be that in your career it is important to have a portfolio, or you may already have one in an online service. If it is your reality, you can add a link to your portfolio here. If you don\'t have one but want to create one, feel free to use one of our suggestions, to see them just click "Add new item".'
 				},
 				
-				'fr-fr': {
+				'fr': {
 					'portfolioHelpText': 'Il se peut que dans votre carrière, il soit important d\'avoir un portfolio, ou que vous en ayez déjà un dans un service en ligne. Si c\'est votre réalité, vous pouvez ajouter un lien vers votre portfolio ici. Si vous n\'en avez pas mais que vous souhaitez en créer un, n\'hésitez pas à utiliser l\'une de nos suggestions, pour les voir il suffit de cliquer sur "Ajouter un nouvel élément"..'
 				}
 			}

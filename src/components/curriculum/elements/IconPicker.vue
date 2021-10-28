@@ -101,7 +101,7 @@
 					searchIcon: 'Search icon...',
 				},
 
-				'fr-fr': {
+				'fr': {
 					defaultIcon: 'Icône par défaut',
 					searchIcon: 'Icône de recherche...',
 				}

@@ -33,7 +33,7 @@ export default {
 				cvAsAnOnlineProfile: 'Your resumé as an online profile',
 			},
 
-			'fr-fr': {
+			'fr': {
 				goToCv: 'Accéder à mon CV',
 				startNow: 'Commencez maintenant',	
 				cvAsAnOnlineProfile: 'Votre CV comme profil en ligne',

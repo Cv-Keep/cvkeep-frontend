@@ -36,7 +36,7 @@ export default {
         'goHome': 'Homepage'
       },
 
-      'fr-fr': {
+      'fr': {
         'error': 'Erreur',
         'unknownError': 'Erreur inconnue',
         'goHome': 'Page d\'accueil',

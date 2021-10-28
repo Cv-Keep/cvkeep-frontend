@@ -15,7 +15,7 @@
       veuillez cesser immédiatement l'utilisation du site web.
     </p>
 
-    <h5>TERMES & ; CONDITIONS</h5>
+    <h5>TERMES & CONDITIONS</h5>
 
     <p>
       Le présent accord, connu ci-après sous le nom de Conditions générales, est juridiquement contraignant et exécutoire. Les utilisateurs ont été préalablement 
@@ -155,7 +155,7 @@
 
 <script>
   export default {
-    name: 'terms-fr-fr',
+    name: 'terms-fr',
 
     data () {
       return {

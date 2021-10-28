@@ -109,7 +109,7 @@
           cancel: 'Cancel'
         }, 
         
-        'fr-fr': {
+        'fr': {
           ok: 'Ok',
           cancel: 'Annuler'
         }
