@@ -144,6 +144,14 @@
 					'unknown': 'Unknown',
 					'demoModeMessage': 'You are on demonstration mode',
 					'loadCvUnexpectedError': 'An error has occurred while loading CV'
+				},
+
+				'fr-fr': {
+					'error': 'Erreur',
+					'atention': 'Attention',
+					'unknown': 'Inconnu',
+					'demoModeMessage': 'Vous êtes en mode démonstration',
+					'loadCvUnexpectedError': 'Une erreur s\'est produite lors du chargement du CV',
 				}
 			}
 		}		

@@ -35,6 +35,11 @@
 				'en': {
 					contact: 'Contact',
 					subtitle: 'You can contact us through the E-Mail address'
+				},
+
+				'fr-fr': {
+					'contact': 'Contact',
+					'subtitle': 'Vous pouvez nous contacter via l\'adresse e-mail',
 				}
 			}
 		}

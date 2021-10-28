@@ -113,6 +113,16 @@
           civilState: 'Civil state',
           contactNumber: 'Contact number',
           contactPreference: 'Contact preference'
+        },
+
+        'fr-fr': {
+          country: 'Pays',
+          state: 'État',
+          city: 'Ville',
+          currentRole: 'Rôle actuel',
+          civilState: 'État civil',
+          contactNumber: 'Numéro de contact',
+          contactPreference: 'Préférence de contact',
         }
       }
     }

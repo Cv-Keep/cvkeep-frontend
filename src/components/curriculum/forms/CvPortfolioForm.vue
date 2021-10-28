@@ -112,6 +112,12 @@
           icon: 'Icon',
           title: 'Title',
           suggestions: 'Suggestions',
+        },
+
+        'fr-fr': {
+          'icon': 'Icône',
+          'title': 'Titre',
+          'suggestions': 'Suggestions',
         }
       }
     }

@@ -80,6 +80,11 @@
         'en': {
           title: 'Title',
           icon: 'Icon',
+        },
+
+        'fr-fr': {
+          title: 'Titre',
+          icons: 'Icône'
         }
       }
     }

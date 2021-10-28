@@ -100,6 +100,15 @@
           conclusion: 'End',
           institution: 'Institution',
           titleCourse: 'Title / Course',
+        },
+
+        'fr-fr': {
+          degree: 'Degré',
+          start: 'Début',
+          situation: 'Situation',
+          conclusion: 'Finir',
+          institution: 'Institution',
+          titleCourse: 'Titre / Cours',          
         }
       }
     }

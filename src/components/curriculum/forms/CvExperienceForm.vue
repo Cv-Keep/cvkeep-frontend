@@ -116,6 +116,14 @@
           end: 'End',
           current: 'Current',
           describeYourXp: 'Describe your experience'                
+        },
+
+        'fr-fr': {
+          type: 'Type',
+          start: 'Start',
+          end: 'End',
+          current: 'Current',
+          describeYourXp: 'Describe your experience',
         }
       }
     }

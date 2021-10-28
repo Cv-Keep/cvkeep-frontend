@@ -107,7 +107,12 @@
 				'en': {
 					lessThan: 'Less than',
 					viewsPrefixPhrase: 'Number of times your CV has been visualized: ',
-				}				
+				},
+
+				'fr-fr': {
+					lessThan: 'Moins que',
+					viewsPrefixPhrase: 'Nombre de fois où votre CV a été visualisé :',
+				},
 			}
 		}
 	}

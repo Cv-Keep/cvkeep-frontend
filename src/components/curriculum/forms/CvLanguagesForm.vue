@@ -59,7 +59,11 @@
         },
 
         'en': {
-          language: 'Language'         
+          language: 'Language'
+        },
+
+        'fr-fr': {
+          language: 'Langue'
         }
       }
     }

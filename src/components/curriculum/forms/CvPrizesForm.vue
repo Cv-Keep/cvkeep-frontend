@@ -92,6 +92,14 @@
           date: 'Date',
           about: 'About',
           institution: 'Institution'
+        },
+
+        'fr-fr': {
+          'achievement': 'Réussite',
+          'title': 'Titre',
+          'date': 'Date',
+          'about': 'Sur',
+          'institution': 'Institution',
         }
       }
     }

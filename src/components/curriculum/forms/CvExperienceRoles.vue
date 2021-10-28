@@ -109,6 +109,16 @@
           start: 'From',
           end: 'Till',
           addRole: 'Add Role'
+        },
+
+        'fr-fr': {
+          roles: 'Un autre rôle',
+          role: 'Rôle',
+          yes: 'Oui',
+          no: 'Non',
+          start: 'De',
+          end: 'Jusqu\'à',
+          addRole: 'Ajouter un rôle',
         }
       }
     }

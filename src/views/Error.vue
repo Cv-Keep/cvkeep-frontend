@@ -34,6 +34,12 @@ export default {
         'error': 'Error',
         'unknownError': 'Unknown error',
         'goHome': 'Homepage'
+      },
+
+      'fr-fr': {
+        'error': 'Erreur',
+        'unknownError': 'Erreur inconnue',
+        'goHome': 'Page d\'accueil',
       }
     }
   }

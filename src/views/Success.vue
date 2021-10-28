@@ -51,7 +51,12 @@ export default {
       'en': {
         'allRight': 'All right',
         'goHome': 'Homepage'        
-      }
+      },
+
+      'fr-fr': {
+        'allRight': 'D\'accord',
+        'goHome': 'Page d\'accueil'
+      },
     }
   }
 }

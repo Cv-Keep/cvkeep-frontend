@@ -115,6 +115,14 @@
 					'invalidPassword': 'Invalid password :(',					
 					'resetPassSuccessPrefix': 'All done ;)',
 					'resetPassSuccessMessage': 'Password changed, this page will be redirected in 5 seconds',
+				},
+
+				'fr-fr': {
+					'defineYourNewPass': 'Définissez votre nouveau passe',
+					'definePass': 'Définir le mot de passe',
+					'invalidPassword': 'Mot de passe incorrect',
+					'resetPassSuccessPrefix': 'Terminé',
+					'resetPassSuccessMessage': 'Mot de passe modifié, cette page sera redirigée dans 5 secondes',
 				}
 			}
 		}
