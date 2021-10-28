@@ -26,5 +26,5 @@ Renan Luz
 Michel Ruan Alves Carvalho  
 Renato Vicente  
 Leo Fabiano Alves  
-Lucas Pierre de Alencar
+Lucas Pierre de Alencar  
 Weslley Fratini
