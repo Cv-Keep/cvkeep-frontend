@@ -34,7 +34,7 @@ app.get('*/service-worker.js', (req, res) => {
 app.get('/cv/:user', async (req, res, next) => {
 	const user = req.params.user;
 	res.$cv = user && await functions.getCv(user);
-	metatags.addCvMetaTagsOnPage(res.$cv, res.$index, req) :
+	metatags.addCvMetaTagsOnPage(res.$cv, res.$index, req);
 
 	next();
 });
