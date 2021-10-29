@@ -28,3 +28,4 @@ Renato Vicente
 Leo Fabiano Alves  
 Lucas Pierre de Alencar  
 Weslley Fratini
+Jorge Gabriel
