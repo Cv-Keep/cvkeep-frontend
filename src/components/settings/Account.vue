@@ -250,7 +250,7 @@
 					passwordRequiredWarning: 'Some settings may be unavailable because they require confirmation via password. Create a user password to unlock them.',
 					help: {
 						userName: 'Here you can change your username. Remember, your username appears in the address of your online curriculum, so prefer a short, friendly and descriptive one.',
-						yourEmail: 'Here you can change the e-Mail linked to your account. If you are doing Social Login, when modifying your e-Mail your social networks will be disconnected from this profile. To modify your e-Mail it is necessary that you have defined a user password, if you have not already done so, you can create it in the \'Create Password\' section of this page.',
+						yourEmail: 'Here you can change the e-Mail linked to your account. If you are doing Social Login, when modifying your e-Mail your social networks will be disconnected from this profile. To modify your e-Mail is necessary that you have defined a user password, if you have not already done so, you can create it in the \'Create Password\' section of this page.',
 						createPassword: 'You do not have a password yet, creating one will enable advanced administrative functions on your CV and ensure greater security for you.',
 						changePassword: 'Here you can modify the password you use to log in to your CV. Remember to use a safe one and not share it with anyone.',
 					},
