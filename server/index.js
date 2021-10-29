@@ -34,9 +34,9 @@ app.get('*/service-worker.js', (req, res) => {
 app.get('/cv/:user', async (req, res, next) => {
 	const user = req.params.user;
 	res.$cv = user && await functions.getCv(user);
-	
+
 	if (res.$cv && !res.$cv.locked) {
-		metatags.addCvMetaTagsOnPage(res.$cv, res.$index, req);
+		res.$index = metatags.addCvMetaTagsOnPage(res.$cv, res.$index, req);
 	}
 
 	next();
@@ -45,8 +45,8 @@ app.get('/cv/:user', async (req, res, next) => {
 // -----------------------------------------
 
 app.get('*', (req, res) => {
-	metatags.addDefaultMetaTagsOnPage(res.$index, req);
-	
+	res.$index = metatags.addDefaultMetaTagsOnPage(res.$index, req);
+
 	res.setHeader('Content-Type', 'text/html');
 	res.status(200).send(res.$index);
 });
