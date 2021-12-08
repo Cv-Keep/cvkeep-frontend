@@ -1,6 +1,5 @@
 <template>
 	<div ref="usermenu" class="user-menu" @click.self="showMenu" @mouseenter="showMenu" @mouseleave="hideMenu">
-
 		<span class="username">{{fullname}}</span>
 		<cv-avatar class="user" source="credentials"/>
 

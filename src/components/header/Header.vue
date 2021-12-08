@@ -9,7 +9,11 @@
 				</div>
 			</div>
 
-			<div class="right">
+			<div class="right" v-if="!$loadedCredentials">
+				<LoadingSpinner/>
+			</div>
+
+			<div class="right" v-else>
 				<template v-if="!$logged">
 					<a href="/" @click.prevent="$AuthModal.show()">
 						Login
@@ -30,16 +34,17 @@
 </template>
 
 <script>
-
 	import UserMenu from './UserMenu.vue'
 	import LangMenu from './LangMenu.vue'
+  import LoadingSpinner from '@/components/loading/LoadingSpinner.vue'
 
 	export default {
 		name: "header-main",
 		
 		components: {
 			UserMenu,
-			LangMenu
+			LangMenu,
+			LoadingSpinner
 		},
 
 		data() {
