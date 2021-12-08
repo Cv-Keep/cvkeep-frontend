@@ -36,7 +36,6 @@
       
       <input
         type="text"
-        minlength="4"
         maxlength="25"
         name="primaryNumber"
         v-model="curriculum.contact.primaryNumber"
