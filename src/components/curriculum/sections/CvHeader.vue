@@ -173,7 +173,7 @@
 	background-color: var(--cv-color);
 	display: grid;
 	grid-template-columns: 200px auto;
-	grid-gap: calc(var(--gutter) * 2);
+	column-gap: calc(var(--gutter) * 2);
 	border-top-left-radius: 18px;
 	border-top-right-radius: 18px;
 	.information {
