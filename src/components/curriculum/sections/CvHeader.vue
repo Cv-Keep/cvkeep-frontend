@@ -169,7 +169,7 @@
 
 <style lang="scss" scoped>
 .cv-header {
-	padding: var(--gutter);
+	padding: calc(var(--gutter) * 2) var(--gutter);
 	background-color: var(--cv-color);
 	display: grid;
 	grid-template-columns: 200px auto;
