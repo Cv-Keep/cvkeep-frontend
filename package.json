@@ -2,6 +2,9 @@
   "name": "cvkeep-frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node server/index.js",
     "build": "vue-cli-service build",
