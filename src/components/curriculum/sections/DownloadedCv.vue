@@ -7,21 +7,23 @@
 </template>
 
 <script>
+	import Utils from '@/shared/script/helpers/utils.js'
+
   export default {
     name: "downloaded-cv",
 
     i18n: {
       messages: {
         'pt-br': {
-          info: `Este currículo está disponível online no endereço <strong>${window.location.href}</strong>`
+          info: `Este currículo está disponível online no endereço <strong>${Utils.downloadedCvUrl()}</strong>`
         },
 
         'en': {  
-          info: `This curriculum is available online at <strong>${window.location.href}</strong>`
+          info: `This curriculum is available online at <strong>${Utils.downloadedCvUrl()}</strong>`
         },
 
         'fr': {  
-          info: `Ce programme est disponible en ligne à l'adresse suivante <strong>${window.location.href}</strong>`
+          info: `Ce programme est disponible en ligne à l'adresse suivante <strong>${Utils.downloadedCvUrl()}</strong>`
         }
       }
     }

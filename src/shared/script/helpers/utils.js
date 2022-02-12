@@ -135,5 +135,9 @@ export default {
 			$el.classList.add('shake');
 			setTimeout(() => { $el.classList.remove('shake') }, 400);
 		}
+	},
+
+	downloadedCvUrl() {
+		return window.location.href.replace('#download-pdf', '');		
 	}
 }
