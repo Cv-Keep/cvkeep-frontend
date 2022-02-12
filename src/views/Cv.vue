@@ -103,7 +103,9 @@
 						this.curriculum.editing = false;
 
 						setTimeout(async () => {
-              switch(ext.toLowerCase()) {
+							window.parent.postMessage('__LOADING_ON__', '*');
+
+							switch(ext.toLowerCase()) {
                 case 'png':
                   await HtmlDownload.downloadPng('.cv-wrapper__content', fileName);
                 break;
@@ -113,6 +115,7 @@
                 break;
 							}
 							
+							window.parent.postMessage('__LOADING_OFF__', '*');
 							clearState();
 						}, 1000);
 					});

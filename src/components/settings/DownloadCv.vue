@@ -42,6 +42,7 @@
 
     methods: {
       downloadCvFile (ext) {
+        this.$appLoading = true;
         const previousIframe = this.$refs.downloadCvRoot.querySelector('iframe')
         previousIframe && previousIframe.remove();
 

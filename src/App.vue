@@ -35,6 +35,16 @@
 
     mounted () {
       this.$root.$on('error', this.$toasted.error);
+
+      window.addEventListener('message', message => {
+        if (message.data === '__LOADING_ON__') {
+          this.$appLoading = true;
+        }
+
+        if (message.data === '__LOADING_OFF__') {
+          this.$appLoading = false;
+        }
+      });
     }
   }
 </script>
