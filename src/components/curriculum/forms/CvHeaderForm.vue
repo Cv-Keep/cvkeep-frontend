@@ -32,6 +32,12 @@
     </div>
 
     <div class="field">
+      <label for="publicEmail">{{ $t('publicEmail') }}</label>
+
+      <input type="email" name="publicEmail" v-model="curriculum.contact.publicEmail">
+    </div>
+
+    <div class="field">
       <label for="primaryNumber">{{ $t('contactNumber') }}</label>
       
       <input
@@ -101,7 +107,8 @@
           currentRole: 'Cargo atual',
           civilState: 'Estado civil',
           contactNumber: 'Número para contato',
-          contactPreference: 'Preferência de contato'
+          contactPreference: 'Preferência de contato',
+          publicEmail: 'E-mail público'
         },
 
         'en': {
@@ -111,7 +118,8 @@
           currentRole: 'Current role',
           civilState: 'Civil state',
           contactNumber: 'Contact number',
-          contactPreference: 'Contact preference'
+          contactPreference: 'Contact preference',
+          publicEmail: 'Public e-mail'
         },
 
         'fr': {
@@ -122,6 +130,7 @@
           civilState: 'État civil',
           contactNumber: 'Numéro de contact',
           contactPreference: 'Préférence de contact',
+          publicEmail: 'E-mail public'
         }
       }
     }

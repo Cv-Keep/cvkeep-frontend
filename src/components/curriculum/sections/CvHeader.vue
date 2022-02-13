@@ -22,11 +22,16 @@
 				<li v-if="civilState && civilState !== 'doNotInform'">
 					<div><i class="fa fa-ring"></i></div>
 					<div>{{ $t(`civilStates.${civilState}`) }}</div>
-				</li>
+				</li>		
 
 				<li v-if="primaryNumber">
 					<div><i :class="contactIcon"></i></div>
 					<div>{{primaryNumber}}</div>
+				</li>
+
+				<li v-if="publicEmail">
+					<div><i class="fa fa-envelope"></i></div>
+					<div>{{publicEmail}}</div>
 				</li>
 			</ul>
 
@@ -80,6 +85,7 @@
 				role: cv => cv.basics.role,
 				location: cv => cv.location,
 				civilState: cv => cv.civilState,
+				publicEmail: cv => cv.contact.publicEmail,
 				primaryNumber: cv => cv.contact.primaryNumber
 			}),
 
