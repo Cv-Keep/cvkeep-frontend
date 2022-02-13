@@ -2,7 +2,7 @@
   <cv-form :title="title" @close="$emit('close')">
     <div class="field">
       <label for="role">{{ $t('currentRole') }}</label>
-      <input type="text" autocomplete="off" max-length="200" v-model="curriculum.basics.role" autofocus required>
+      <input type="text" autocomplete="off" max-length="200" v-model="curriculum.basics.role" autofocus>
     </div>
 
     <div class="field">
