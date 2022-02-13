@@ -8,19 +8,19 @@
     <div class="field">
       <label for="country">{{ $t('country') }}</label>
 
-      <input type="text" name="country" v-model="curriculum.location.country" required>
+      <input type="text" name="country" v-model="curriculum.location.country">
     </div>
 
     <div class="field">
       <label for="region">{{ $t('state') }}</label>
 
-      <input type="text" name="region" v-model="curriculum.location.region" required>
+      <input type="text" name="region" v-model="curriculum.location.region">
     </div>
 
     <div class="field">
       <label for="city">{{ $t('city') }}</label>
 
-      <input type="text" name="city" v-model="curriculum.location.city" required>
+      <input type="text" name="city" v-model="curriculum.location.city">
     </div>
 
     <div class="field">
