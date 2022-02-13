@@ -14,9 +14,9 @@
 					<div>{{location.city}} - <span class="region">{{location.region}}</span></div>
 				</li>
 
-				<li>
+				<li v-if="location.country">
 					<div><i class="fa fa-flag"></i></div>
-					<div :data-placeholder="$t('addYourLocation')">{{location.country}}</div>
+					<div>{{location.country}}</div>
 				</li>
 
 				<li v-if="civilState && civilState !== 'doNotInform'">
