@@ -35,7 +35,7 @@
 				</li>
 			</ul>
 
-			<cv-header-form title="Informações Básicas" @close="edit(false)" v-if="editModal"/>
+			<cv-header-form :title="$t('basicInformation')" @close="edit(false)" v-if="editModal"/>
 		</div>
 
 		<span class="cv-top-right-badge cv-locale-flag-badge" :title="`${$t(this.$logged ? 'cvLangPreferenceLogged' : 'cvLangPreference')} ${$t(cvLang)}`">
@@ -137,6 +137,7 @@
 					yourName: 'Seu nome',
 					yourRole: 'Sua ocupação',
 					addYourLocation: 'Sua localidade',
+					basicInformation: 'Informações básicas',
 					privacyPreferences: 'Preferencias de Privacidade',
 					cvLangPreference: 'O proprietário deste CV preferiu exibi-lo em ',
 					cvLangPreferenceLogged: 'Idioma em que este CV será exibido para os visitantes - ',
@@ -150,6 +151,7 @@
 					yourName: 'Your name',
 					yourRole: 'Your occupation',
 					addYourLocation: 'Your location',
+					basicInformation: 'Basic information',
 					privacyPreferences: 'Privacy preferences',
 					cvLangPreference: 'The owner of this CV preferred to display it in',
 					cvLangPreferenceLogged: 'Language in which this CV will be displayed to visitors - ',
@@ -163,6 +165,7 @@
 					yourName: 'Votre nom',
 					yourRole: 'Votre occupation',
 					addYourLocation: 'Votre localisation',
+					basicInformation: 'Informations de base',
 					privacyPreferences: 'Préférences en matière de confidentialité',
 					cvLangPreference: 'Le propriétaire de ce CV a préféré l\'exposer en',
 					cvLangPreferenceLogged: 'Langue dans laquelle ce CV sera affiché aux visiteurs - ',
