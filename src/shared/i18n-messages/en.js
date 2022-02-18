@@ -19,6 +19,7 @@ export default {
     },  
   },
   educationTypes: {
+    bachelor: 'Bachelor',
     highSchool: 'High School',
     universityEducation: 'University',
     onlineCourse: 'Online Course',
@@ -29,7 +30,7 @@ export default {
     technician: 'Technician',
     doctorateDegree: 'Doctorate Degree',
     postgraduateStudies: 'Postgraduate',
-    master: 'Mater',
+    master: 'Master',
     phD: 'PhD',
     specialization: 'Specialization',
     training: 'Training',
