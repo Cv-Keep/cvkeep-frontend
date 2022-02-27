@@ -18,6 +18,7 @@ export default {
     }
   },
   educationTypes: {
+    bachelor: 'Bacharelado',
     highSchool: 'Ensino Médio',
     universityEducation: 'Ensino Superior',
     onlineCourse: 'Curso Online',

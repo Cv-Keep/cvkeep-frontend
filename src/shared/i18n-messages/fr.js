@@ -19,6 +19,7 @@ export default {
       },  
     },
     educationTypes: {
+      bachelor: 'Baccalauréat',
       highSchool: 'École secondaire',
       universityEducation: 'Université',
       onlineCourse: 'Cours en ligne',
