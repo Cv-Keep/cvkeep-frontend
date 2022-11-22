@@ -6,13 +6,13 @@
 
 			<section-availability/>
 			<section-presentation/>
+			<section-find-me-at/>
 			<section-education/>
 			<section-experience/>
 			<section-languages/>
 			<section-skills/>
 			<section-prizes/>
 			<section-portfolio/>
-			<section-find-me-at/>
 			<section-downloaded-cv v-if="application.downloadingCv"/>
 		</cv-wrapper>
 	</div>
