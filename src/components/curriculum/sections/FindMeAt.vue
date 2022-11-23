@@ -44,9 +44,9 @@
 			},
 
 			customTitle: {
-				get () { return this.$store.state.curriculum.presentation.customTitle },
-				set (value) { this.$store.state.curriculum.presentation.customTitle = value }
-			}			
+				get () { return this.$store.state.curriculum.links.customTitle },
+				set (value) { this.$store.state.curriculum.links.customTitle = value }
+			}
 		},
 
 		i18n: {
