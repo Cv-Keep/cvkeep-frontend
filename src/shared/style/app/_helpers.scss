@@ -74,3 +74,11 @@
 .break-word {
 	word-break: break-word;
 }
+
+.nowrap-editable {
+	white-space: break-spaces;
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+	overflow: hidden;	
+}

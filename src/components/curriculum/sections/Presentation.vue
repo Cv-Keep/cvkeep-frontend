@@ -3,7 +3,12 @@
 		<section-controls :help="$t('presentationHelpText')" :helpTitle="$t('presentation')" :sectionTagName="sectionTag"/>
 
 		<div class="cv-presentation__content">
-			<h3>{{ $t('presentation') }}</h3>
+			<h3
+				:class="{ 'editable': $editing, 'nowrap-editable': $editing }"
+				v-contenteditable:customTitle="$editing"
+			>
+				{{ (customTitle || '').trim() || $t('presentation') }}
+			</h3>
 			
 			<text-limited :limit="this.maxlen" v-if="$editing" class="editable" v-contenteditable:description="$editing" :data-placeholder="$t('placeholder')">
 				{{ description }}
@@ -45,6 +50,11 @@
 				'hiddenSections',
 				'presentation'
 			]),
+
+			customTitle: {
+				get () { return this.$store.state.curriculum.presentation.customTitle },
+				set (value) { this.$store.state.curriculum.presentation.customTitle = value }
+			},
 
 			description: {
 				get () { return this.$store.state.curriculum.presentation.description },
