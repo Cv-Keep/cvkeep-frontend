@@ -87,6 +87,9 @@
 				.addbar {
 					margin-bottom: 0;
 				}
+				h3 {
+					color: #333;
+				}
 			}
 			
 			&.downloading-as-image {
