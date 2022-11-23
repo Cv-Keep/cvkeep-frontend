@@ -3,13 +3,18 @@
 		<section-controls :help="$t('presentationHelpText')" :helpTitle="$t('presentation')" :sectionTagName="sectionTag"/>
 
 		<div class="cv-presentation__content">
-			<h3
-				v-contenteditable:customTitle="$editing"
-				:class="{ 'editable': $editing, 'nowrap-editable': $editing }"
-				:data-placeholder="$t('presentation')"
-			>
-				{{ $t('presentation') }}
-			</h3>
+			<div class="section-title">
+				<h3
+					v-if="$editing"
+					v-contenteditable:customTitle="$editing"
+					:class="{ 'editable': $editing, 'nowrap-editable': $editing }"
+					:data-placeholder="$t('presentation')"
+				></h3>
+				
+				<h3 v-else>
+					{{ customTitle || $t('presentation') }}
+				</h3>
+			</div>
 			
 			<text-limited :limit="this.maxlen" v-if="$editing" class="editable" v-contenteditable:description="$editing" :data-placeholder="$t('placeholder')">
 				{{ description }}
