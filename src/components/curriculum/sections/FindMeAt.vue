@@ -2,7 +2,19 @@
 	<section class="cv-links" v-if="display">
 		<section-controls :help="$t('addLinksHelpText')" :helpTitle="$t('aditionalLinks')" :sectionTagName="sectionTag"/>
 
-		<h3>{{ $t('aditionalLinks' )}}</h3>
+		<div class="section-title">
+			<h3
+				v-if="$editing"
+				v-contenteditable:customTitle="$editing"
+				:class="{ 'editable': $editing, 'nowrap-editable': $editing }"
+				:data-placeholder="$t('aditionalLinks')"
+			></h3>
+			
+			<h3 v-else>
+				{{ customTitle || $t('aditionalLinks') }}
+			</h3>
+		</div>
+
 		<find-me-list/>
 	</section>
 </template>
@@ -29,7 +41,12 @@
 		computed: {
 			display () {
 				return Utils.canDisplayCvSection(this, 'links');
-			}
+			},
+
+			customTitle: {
+				get () { return this.$store.state.curriculum.presentation.customTitle },
+				set (value) { this.$store.state.curriculum.presentation.customTitle = value }
+			}			
 		},
 
 		i18n: {
