@@ -74,7 +74,7 @@
 			border: solid 4px var(--stripe-color);
 			> section {
 				position: relative;
-				padding: calc(var(--gutter) * 2) var(--gutter);
+				padding: var(--gutter);
 				&:nth-child(even) {
 					background-color: var(--stripe-color);
 					.cv-card {
