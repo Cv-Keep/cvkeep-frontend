@@ -5,6 +5,7 @@
 		<div class="cv-presentation__content">
 			<h3
 				:class="{ 'editable': $editing, 'nowrap-editable': $editing }"
+				:data-placeholder="$t('presentation')"
 				v-contenteditable:customTitle="$editing"
 			>
 				{{ $t('presentation') }}
