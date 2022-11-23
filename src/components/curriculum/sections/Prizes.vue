@@ -2,7 +2,19 @@
 	<section class="cv-prizes" v-if="display">
 		<section-controls :help="$t('prizesHelpText')" :helpTitle="$t('prizes')" :sectionTagName="sectionTag"/>
 
-		<h3>{{ $t('prizes') }}</h3>
+		<div class="section-title">
+			<h3
+				v-if="$editing"
+				v-contenteditable:customTitle="$editing"
+				:class="{ 'editable': $editing, 'nowrap-editable': $editing }"
+				:data-placeholder="$t('prizes')"
+			></h3>
+			
+			<h3 v-else>
+				{{ customTitle || $t('prizes') }}
+			</h3>
+		</div>
+
 		<prizes-list/>
 	</section>
 </template>
@@ -29,7 +41,12 @@
 		computed: {
 			display () {
 				return Utils.canDisplayCvSection(this, 'prizes');
-			}	
+			},
+
+			customTitle: {
+				get () { return this.$store.state.curriculum.prizes.customTitle },
+				set (value) { this.$store.state.curriculum.prizes.customTitle = value }
+			}			
 		},
 
 		i18n: {
