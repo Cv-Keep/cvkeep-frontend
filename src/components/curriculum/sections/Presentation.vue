@@ -7,7 +7,7 @@
 				:class="{ 'editable': $editing, 'nowrap-editable': $editing }"
 				v-contenteditable:customTitle="$editing"
 			>
-				{{ (customTitle || '').trim() || $t('presentation') }}
+				{{ $t('presentation') }}
 			</h3>
 			
 			<text-limited :limit="this.maxlen" v-if="$editing" class="editable" v-contenteditable:description="$editing" :data-placeholder="$t('placeholder')">
