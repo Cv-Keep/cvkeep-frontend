@@ -49,8 +49,8 @@
   .section-controls {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    display: inline-block;
     &__content {
       display: flex;
       align-items: center;
