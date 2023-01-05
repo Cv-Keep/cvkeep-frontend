@@ -150,6 +150,26 @@
       <li>Accéder au contenu du site web par des moyens non conventionnels autres que ceux fournis ou autorisés par {{host}}</li>.
       <li>Bypasser les mesures utilisées pour empêcher ou restreindre l'accès au site web, y compris, mais sans s'y limiter, les fonctionnalités qui empêchent ou restreignent l'utilisation, la copie de tout contenu, ou l'application de limitations à l'utilisation du site web.</li>
     </ul>
+
+    <h5>SUPPRESSION DES DONNÉES</h5>
+
+    <p>
+      À tout moment, vous pouvez supprimer vos données de CV Keep. Une fois que vous aurez demandé la suppression de votre compte, nous supprimerons automatiquement vos données.
+      Pour résilier votre compte CV Keep, vous devez suivre ces étapes :
+    </p>
+
+    <ol>
+      <li>Accédez à <a href="https://cvkeep.com/settings" target="_blank">https://cvkeep.com/settings</a></li>
+      <li>Cliquez sur le bouton <strong>Désactiver mon compte</strong></li>
+      <li>Si vous n'avez pas de mot de passe de compte, vous devrez le créer</li>
+      <li>Confirmez la demande de désactivation sur le modal</li>
+      <li>Vous recevrez un e-mail de confirmation avec un lien pour effectuer la suppression du compte et des données</li>
+      <li>Accédez à votre boîte de réception et cliquez sur le lien de confirmation</li>
+    </ol>
+
+    <p>
+      Ce processus est irréversible.
+    </p>    
   </div>
 </template>
 

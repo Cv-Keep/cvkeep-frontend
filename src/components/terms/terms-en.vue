@@ -150,6 +150,26 @@
       <li>Accessing content on the website through unconventional means other than those provided or authorized by {{host}}</li>
       <li>Bypassing the measures used to prevent or restrict access to the website, including, but not limited to features that prevent or restrict use, copying of any content, or enforcing limitations on use of the website.</li>
     </ul>
+
+    <h5>DATA DELETION</h5>
+
+    <p>
+      At any time you can remove your data from CV Keep. Once you request your account deletion, we will automatically remove your data.
+      To terminate your CV Keep account you must follow this steps:
+    </p>
+    
+    <ol>
+      <li>Navigate to <a href="https://cvkeep.com/settings" target="_blank">https://cvkeep.com/settings</a></li>
+      <li>Click on the button <strong>Deactivate my account</strong></li>
+      <li>If you dont have an account password, you will need to create it</li>
+      <li>Confirm the deactivation request on the modal</li>
+      <li>You will receive an confirmation e-mail with a Link to perform de account and data deletion</li>
+      <li>Go to your inbox and click on the confirmation link</li>
+    </ol>
+
+    <p>
+      This process is irreversible.
+    </p>
   </div>
 </template>
 
