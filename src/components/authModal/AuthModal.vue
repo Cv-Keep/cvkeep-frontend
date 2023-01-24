@@ -101,7 +101,7 @@ export default {
 	data() {
 		return {
 			active: false,
-			withEmail: false,
+			withEmail: true,
 			signInText: '',
 			signUpText: '',
 			forgotPassText: '',
@@ -147,7 +147,7 @@ export default {
 		},
 
 		slideTo (index) {
-			this.withEmail = false;
+			this.withEmail = true;
 			if(this.$refs.sw) this.$refs.sw.swiper.slideTo(index, 200);
 		},
 

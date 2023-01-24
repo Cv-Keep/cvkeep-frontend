@@ -1,11 +1,11 @@
 <template>
   <auth-form @on-submit="signIn" :loading="loading">
     <div class="inputs">
-      <div class="field">
+      <!-- <div class="field">
         <span class="go-back" @click="$emit('go-back')">
           <i class="fa fa-arrow-left block"></i> {{ $t('goBack') }}
         </span>
-      </div>
+      </div> -->
 
       <div class="field">
         <i class="fa fa-envelope"></i>
