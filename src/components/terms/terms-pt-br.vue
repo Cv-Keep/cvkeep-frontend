@@ -150,6 +150,26 @@
       <li>Acessando o conteúdo do site por meios não convencionais, exceto aqueles fornecidos ou autorizados por {{host}}</li>
       <li>Ignorar as medidas usadas para prevenir ou restringir o acesso ao site, incluindo, mas não se limitando a recursos que impedem ou restringem o uso, cópia de qualquer conteúdo ou imposição de limitações no uso do site.</li>
     </ul>
+
+    <h5>EXCLUSÃO DE DADOS</h5>
+
+    <p>
+      A qualquer momento você pode remover seus dados do CV Keep. Depois de solicitar a exclusão da sua conta, removeremos automaticamente seus dados.
+      Para encerrar sua conta CV Keep, você deve seguir estas etapas:
+    </p>
+
+    <ol>
+      <li>Navegue até <a href="https://cvkeep.com/settings" target="_blank">https://cvkeep.com/settings</a></li>
+      <li>Clique no botão <strong>Desativar minha conta</strong></li>
+      <li>Se você não tiver uma senha de conta, precisará criá-la</li>
+      <li>Confirme a solicitação de desativação no modal</li>
+      <li>Você receberá um e-mail de confirmação com um Link para realizar a exclusão da conta e dos dados</li>
+      <li>Vá para sua caixa de entrada e clique no link de confirmação</li>
+    </ol>
+
+    <p>
+      Este processo é irreversível.
+    </p>    
   </div>
 </template>
 

@@ -2,22 +2,13 @@
     
     <div :class="`cv-view ${$editing ? 'cv-editing' : 'cv-viewing'}`" :style="dynamicStyle">
 
-        <div v-if="mustShowResults" class="search-result">
-            <div class="search-result__items">
-                <result-card v-for="(item, index) in result.items" :key="index" :item="item"></result-card>
-            </div>
-        </div>
-
-        <div v-if="loading" class="search-loading">
-            <loading-spinner/>
-        </div>
-
         <cv-wrapper>
             <cv-actions/>
             <cv-header/>
 
             <section-availability/>
             <section-presentation/>
+            <section-find-me-at/>
             <section-education/>
             <section-experience/>
             <section-languages/>
@@ -36,10 +27,6 @@
     import { mapState } from 'vuex'
     import API from '@/shared/script/api/api.js'
     import CvWrapper from '@/components/curriculum/wrapper/CvWrapper.vue'
-
-    import ResultCard from '@/components/search/ResultCardLine.vue'
-    import LoadingSpinner from '@/components/loading/LoadingSpinner.vue'
-
 
     const CvHeader = () => import(/* webpackChunkName: "CvHeader" */ '@/components/curriculum/sections/CvHeader.vue')
     const CvActions = () => import(/* webpackChunkName: "CvActions" */ '@/components/curriculum/actions/CvActions.vue')
@@ -71,8 +58,6 @@
             SectionPortfolio,
             SectionFindMeAt,
             SectionDownloadedCv,
-            ResultCard,
-            LoadingSpinner,
         },
         data() {
             return {
