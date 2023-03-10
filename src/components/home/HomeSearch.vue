@@ -16,7 +16,12 @@ export default {
 
   components: {
     SearchSimpleInput
-  }
+  },
+  data() {
+      return {
+          home: true,
+      }
+  },
 }
 </script>
 

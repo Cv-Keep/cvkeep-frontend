@@ -1,5 +1,5 @@
 <template>
-  <div class="search-view">
+  <div class="search-view" >
     <div class="search-view__header">
       <div class="content">
         <div class="search-form">
@@ -141,6 +141,7 @@ export default {
     simpleInputVal && this.search(simpleInputVal);
 
   },
+  
 
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll);
@@ -156,7 +157,7 @@ export default {
       .search-form {
         padding: 56px 0;
         transition: 500ms;
-        background-color: rgba(150,150,150,.2);
+        // background-color: rgba(150,150,150,.2);
         form {
           margin: 0;
         }

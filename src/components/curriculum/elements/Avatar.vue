@@ -186,7 +186,7 @@
 <style lang="scss" scoped>
 	.avatar-root {
 		width: 200px;
-		margin: 0 auto;
+		// margin: 0 auto;
 		position: relative;
 		text-align: center;
 		.avatar {

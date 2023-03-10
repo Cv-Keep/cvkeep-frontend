@@ -6,8 +6,8 @@ Vue.use(VueI18n)
 
 const i18n = new VueI18n({
   messages,
-  locale: 'en',
-  fallbackLocale: 'en',
+  locale: 'fr',
+  fallbackLocale: 'fr',
   silentFallbackWarn: true,
 });
 

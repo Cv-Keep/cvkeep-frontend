@@ -3,7 +3,7 @@
 		<home-hero/>
 
 		<div class="home-box">
-			<home-search/>
+			<home-search v-if="$logged"/>
 			<home-features/>
 		</div>
 		
@@ -28,7 +28,7 @@
 			HomeSearch,
 			HomeSupport,
 			HomeFoot
-		}
+		},
 	}
 </script>
 

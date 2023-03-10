@@ -56,10 +56,11 @@
 	.home-foot {
 		padding: 60px 46px;
 		padding-bottom: 0;
-		background-color: var(--secondary-color);
+		// background-color: var(--secondary-color);
+		background-color: #ffffff;
 		.container {
 			display: flex;
-			color: #ffffff;
+			color: black;
 			button {
 				opacity: 1;
 				width: auto;

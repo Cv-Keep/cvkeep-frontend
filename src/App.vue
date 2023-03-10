@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <app-header/>
     
     <main>
@@ -45,7 +46,16 @@
           this.$appLoading = false;
         }
       });
-    }
+    },
+
+    methods: {
+      logPath() {
+        const apiUrl = process.env.VUE_APP_API_URL;
+        const username = this.info.username;
+
+        return `${apiUrl}/avatar/getuseravatar/${username}`;
+      }
+    },
   }
 </script>
 

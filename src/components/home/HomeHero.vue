@@ -5,7 +5,7 @@
     </div>
 
     <div class="container">
-      <h1 class="shadow text1">{{String($brandName).toUpperCase()}}</h1>
+      <h1 class="shadow text1"><!--{{String($brandName).toUpperCase()}}--> LAHIKI Pro</h1>
       <h2><span>{{ $t('cvAsAnOnlineProfile') }}</span></h2>
 
 			<button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()">
@@ -50,9 +50,9 @@ export default {
 		$dot-size: 2px;
 		$dot-space: 14px;
 		background-color: #ffffff;
-		background:
-			linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
-			linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;
+		// background:
+		// 	linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		// 	linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center, $dot-color;
 		background-size: $dot-space $dot-space;
 
 		padding-top: 100px;
@@ -64,21 +64,21 @@ export default {
 		overflow: hidden;
 
 		h1 {
-			letter-spacing: 23px;
+			// letter-spacing: 23px;
 			margin-bottom: 8px;
 			font-size: calc(30px + 5vw);
 			font-weight: 700;
 			margin-right: -.5ch;
 			font-weight: bold;
-			text-shadow:
-				-3px -3px 0 #fff,
-				3px -3px 0 #fff,
-				-3px 3px 0 #fff,
-				3px 3px 0 #fff,
-				4px 4px 0 var(--primary-color),
-				5px 5px 0 var(--primary-color),
-				6px 6px 0 var(--primary-color),
-				7px 7px 0 var(--primary-color) !important;
+			// text-shadow:
+			// 	-3px -3px 0 #fff,
+			// 	3px -3px 0 #fff,
+			// 	-3px 3px 0 #fff,
+			// 	3px 3px 0 #fff,
+			// 	4px 4px 0 var(--primary-color),
+			// 	5px 5px 0 var(--primary-color),
+			// 	6px 6px 0 var(--primary-color),
+			// 	7px 7px 0 var(--primary-color) !important;
 			strong {
 				font-size: 700;
 			}

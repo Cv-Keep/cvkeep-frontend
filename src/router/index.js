@@ -33,13 +33,19 @@ export default new Router({
 			name: 'home',
 			component: Home
 		},
+		
 		{
 			path: '/cv/:user?',
 			name: 'cv',
 			component: Cv,
 			beforeEnter: (to, from, next) => {
+				// si recherche dans cv
+				if( to.params.user && to.path == "/cv/search" ){
+					// console.log("next", to); 
+					next({ name: 'search', query: {subject: to.query.subject} });
+				}
 				!to.params.user ? next({ name: 'home' }) : next();
-      }
+			}
 		},
 		{
 			path: '/confirm/',
@@ -49,7 +55,7 @@ export default new Router({
 		{
 			path: '/search/',
 			name: 'search',
-			component: Search
+			component: Search,
 		},
 		{
 			path: '/reset-pass/',

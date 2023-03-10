@@ -1,41 +1,52 @@
 <template>
 	<header class="cv-header">
+		<div class="globb"></div>
+
 		<cv-avatar/>
 
-		<div class="information">
-			<h1 class="editable break-word" @keypress.enter.prevent v-contenteditable:fullname="$editing" :data-placeholder="$t('yourName')">{{ fullname }}</h1>
-			<h5 class="editable break-word pointer-all" @click="edit(true)" :data-placeholder="$t('yourRole')">{{ role }}</h5>
-			
-			<hr>
+		<div class="container-info-edu" >
+			<div class="information">
+				<h1 class="editable break-word" @keypress.enter.prevent v-contenteditable:fullname="$editing" :data-placeholder="$t('yourName')">{{ fullname }}</h1>
+				<h5 class="editable break-word pointer-all" @click="edit(true)" :data-placeholder="$t('yourRole')">{{ role }}</h5>
+				
+				<hr>
 
-			<ul class="editable pointer" @click="edit(true)">
-				<li v-if="location.city || location.region">
-					<div><i class="fa fa-home"></i></div>
-					<div>{{location.city}} - <span class="region">{{location.region}}</span></div>
-				</li>
+				<ul class="editable pointer" @click="edit(true)">
+					<li v-if="location.city || location.region">
+						<div><i class="fa fa-home"></i></div>
+						<div>{{location.city}} - <span class="region">{{location.region}}</span></div>
+					</li>
 
-				<li v-if="location.country">
-					<div><i class="fa fa-flag"></i></div>
-					<div>{{location.country}}</div>
-				</li>
+					<li v-if="location.country">
+						<div><i class="fa fa-flag"></i></div>
+						<div>{{location.country}}</div>
+					</li>
 
-				<li v-if="civilState && civilState !== 'doNotInform'">
-					<div><i class="fa fa-ring"></i></div>
-					<div>{{ $t(`civilStates.${civilState}`) }}</div>
-				</li>		
+					<li v-if="civilState && civilState !== 'doNotInform'">
+						<div><i class="fa fa-ring"></i></div>
+						<div>{{ $t(`civilStates.${civilState}`) }}</div>
+					</li>		
 
-				<li v-if="primaryNumber">
-					<div><i :class="contactIcon"></i></div>
-					<div>{{primaryNumber}}</div>
-				</li>
+					<li v-if="primaryNumber">
+						<div><i :class="contactIcon"></i></div>
+						<div>{{primaryNumber}}</div>
+					</li>
 
-				<li v-if="publicEmail">
-					<div><i class="fa fa-envelope"></i></div>
-					<div>{{publicEmail}}</div>
-				</li>
-			</ul>
+					<li v-if="publicEmail">
+						<div><i class="fa fa-envelope"></i></div>
+						<div>{{publicEmail}}</div>
+					</li>
+				</ul>
 
-			<cv-header-form :title="$t('basicInformation')" @close="edit(false)" v-if="editModal"/>
+				<cv-header-form  :title="$t('basicInformation')" @close="edit(false)" v-if="editModal"/>
+			</div>
+		
+
+			<section class="cv-education" >
+				<section-controls :help="$t('educationHelpText')" :helpTitle="$t('education')" :sectionTagName="sectionTag"/>
+
+				<education-list/>
+			</section>
 		</div>
 
 		<span class="cv-top-right-badge cv-locale-flag-badge" :title="`${$t(this.$logged ? 'cvLangPreferenceLogged' : 'cvLangPreference')} ${$t(cvLang)}`">
@@ -68,6 +79,7 @@
 	import i18nMessages from '@/shared/i18n-messages'
 	import SimpleTooltip from '@/components/tooltip/tooltip.vue'
 	import CvHeaderForm from '@/components/curriculum/forms/CvHeaderForm.vue'
+	import EducationList from '../elements/EducationList.vue'
 
 	export default {
 		name: "cv-header",
@@ -76,6 +88,7 @@
 			CvAvatar,
 			CvHeaderForm,
 			SimpleTooltip,
+			EducationList,
 		},
 
 		computed: {
@@ -178,14 +191,17 @@
 
 <style lang="scss" scoped>
 .cv-header {
+	position: relative;
+	overflow: hidden;
 	padding: calc(var(--gutter) * 2) var(--gutter);
 	background-color: var(--cv-color);
-	display: grid;
+	// display: grid;
 	grid-template-columns: 200px auto;
 	column-gap: calc(var(--gutter) * 2);
 	border-top-left-radius: 18px;
 	border-top-right-radius: 18px;
 	.information {
+		z-index: 2;
 		> h5 {
 			margin-bottom: calc(var(--gutter) / 2);
 		}
@@ -281,4 +297,30 @@
 		}
 	}
 }
+</style>
+
+
+<style type="text/css">
+	.container-info-edu {
+		display: flex;
+		background-color: white;
+	}
+
+	.container-info-edu > div, .container-info-edu > section {
+		flex: 50%;
+		padding: 20px;
+		background-color: transparent;
+	}
+
+
+	.globb {
+		position: absolute;
+		top: 140px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: white;
+		border-radius: 0 0 20px 20px;
+		z-index: 0;
+	}
 </style>

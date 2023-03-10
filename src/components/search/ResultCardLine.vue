@@ -2,32 +2,19 @@
   <a v-if="info && $logged" :href="`cv/${info.username}`" class="result-card" rel="noopener noreferrer">
     <div class="result-card__content">
       <div class="result-card__head">
-        <img :src="getAvatarUrl()" :alt="`${info.basics.fullname}'s profile image`" class="profile-photo">
-
-        <div class="fast-info">
-          <div class="fast-info__left">
-            <div class="cv-color-hr" :style="`background-color: ${info.color}`"></div>
-          </div>
-
-          <div class="fast-info__right">
-            <span class="badge" v-for="badge in badges" :key="badge.key">
-              <i :class="`fa ${badge.icon}`"></i>
-            </span>
-          </div>
+        <div class="result-card__head_child">
+          <img :src="getAvatarUrl()" :alt="`${info.basics.fullname}'s profile image`" class="profile-photo">
         </div>
       </div>
 
       <div class="result-card__body">
-        <p class="fullname">
-          <span>{{info.basics.fullname}}</span>
-        </p>
+        <div class="result-card__body_child">
+          <p class="fullname">
+            <span>{{info.basics.fullname}}</span>
+          </p>
 
-        <p class="role">{{info.basics.role}}</p>
-      </div>
-
-      <div class="result-card__footer">
-        <p>{{info.location.city}} - {{info.location.region}}</p>
-        <p>{{info.location.country}}</p>
+          <p class="role">{{info.basics.role}}</p>
+        </div>
       </div>
     </div>
   </a>
@@ -75,10 +62,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// .search-result {
+//   &__items {
+//     flex-direction: column;
+//   }
+// }
+
 .result-card {
   width: 100%;
-  max-width: 288px;
-  margin: var(--gutter);
+  // max-width: 288px;
+  // margin: var(--gutter);
+  margin: 5px;
   text-decoration: none;
   display: inline-block;
   &__content {
@@ -86,15 +80,16 @@ export default {
     overflow: hidden;
     transition: 150ms;
     display: flex;
-    flex-direction: column;    
+    // flex-direction: column;    
     box-shadow: var(--box-shadow-a);
     border-radius: var(--border-radius);
   }
   &__head {
-    border-bottom: solid 1px;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq6YTrnJOn0VSR2q7p52rfuz64E9y25APizw&usqp=CAU");
-    height: 180px;
+    // border-bottom: solid 1px;
+    // background-image: url("https://img.freepik.com/vecteurs-libre/theme-fond-ecran-dynamique_52683-44743.jpg");
+    // height: 180px;
     position: relative;
+    margin-left: 20px;
     .profile-photo {
       width: 100%;
       height: 100%;
@@ -148,7 +143,7 @@ export default {
     padding: var(--gutter);
     .fullname {
       margin: 0;
-      font-size: 32px;
+      font-size: 20px;
       font-weight: 700;
       text-align: center;
     }
@@ -157,7 +152,7 @@ export default {
       color: #444;
       font-weight: 700;
       text-align: center;
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
   &__footer {
@@ -182,9 +177,9 @@ export default {
 <style type="text/css">
   .profile-photo{
     border-radius: 2000px;
-    width: 110px !important;
-    height: 110px !important;
-    margin-top: 35px !important;
+    width: 50px !important;
+    height: 50px !important;
+/*    margin-top: 35px !important;*/
   }
 
   .result-card__content {
@@ -192,12 +187,24 @@ export default {
   }
 
   .result-card__head {
-    height: 95px !important;
-    margin-bottom: 50px;
+/*    height: 95px !important;*/
+/*    margin-bottom: 50px;*/
+  }
+
+  .result-card__body, .result-card__head {
+    display: flex;
+  }
+
+  .result-card__body_child, .result-card__head_child {
+    margin: auto !important;
   }
 
   .fullname span {
     color: black !important;
+  }
+
+  .search-result__items {
+    flex-direction: column ;
   }
 
 </style>

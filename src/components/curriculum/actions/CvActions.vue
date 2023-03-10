@@ -40,12 +40,12 @@
 						<label>{{ $t('save') }}</label>
 					</li>				
 
-					<li @click="bgsetter=true" v-if="$editing" :title="$t('bg')">
+					<!-- <li @click="bgsetter=true" v-if="$editing" :title="$t('bg')">
 						<span class="icon">
 							<i class="fa fa-image"></i>
 						</span>
 						<label>{{ $t('bg') }}</label>
-					</li>
+					</li> -->
 
 					<color-swatches
 						v-if="$editing"

@@ -1,4 +1,4 @@
-<template>
+<template >
   <div class="search-result-holder">
     <div class="container">
       <div v-if="mustShowResults" class="search-result">
