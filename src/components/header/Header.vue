@@ -32,7 +32,7 @@
                     <user-menu/>
                 </template>
 
-                <lang-menu/>
+                <!-- <lang-menu/> -->
             </div>
         </div>
     </header>
@@ -40,7 +40,7 @@
 
 <script>
     import UserMenu from './UserMenu.vue'
-    import LangMenu from './LangMenu.vue'
+    // import LangMenu from './LangMenu.vue'
     import LoadingSpinner from '@/components/loading/LoadingSpinner.vue'
     import SearchSimpleInputHead from '@/components/search/SearchSimpleInputHead.vue'
 
@@ -49,7 +49,6 @@
         
         components: {
             UserMenu,
-            LangMenu,
             SearchSimpleInputHead,
             LoadingSpinner
         },
@@ -178,5 +177,9 @@
 
     .form-srch div div.search-input-holder input {
         height: 50px !important;
+    }
+
+    .container-search {
+        margin-right: 10px;
     }
 </style>

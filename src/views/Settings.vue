@@ -1,5 +1,5 @@
 <template>
-	<div class="content settings" style="background-image:url('/img/backgrounds/000.jpg')">
+	<div class="content settings" style="background: #eee;">
 		<div v-if="loading" class="settings__loading">
 			<div class="spinner">
 				<loading-spinner/>

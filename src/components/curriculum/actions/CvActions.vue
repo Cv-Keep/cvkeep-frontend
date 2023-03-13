@@ -16,7 +16,7 @@
 							<i class="fa fa-share-alt"></i>
 						</span>
 						<label>{{ $t('share') }}</label>
-					</li>				
+					</li>
 				</ul>
 
 				<ul class="admin" v-if="isAdmin" :data-editing="$editing">
@@ -308,7 +308,7 @@
 				}
 			}
 
-			@media screen and (max-width: 1568px), (max-height: 677px) {
+			@media screen and (max-width: 1568px), (max-height: 630px) {
 				ul {
 					li, li:hover, li:active, li:focus {
 						padding: 0;
@@ -324,7 +324,7 @@
 			}
 		}
 
-		@media screen and (max-width: 1300px), (max-height: 677px) {
+		@media screen and (max-width: 1300px), (max-height: 630px) {
 			top: -68px;
 			width: 100%;
 			border: none;
@@ -365,7 +365,7 @@
 		}
 		
 		&.editing-true {
-			@media screen and (max-width: 1300px), (max-height: 677px) {
+			@media screen and (max-width: 1300px), (max-height: 530px) {
 				position: fixed;
 				transform: translateY(0);
 				top: unset;
@@ -414,6 +414,67 @@
 				justify-content: space-between;
 			}
 		}
+
+		&.editing-false {
+			@media screen and (max-width: 1300px), (max-height: 530px) {
+				position: fixed;
+				transform: translateY(0);
+				top: unset;
+				left: 0;
+				bottom: 0;
+				height: auto;
+				display: flex;
+				max-width: 100%;
+				overflow-x: auto;
+				overflow-y: hidden;
+				width: 100%;
+				background-color: #ffffff;
+				justify-content: center;
+				border-top: solid 1px var(--color-gray-b);
+				.cv-actions__holder {
+					width: 100%;
+					ul {
+						width: 100%;
+						margin: 0;
+						width: auto;
+						display: inline-flex;
+						&:first-child {
+							padding-left: 0;
+						}
+						&.admin {
+							border: none;
+							padding: 0 var(--gutter);
+							position: initial;
+							border-top: none !important;
+							border-left: solid 1px var(--hover-color);
+						}
+						li {
+							width: 100%;
+							margin: 0;
+							margin-right: var(--gutter);
+							min-width: unset;
+							span {
+								width: 100%;
+							}
+						}
+						&.admin > *:last-child {
+							margin-right: 0;
+						}
+						&.public{
+							width: 100%;
+						}
+						& + ul {
+							padding-left: var(--gutter);
+							width: 50%;
+						}
+					}
+				}
+			}
+
+			@media screen and (max-width: 520px) {
+				justify-content: space-between;
+			}
+		}
 	}
 	.cv-actions-color-picker {
 		.vue-swatches__container {
@@ -425,7 +486,7 @@
 				}
 			}
 		}
-		@media screen and (max-width: 1260px), (max-height: 677px) {
+		@media screen and (max-width: 1260px), (max-height: 630px) {
 			position: initial;
 			.vue-swatches__container {
 				position: fixed;

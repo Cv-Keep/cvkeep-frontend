@@ -111,8 +111,9 @@
 			width: 300px;
 			white-space: nowrap;
 			color: #444444;
-			@media screen and (max-width: 425px) {
+			@media screen and (max-width: 825px) {
 				width: 114px;
+				display: none;
 			}
 		}
 		.user {

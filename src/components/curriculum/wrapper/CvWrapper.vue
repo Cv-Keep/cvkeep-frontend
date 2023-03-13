@@ -51,7 +51,7 @@
 			padding-bottom: 4px;
 		}
 		&.container {
-			padding-bottom: 100px;
+			// padding-bottom: 100px;
 		}
 		@media screen and (max-width: 1160px) {
 			&.container {
@@ -61,7 +61,7 @@
 		@media screen and (max-width: 1300px), (max-height: 677px) {
 			&.container {
 				padding: 80px 0;
-				padding-top: calc(var(--header-height) + 80px);
+				// padding-top: calc(var(--header-height) + 80px);
 			}
 		}
 	}
@@ -134,5 +134,11 @@
 				}
 			}
 		}
+	}
+</style>
+
+<style type="text/css">
+	.cv-lightbox__content header{
+		border-radius: 0px !important;
 	}
 </style>

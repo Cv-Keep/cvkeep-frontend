@@ -33,7 +33,6 @@ export default new Router({
 			name: 'home',
 			component: Home
 		},
-		
 		{
 			path: '/cv/:user?',
 			name: 'cv',

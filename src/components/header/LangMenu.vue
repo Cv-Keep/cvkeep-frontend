@@ -152,4 +152,9 @@
 			}
 		}
 	}
+	@media screen and (max-width: 768px) {
+		.lang-menu {
+			display: none;
+		}
+	}
 </style>

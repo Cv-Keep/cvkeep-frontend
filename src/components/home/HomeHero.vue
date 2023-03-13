@@ -8,9 +8,9 @@
       <h1 class="shadow text1"><!--{{String($brandName).toUpperCase()}}--> LAHIKI Pro</h1>
       <h2><span>{{ $t('cvAsAnOnlineProfile') }}</span></h2>
 
-			<button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()">
+			<!-- <button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()">
 				<span v-html="$logged ? $t('goToCv') : $t('startNow')"></span>
-			</button>
+			</button> -->
     </div>
   </div>  
 </template>

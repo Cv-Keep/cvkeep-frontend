@@ -304,6 +304,7 @@
 	.container-info-edu {
 		display: flex;
 		background-color: white;
+		flex-wrap: wrap;
 	}
 
 	.container-info-edu > div, .container-info-edu > section {

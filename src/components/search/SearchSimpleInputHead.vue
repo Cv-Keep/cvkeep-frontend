@@ -80,6 +80,10 @@
         }
       }
     }
+
+    .container-search {
+      // display: none;
+    }
   }
 </style>
 

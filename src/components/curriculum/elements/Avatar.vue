@@ -187,6 +187,7 @@
 	.avatar-root {
 		width: 200px;
 		// margin: 0 auto;
+		margin: auto;
 		position: relative;
 		text-align: center;
 		.avatar {

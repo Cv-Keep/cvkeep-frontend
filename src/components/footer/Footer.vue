@@ -58,8 +58,11 @@
                     </li>
                 </ul> -->
 
+                <lang-menu/>
+
+
                 <ul>
-                    <h5>Links</h5>
+                    <!-- <h5>Links</h5> -->
                     <li>
                         <router-link to="/contact">
                             {{ $t('contact') }}
@@ -75,14 +78,14 @@
                     </li> -->
 
                     <li>
-                        <router-link to="/terms">
+                        <router-link to="/">
                             {{ $t('termsAndConditions') }}
                         </router-link>
                     </li>
                 </ul>
 
                 <ul>
-                    <h5>Newslatter</h5>
+                    <!-- <h5 id="newslatter-title">Newslatter</h5> -->
                     <div class="icons-social">
                         <a href="#">
                             <i class="fab fa-facebook"></i>
@@ -104,8 +107,9 @@
             </div>
         </div>
 
+        
         <div class="foot">
-            <a href="www.mae-solutions.yt" style="color:white"><p><!--{{$brandName}}-->MAE-Solutions © All Rights Reserved</p></a>
+            <p><!--{{$brandName}}--><a id="copy-rigth" href="https://www.mae-solutions.yt" style="color:white">MAE Solutions</a> © All Rights Reserved</p>
         </div>
 
         <report-cv v-if="reportCv" @close="reportCv = false"/>
@@ -116,12 +120,14 @@
 <script>
     import ReportCv from '@/components/curriculum/reportCv/ReportCv.vue'
     import BecomeSupporter from '@/components/support/BecomeSupporterModal.vue'
+    import LangMenu from '../header/LangMenu.vue'
 
     export default {
         name: 'app-footer',
 
         components: {
             ReportCv,
+            LangMenu,
             BecomeSupporter
         },      
 
@@ -184,6 +190,7 @@
         .footer__content {
             display: flex;
             flex-wrap: wrap;
+            min-height: 150px;
             .container {
                 display: flex;
                 width: 100%;
@@ -254,6 +261,7 @@
                     ul {
                     }
                 }
+
             }
         }
     }           
@@ -312,9 +320,13 @@
             }
         }
     }
+
+    
 </style>
 
 
 <style type="text/css">
-
+    .lang-menu ul.dropdown {
+        margin-right: -250px !important;
+    }
 </style>

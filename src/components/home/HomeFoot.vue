@@ -68,13 +68,13 @@
 				font-size: 18px;
 				font-weight: 700;
 				margin-top: 24px;
-				color: #ffffff;
+				color: var(--primary-color);
 				transition: 100ms;
 				border-width: 2px;
-				border-color: #ffffff;
+				border-color: var(--primary-color);
 				background-color: transparent;
 				&:hover {
-					background-color: #fff;
+					background-color: black;
 					color: var(--secondary-color);
 				}
 			}

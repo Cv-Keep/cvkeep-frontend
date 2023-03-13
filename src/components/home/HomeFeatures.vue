@@ -2,8 +2,10 @@
   <div :class="`home-features donation-${!!$showDonation}`">
     <div class="container">
       <div class="home-features__head">
-        <h2>
-          {{ $t('featuredText') }}
+        <h2 style="text-align: right;">
+          <strong style="text-transform: uppercase; font-weight: initial;">{{ $t('featuredTextDeb') }}</strong><br>
+          <strong style="text-transform: uppercase;">{{ $t('featuredTextBoldMaj') }}</strong><br>
+          <span style="font-size: 3.2rem;">{{ $t('featuredTextEnd') }}</span>
         </h2>
       </div>
 
@@ -65,7 +67,10 @@
           secure: 'Sécurisé',
           simple: 'Simple',
           pretty: 'Beau',
-          featuredText: 'Gardez votre CV à portée de main, complet, mis à jour, beau et accessible de n\'importe où dans le monde.'
+          featuredTextDeb: 'Gardez votre ',
+          featuredTextBoldMaj: 'CV à portée de main',
+          featuredTextEnd: ' complet, mis à jour, beau et accessible de n\'importe où.',
+
         }
       }
     }
