@@ -30,6 +30,11 @@
       index: {
         type: Number,
         default: -1
+      },
+
+      addMethod: {
+        type: String,
+        default: 'append'
       }
     },
     
@@ -45,7 +50,9 @@
         if (this.index >= 0) {
           items[this.index] = data;
         } else {
-          items.push(data);
+          const action = this.addMethod === 'append' ? 'push' : 'unshift';
+
+          items[action](data);
         }
 
         this.$emit('submit', this.$el);

@@ -8,6 +8,7 @@
 			<p class="pre-line">{{introduction.substring(0, this.introMaxLen)}}</p>
 		</see-more>
 
+		<add-bar @click.native="edit(true)" v-if="items.length < this.max_items"/>
 		<hr/>
 
 		<is-draggable tag="ul" :list="items" class="experience-list">			
@@ -35,8 +36,12 @@
 
 					<p class="dates color-gray-light">
 						<strong>
+							<span class="label-current">
+								{{ phraseDateRange(item.start, item.end) }}  
+							</span>
+
 							<span>
-								{{item.start}}
+								| {{item.start}}
 							</span>
 							-
 							<span :class="`current-${item.current ? 'true' : 'false'}`">
@@ -81,8 +86,6 @@
 		</is-draggable>
 
 		<cv-experience-form :title="$t('experience')" :index="index" @close="edit(false)" v-if="editModal"/>
-
-		<add-bar @click.native="edit(true)" v-if="items.length < this.max_items"/>
 	</div>
 </template>
 
@@ -150,12 +153,45 @@
 
 			getItemIcon (item) {
 				return experienceIconsByType[item.type] || 'fa-star';
+			},
+
+			phraseDateRange (dateA, dateB) {
+				const a = dateA && dateA.split('/');
+				const b = dateB && dateB.split('/');
+				
+				const start = dateB ? new Date(`${b[1]}-${b[0]}-${b[2]}`) : new Date();
+				const end = a && new Date(`${a[1]}-${a[0]}-${a[2]}`);
+				
+				let m = (start.getFullYear() - end.getFullYear()) * 12;
+				
+				m -= end.getMonth();
+				m += start.getMonth();
+
+				const totalMonths = m <= 0 ? 1 : m;
+				const years = Math.floor(totalMonths >= 12 ? (totalMonths / 12) : 0);
+				const months = Math.floor(totalMonths % 12);
+
+				const yearsPhrase = years 
+					? `${years} ${this.$t(`year${years !== 1 ? 's' : ''}`)}` : '';
+					
+				const monthsPhrase = months 
+					? `${months} ${this.$t(`month${months !== 1 ? 's' : ''}`)}` : '';
+
+				const andPhrase = yearsPhrase && monthsPhrase 
+					? this.$t('and') : '';
+
+				return `${yearsPhrase} ${andPhrase} ${monthsPhrase}`.trim();
 			}
 		},
 
 		i18n: {
 			messages: {
 				'pt-br': {
+					and: 'e',
+					year: 'ano',
+					years: 'anos',
+					month: 'mês',
+					months: 'meses',
 					role: 'Cargo',
 					current: 'Atual',
 					experience: 'Experiência',
@@ -163,6 +199,11 @@
 				},
 
 				'en': {
+					and: 'and',
+					year: 'year',
+					years: 'years',
+					month: 'month',
+					months: 'months',
 					role: 'Role',
 					current: 'Current',
 					experience: 'Experience',
@@ -170,6 +211,11 @@
 				},
 
 				'fr': {
+					and: 'et',
+					year: 'an',
+					years: 'ans',
+					month: 'mois',
+					months: 'mois',
 					role: 'Rôle',
 					current: 'Actuel',
 					experience: 'Expérience',

@@ -1,5 +1,11 @@
 <template>
-  <cv-form-items :items="'experience'" :index="index" :title="title" @close="$emit('close')">
+  <cv-form-items 
+    :items="'experience'" 
+    :index="index" 
+    :title="title"
+    addMethod="prepend"
+    @close="$emit('close')"
+  >
     <div class="field">
       <label for="type" data-required>{{ $t('type') }}</label>
 
