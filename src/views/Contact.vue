@@ -1,5 +1,5 @@
 <template>
-	<div class="contact" style="background-image:url('/img/backgrounds/000.jpg')">
+	<div class="contact" style="">
 		<div class="content container">
 			<div class="title">
 				<h1>{{ $t('contact') }}</h1>
@@ -54,7 +54,8 @@
 			display: flex;
 			padding: 0;
 			background-color: #ffffff;
-			border-radius: 8px;
+			border-radius: 25px;
+			border: solid 2px #ccc;
 			> div {
 				width: 50%;
 				padding: calc(var(--gutter) * 2);

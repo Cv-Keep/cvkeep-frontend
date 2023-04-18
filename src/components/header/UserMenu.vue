@@ -92,6 +92,7 @@
 		@media screen and (max-width: 1000px) {
 			--user-menu-size: 40px;
 		}
+		
 		z-index: 1001;
 		position: relative;
 		height: var(--user-menu-size);
@@ -180,6 +181,13 @@
 				visibility: visible;
 				transition: 0ms;
 			}
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.user-menu ul.dropdown {
+			width: 100vw;
+			margin-top: 25px;
+			position: fixed !important;
 		}
 	}
 </style>

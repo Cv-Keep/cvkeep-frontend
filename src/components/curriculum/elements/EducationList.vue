@@ -31,7 +31,7 @@
 			</li>
 		</is-draggable>
 
-		<cv-education-form title="Educação" :index="index" @close="edit(false)" v-if="editModal"/>		
+		<cv-education-form title="Education" :index="index" @close="edit(false)" v-if="editModal"/>		
  
 		<add-bar @click.native="edit(true)" v-if="items.length < max_items"/>
 	</div>

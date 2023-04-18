@@ -29,7 +29,7 @@
 		props: {
 			title: {
 				type: String,
-				default: ''
+				default: 'OK'
 			},
 
 			validate: {

@@ -23,7 +23,8 @@
 		computed: {
 			...mapState({
 				$canEdit: state => state.curriculum.canEdit || false,
-				$editing: state => state.curriculum.editing || false
+				$editing: state => state.curriculum.editing || false,
+				$pro: state => state.curriculum.pro || false,
 			})
 		}
 	});

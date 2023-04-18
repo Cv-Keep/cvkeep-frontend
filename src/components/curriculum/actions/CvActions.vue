@@ -4,6 +4,25 @@
 			<div class="cv-actions__holder">
 
 				<ul class="public" :data-editing="$editing">
+					<li @click="toggleProCv();" v-if="allowPublicMessages" title="Curriculum vitae">
+						<span class="icon">
+							<i class="fa fa-file" style="color: inherit;" v-if="$pro"></i>
+							<i class="fa fa-file" v-else></i>
+						</span>
+						<label>Curriculum vitae</label>
+					</li>
+
+					<li @click="toggleCvPro()" v-if="allowPublicMessages" title="Projet Pro">
+						<span class="icon">
+							<i class="fa fa-user" style="color: inherit;" v-if="!$pro"></i>
+							<i class="fa fa-user" v-else></i>
+						</span>
+						<label>Projet Pro</label>
+					</li>
+				</ul>
+				
+
+				<ul class="public" :data-editing="$editing">
 					<li v-if="allowPublicMessages" @click="sendEmailLb=true" :title="$t('message')">
 						<span class="icon">
 							<i class="fa fa-envelope"></i>
@@ -18,6 +37,7 @@
 						<label>{{ $t('share') }}</label>
 					</li>
 				</ul>
+
 
 				<ul class="admin" v-if="isAdmin" :data-editing="$editing">
 					<li @click="toggleView" :title="$editing ? $t('preview') : $t('edit')">
@@ -156,7 +176,13 @@
 
 			toggleView () {
 				this.curriculum.editing = !this.curriculum.editing;
-			}
+			},
+			toggleCvPro () {
+				this.curriculum.pro = true;
+			},
+			toggleProCv () {
+				this.curriculum.pro = false;
+			},
 		},
 
 		i18n: {
@@ -260,13 +286,16 @@
 						justify-content: center;
 						color: #555;
 						.fa-envelope {
-							color: #2d6da4;
+							// color: #2d6da4;
 						}
 						.fa-share-alt {
-							color: #1877f2;
+							// color: #1877f2;
 						}
 						.fa-eye, .fa-save {
 							color: #2d6da4;
+						}
+						.fa-file, .fa-user, .fa-eye, .fa-save {
+							color: var(--cv-color);
 						}
 						svg {
 							width: 24px;
@@ -284,7 +313,7 @@
 			}
 
 			ul.admin {
-				padding-top: 20px;
+				// padding-top: 20px;
 				border-top: solid 1px var(--hover-color);
 				li:hover {
 					.icon {
@@ -293,6 +322,12 @@
 						}
 					}
 				}
+			}
+
+			ul.public {
+				// padding-top: 20px;
+				border-bottom: 2px solid #DDD;
+				margin-bottom: 15px;
 			}
 
 			ul:not([data-editing]), 

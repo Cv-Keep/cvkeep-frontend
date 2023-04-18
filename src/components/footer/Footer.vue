@@ -1,7 +1,7 @@
 <template>
     <footer>
-        <div class="footer__content">
-            <div class="container-footer">
+        <div class="footer__content" >
+            <div class="container-footer" >
                 <!-- <div class="logo">
                     <router-link to="/">
                         <img :src="require(`@/${logoPath}`)" alt="Application Logo">
@@ -121,6 +121,7 @@
     import ReportCv from '@/components/curriculum/reportCv/ReportCv.vue'
     import BecomeSupporter from '@/components/support/BecomeSupporterModal.vue'
     import LangMenu from '../header/LangMenu.vue'
+    import $ from 'jquery'
 
     export default {
         name: 'app-footer',
@@ -135,12 +136,24 @@
             return {
                 reportCv: false,
                 becomeSupporter: false,
+                notInCv: true,
                 logoPath: process.env.VUE_APP_LOGO_PATH
                     .replace('@/', '')
                     .replace(/'"/g, '')
             }
         },
-
+        watch:{
+            $route (to){
+                if( to.path.substring(0,3) == "/cv" ){
+                    // this.notInCv=false;
+                    $("footer").css("display", "none")
+                }
+                else{
+                    // this.notInCv=true;
+                    $("footer").css("display", "inherit")
+                }
+            }
+        },
         i18n: {
             messages: {
                 'pt-br': {

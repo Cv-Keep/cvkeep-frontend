@@ -2,7 +2,7 @@
   <a v-if="info && $logged" :href="`cv/${info.username}`" class="result-card" rel="noopener noreferrer">
     <div class="result-card__content">
       <div class="result-card__head">
-        <img :src="getAvatarUrl()" :alt="`${info.basics.fullname}'s profile image`" class="profile-photo">
+        <img :src="getAvatarUrl()" :alt="`${info.basics.fullname}`" class="profile-photo">
 
         <div class="fast-info">
           <div class="fast-info__left">

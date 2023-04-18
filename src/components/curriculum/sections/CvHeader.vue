@@ -50,7 +50,7 @@
 		</div>
 
 		<span class="cv-top-right-badge cv-locale-flag-badge" :title="`${$t(this.$logged ? 'cvLangPreferenceLogged' : 'cvLangPreference')} ${$t(cvLang)}`">
-			{{cvLang === 'pt-br' ? 'BR' : 'EN'}}
+			{{cvLang === 'en' ? 'EN' : 'FR'}}
 		</span>
 
 		<simple-tooltip 

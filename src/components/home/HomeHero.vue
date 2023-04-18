@@ -1,11 +1,14 @@
+
 <template>
   <div class="home-hero">
     <div class="feature-img">
-      <img src="@/assets/guy.jpg" alt="a"/>
+      <!-- <img src="@/assets/guy.jpg" alt="a"/> -->
+
+    <lottie-player src="https://lottie.host/b3a47455-ab25-4bee-b40b-c7674ff2542d/ddRj5OW0rk.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
     </div>
 
     <div class="container">
-      <h1 class="shadow text1"><!--{{String($brandName).toUpperCase()}}--> LAHIKI Pro</h1>
+      <h1 class="shadow text1">{{String($brandName).toUpperCase()}}</h1>
       <h2><span>{{ $t('cvAsAnOnlineProfile') }}</span></h2>
 
 			<!-- <button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()">
@@ -14,6 +17,8 @@
     </div>
   </div>  
 </template>
+
+
 
 <script>
 export default {
@@ -42,6 +47,8 @@ export default {
 	}
 }
 </script>
+
+
 
 <style lang="scss" scoped>
 	.home-hero {
@@ -114,8 +121,8 @@ export default {
 			}
 		}
 		.feature-img {
-			top: 0;
-			left: -200px;
+			// top: 0;
+			// left: -200px;
 			bottom: 0;
 			overflow: hidden;
 			position: absolute;

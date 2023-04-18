@@ -33,7 +33,7 @@ export default async Vue => {
   
   Vue.config.performance = true;
   Vue.config.productionTip = false;
-  Vue.prototype.$brandName = 'Cv Keep';
+  Vue.prototype.$brandName = 'Lahiki Pro';
   
   Vue.mixin({
     computed: {

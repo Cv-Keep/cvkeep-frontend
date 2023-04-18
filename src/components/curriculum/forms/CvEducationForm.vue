@@ -34,13 +34,14 @@
       <div class="field">
         <label for="start_date">{{ $t('start') }}</label>
         
-        <input type="text" name="start_date" v-mask="$t('dateMask')">
+        <input type="date" name="start_date" >
       </div>
 
       <div class="field">
         <label for="end_date">{{ $t('conclusion') }}</label>
         
-        <input type="text" name="end_date" v-mask="$t('dateMask')">
+        <!-- <input type="date" name="end_date" v-mask="$t('dateMask')"> -->
+        <input type="date" name="end_date">
       </div>      
     </div>
   </cv-form-items>
@@ -62,7 +63,7 @@
 		props: {
 			title: {
 				type: String,
-				default: ''
+				default: 'OK'
       },
       
       index: {
