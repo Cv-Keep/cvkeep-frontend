@@ -58,13 +58,13 @@
 			]),
 
 			customTitle: {
-				get () { return this.$store.state.curriculum.hobby.customTitle },
-				set (value) { this.$store.state.curriculum.hobby.customTitle = value }
+				get () { return this.$store.state.curriculum.jobs.customTitle },
+				set (value) { this.$store.state.curriculum.jobs.customTitle = value }
 			},
 
 			description: {
-				get () { return this.$store.state.curriculum.hobby.description },
-				set (value) { this.$store.state.curriculum.hobby.description = value }
+				get () { return this.$store.state.curriculum.jobs.description },
+				set (value) { this.$store.state.curriculum.jobs.description = value }
 			},
 
 			display () {
@@ -84,7 +84,7 @@
 				},
 
 				'en': {
-					presentation: 'Hobby Loisirs',
+					presentation: 'jobs',
 					presentationHelpText: 'Talk about yourself objectively and concisely. Tell us who is the person behind your resume. You can tell your story, what you do or would like to do, your aspirations and goals, for example. It can also be a good place to briefly demonstrate who you are outside of work. Writing a presentation is especially important if you have little or no experience.',
 					placeholder: 'Write a presentation. You can tell your story, your achievements and your goals. Mantain objectivety and show your personality'
 				},
