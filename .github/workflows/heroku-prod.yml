@@ -14,7 +14,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v4.1.6
+        uses: AkhileshNS/heroku-deploy@v3.12.13
         with:
           heroku_api_key: ${{secrets.HEROKU_PROD_API_KEY}}
           heroku_app_name: "lahiki-recruit-frontend"
