@@ -1,7 +1,19 @@
 <template>
-	<div class="avatar-root" v-if="!loading">
+	<div 
+		v-if="!loading"
+		class="avatar-root" 
+		:hidden="!$editing && !this.hasAvatar && this.source === 'curriculum'"
+	>
 		<div class="avatar pointer" @click="$editing ? $refs.uploader.click() : false">
-			<img alt=" " ref="avatarImg" :data-src="avatarUrl" :src="avatarUrl" :key="avatarUrl">
+			<img alt=" " 
+				ref="avatarImg" 
+				:data-src="avatarUrl" 
+				:src="avatarUrl" 
+				:key="avatarUrl"
+				@load="this.onLoadImage"
+				@error="this.onLoadImage"
+			>
+			
 			<i v-if="$editing" class="fa fa-camera"></i>
 			
 			<div v-if="$editing">
@@ -64,6 +76,7 @@
 		data () {
 			return {
 				loading: false,
+				hasAvatar: false,
 				avatarUrl: this.getAvatarUrl(),
 			}
 		},
@@ -145,10 +158,13 @@
 				}
 			},
 
+			onLoadImage(event) {
+				this.hasAvatar = event.target.naturalWidth > 0;
+			},
+
 			raiseError (error) {
 				return this.$toasted.error(error || 'Internal unexpected error');
 			},
-
 		},
 
 		mounted() {
@@ -186,7 +202,6 @@
 <style lang="scss" scoped>
 	.avatar-root {
 		width: 200px;
-		margin: 0 auto;
 		position: relative;
 		text-align: center;
 		.avatar {

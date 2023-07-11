@@ -36,7 +36,7 @@
 
 					<p class="dates color-gray-light">
 						<strong>
-							<span class="label-current">
+							<span class="cv-color">
 								{{ phraseDateRange(item.start, item.end) }}  
 							</span>
 
@@ -159,8 +159,8 @@
 				const a = dateA && dateA.split('/');
 				const b = dateB && dateB.split('/');
 				
-				const start = dateB ? new Date(`${b[1]}-${b[0]}-${b[2]}`) : new Date();
-				const end = a && new Date(`${a[1]}-${a[0]}-${a[2]}`);
+				const start = dateB ? new Date(`${b[1]}/${b[0]}/${b[2]}`) : new Date();
+				const end = a && new Date(`${a[1]}/${a[0]}/${a[2]}`);
 				
 				let m = (start.getFullYear() - end.getFullYear()) * 12;
 				
