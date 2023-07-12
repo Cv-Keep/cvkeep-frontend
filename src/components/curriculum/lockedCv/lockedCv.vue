@@ -185,6 +185,7 @@
 					object-fit: cover;
 					border-radius: 100%;
 					margin-bottom: var(--gutter);
+					background-color: #d1d1d1;
 				}
 			}
 			h4 {
