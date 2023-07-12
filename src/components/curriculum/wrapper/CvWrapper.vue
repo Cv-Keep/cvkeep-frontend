@@ -96,7 +96,7 @@
 				margin: 0;
 				border: none;
 				border-radius: 0;
-				width: 1000px;
+				width: 960px;
 				max-width: unset;
 				box-shadow: none;	
 				padding-bottom: 48px;

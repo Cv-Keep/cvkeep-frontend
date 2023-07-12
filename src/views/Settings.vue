@@ -17,7 +17,6 @@
 				<edit-account :hasPassword="hasPassword"/>
 				<edit-privacy/>
 				<edit-searchable/>
-				<download-cv/>
 				<danger-zone :hasPassword="hasPassword"/>
 			</div>
 		</div>
@@ -31,7 +30,6 @@
 	const EditAccount = () => import(/* webpackChunkName: "EditAccount" */ '@/components/settings/Account.vue')
 	const EditPrivacy = () => import(/* webpackChunkName: "EditPrivacy" */ '@/components/settings/Privacy.vue')
 	const DangerZone = () => import(/* webpackChunkName: "DangerZone" */ '@/components/settings/Deactivate.vue')
-	const DownloadCv = () => import(/* webpackChunkName: "DownloadCv" */ '@/components/settings/DownloadCv.vue')
 	const EditSearchable = () => import(/* webpackChunkName: "EditSearchable" */ '@/components/settings/Searchable.vue')
 
 	export default {
@@ -42,8 +40,7 @@
 			EditAccount,
 			EditPrivacy,
 			EditSearchable,
-			DangerZone,
-			DownloadCv
+			DangerZone
 		},
 
 		computed: {

@@ -1,6 +1,6 @@
 import { saveAs } from 'file-saver';
-import { toBlob } from 'html-to-image';
 import { jsPDF } from "jspdf";
+import domtoimage from 'dom-to-image';
 
 export default {
   generateImage (selector) {
@@ -8,7 +8,7 @@ export default {
     element.classList.add('downloading-as-image');
 
     return new Promise(resolve => {
-      toBlob(element)
+      domtoimage.toBlob(element)
         .then(blob => {
           element.classList.remove('downloading-as-image');
 
@@ -26,21 +26,28 @@ export default {
     return new Promise(resolve => {
       this.generateImage(selector)
         .then(blob => {
-          const img = Object.assign(document.createElement('img'), {
-            src: URL.createObjectURL(blob),
-          });
+          const imageDataURL = URL.createObjectURL(blob);
+          const image = Object.assign(document.createElement('img'));
 
-          img.onload = () => {
-            const mm = px => Math.floor(px * 0.264583);
-            const w = mm(img.width);
-            const h = mm(img.height);
-            const doc = new jsPDF('p', 'mm', [ w, h ], true);
-            
-            doc.addImage(img, 0, 0, w, h);
-            doc.save(`${filename}.pdf`);
-  
-            resolve();
+          image.onload = function() {
+            let pageWidth = image.naturalWidth / 2;
+            let pageHeight = image.naturalHeight / 2;
+        
+            // Create a new PDF with the same dimensions as the image.
+            const pdf = new jsPDF({
+              unit: "px",
+              format: [pageHeight, pageWidth]
+            });
+        
+            // Add the image to the PDF with dimensions equal to the internal dimensions of the page.
+            pdf.addImage(imageDataURL, 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight(), '','FAST');
+        
+            // Save the PDF with the filename specified here:
+            pdf.save(`${filename}.pdf`);
           } 
+          
+          image.src = imageDataURL;
+          resolve(true);
         }); 
     }) 
   }

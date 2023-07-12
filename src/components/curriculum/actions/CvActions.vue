@@ -11,11 +11,11 @@
 						<label>{{ $t('message') }}</label>
 					</li>
 					
-					<li @click="share=true" :title="$t('share')">
+					<li @click="sendCv=true" :title="$t('send')">
 						<span class="icon">
-							<i class="fa fa-share-alt"></i>
+							<i class="fa fa-paper-plane"></i>
 						</span>
-						<label>{{ $t('share') }}</label>
+						<label>{{ $t('send') }}</label>
 					</li>				
 				</ul>
 
@@ -71,7 +71,7 @@
 			</div>
 		</div>
 
-		<cv-share :active="share" @close="share=false"/>
+		<send-cv :active="sendCv" @close="sendCv=false"/>
 		<bg-setter :active="bgsetter" @close="bgsetter=false"/>
 		<sections-manager :active="sectionsLb" @close="sectionsLb=false"/>
 		<send-email :active="sendEmailLb" @close="sendEmailLb=false"/>
@@ -81,7 +81,7 @@
 <script>
 	import { mapState } from 'vuex'
 	import cvColors from '@/shared/script/data/cvColors.js'
-	import CvShare from '@/components/curriculum/actions/CvShare.vue'
+	import SendCv from '@/components/curriculum/actions/SendCv.vue'
 	import SendEmail from '@/components/curriculum/actions/SendEmail.vue'
 	import BgSetter from '@/components/curriculum/actions/BackgroundSetter.vue'
 	import SectionsManager from '@/components/curriculum/actions/SectionsManager.vue'
@@ -93,7 +93,7 @@
 		name: "CvActions",
 		
 		components: {
-			CvShare,
+			SendCv,
 			BgSetter,
 			SendEmail,
 			LoadingSpinner,
@@ -116,7 +116,7 @@
 		data () {
 			return {
 				saving: false,
-				share: false,
+				sendCv: false,
 				bgsetter: false,
 				sectionsLb: false,
 				sendEmailLb: false,
@@ -163,7 +163,7 @@
 			messages: {
 				'pt-br': {
 					message: 'Mensagem',
-					share: 'Compartilhar',
+					send: 'Enviar este CV',
 					preview: 'Visualizar',
 					edit: 'Editar',
 					save: 'Salvar',
@@ -176,7 +176,7 @@
 
 				'en': {
 					message: 'Message',
-					share: 'Share',
+					send: 'Send this CV',
 					preview: 'Preview',
 					edit: 'Edit',
 					save: 'Save',
@@ -189,7 +189,7 @@
 
 				'fr': {
 					message: 'Message',
-					share: 'Partager',
+					send: 'Envoyer ce CV',
 					preview: 'Prévisualisation',
 					edit: 'Editer',
 					save: 'Sauvegarder',
@@ -262,7 +262,7 @@
 						.fa-envelope {
 							color: #2d6da4;
 						}
-						.fa-share-alt {
+						.fa-paper-plane {
 							color: #1877f2;
 						}
 						.fa-eye, .fa-save {
