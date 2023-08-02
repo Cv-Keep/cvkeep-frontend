@@ -116,7 +116,7 @@
 			column-gap: calc(var(--gutter) * 2);
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			@media screen and(max-width: 1023px) {
+			@media screen and (max-width: 1023px) {
 				display: block;
 			}
 			li.language-item {
