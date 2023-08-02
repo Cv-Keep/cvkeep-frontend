@@ -55,21 +55,21 @@
 		i18n: {
 			messages: {
 				'pt-br': {
-					'lookingForWork': 'Procurando Recolocaçao',
+					'lookingForWork': 'Procurando Recolocação',
 					'freelance': 'Aceita Freelancing',
 					'onlyRemote': 'Apenas Remoto',
 					'disability': 'PCD',
 				},
 
 				'en': {
-					'lookingForWork': 'Looking for work',
+					'lookingForWork': 'Open to work',
 					'freelance': 'Accepts freelancing',
 					'onlyRemote': 'Only remote',
 					'disability': 'PWD',					
 				},
 
 				'fr': {
-					'lookingForWork': 'Recherche d\'un travail',
+					'lookingForWork': 'Ouvert aux opportunités',
 					'freelance': 'Accepter le freelancing',
 					'onlyRemote': 'Seulement à distance',
 					'disability': 'handicap',					

@@ -1,7 +1,6 @@
 <template>
-	<cv-lightbox :title="$t('shareCv')" :hasfooter="false" v-if="active" @close="close">
-		
-		<div class="share-url">
+	<cv-lightbox :title="$t('sendCV')" :hasfooter="false" v-if="active" class="download-cv-lightbox" @close="close">
+		<div class="share-cv-url">
 			<h5>{{ $t('title') }}</h5>
 
 			<div class="field">
@@ -9,60 +8,25 @@
 				<span :title="$t('copyHelp')" @click="copy"><i class="fa fa-copy"></i></span>
 			</div>
 		</div>
-		
-		<div class="socials">
-			<social-sharing :url="$route.query.page" :title="$route.meta.title" inline-template>
-				<div class="vue-social-sharing shares">
-					<network network="whatsapp">
-						<i class="fab fa-whatsapp color-whatsapp"></i>
-						Whatsapp
-					</network>
 
-					<network network="facebook">
-						<i class="fab fa-facebook color-facebook"></i>
-						Facebook
-					</network>
+		<div class="download">
+			<h5>{{ $t('downloadCV') }}</h5>
 
-					<network network="twitter">
-						<i class="fab fa-twitter color-twitter"></i>
-						Twitter
-					</network>
-
-					<network network="reddit">
-						<i class="fab fa-reddit color-reddit"></i>
-						Reddit
-					</network>
-
-					<network network="telegram">
-						<i class="fab fa-telegram color-telegram"></i>
-						Telegram
-					</network>
-
-					<network network="pinterest">
-						<i class="fab fa-pinterest color-pinterest"></i>
-						Pinterest
-					</network>
-
-					<network network="vk">
-						<i class="fab fa-vk color-vk"></i>
-						VKontakte
-					</network>
-				</div>
-			</social-sharing>
+			<download-cv/>
 		</div>
 	</cv-lightbox>
 </template>
 
 <script>
-	import SocialSharing from 'vue-social-sharing'
 	import CvLightbox from '@/components/lightbox/Lightbox.vue'
+	import DownloadCv from '@/components/settings/DownloadCv.vue'
 
 	export default {
-		name: 'CvShare',
+		name: 'SendCv',
 
 		components: {
 			CvLightbox,
-			SocialSharing
+			DownloadCv
 		},
 
 		props: {
@@ -97,19 +61,22 @@
 		i18n: {
 			messages: {
 				'pt-br': {
-					shareCv: 'Compartilhar CV',
+					sendCV: 'Enviar este CV',
+          downloadCV: 'Baixar',
 					copyHelp: 'Copiar para área de transferência',
 					title: 'Envie esta URL para compartilhar este CV',
 				},
 
 				'en': {
-					shareCv: 'Share CV',
+					sendCV: 'Send this CV',
+          downloadCV: 'Download',
 					copyHelp: 'Copy to the clipboard',
 					title: 'Send this URL to share this CV',					
 				},
 
 				'fr': {
-					shareCv: 'Partager le CV',
+					sendCV: 'Envoyer ce CV',
+          downloadCV: 'Télécharger',
 					copyHelp: 'Copier dans le presse-papiers',
 					title: 'Envoyer cette URL pour partager ce CV',					
 				}
@@ -119,9 +86,8 @@
 </script>
 
 <style lang="scss" scoped>
-	.share-url, .socials {
+	.share-cv-url {
 		padding: var(--gutter);
-		padding-bottom: 0;
 		.field, .field input {
 			margin: 0;
 			width: 100%;
@@ -153,33 +119,14 @@
 			}
 		}
 	}
-	hr {
-		margin: 8px 0;
-		border: dashed 2px #e9e9e9;
-	}
-	.shares {
-		display: grid;
+	.download {
 		padding: var(--gutter);
-		font-size: 30px;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: var(--gutter);
-		@media screen and (max-width: 500px) {
-			grid-template-columns: 1fr;
-		}
 	}
 </style>
 
 <style lang="scss">
-	.vue-social-sharing {
-		span {
-			border-radius: 26px;
-			transition: 100ms;
-			padding: 4px var(--gutter);
-			&:hover {
-				transition: 100ms;
-				cursor: pointer;
-				background-color: var(--hover-color);
-			}
-		}
+	.download-cv-lightbox .cv-lightbox__content {
+		max-width: 500px;
+		max-height: 400px;
 	}
 </style>

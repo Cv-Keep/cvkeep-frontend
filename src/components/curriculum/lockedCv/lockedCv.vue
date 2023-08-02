@@ -166,6 +166,7 @@
 <style lang="scss" scoped>
 	.locked-cv {
 		padding-top: 180px;
+		padding-bottom: 180px;		
 		min-height: 100vh;
 		&__content {
 			text-align: center;
@@ -184,6 +185,7 @@
 					object-fit: cover;
 					border-radius: 100%;
 					margin-bottom: var(--gutter);
+					background-color: #d1d1d1;
 				}
 			}
 			h4 {

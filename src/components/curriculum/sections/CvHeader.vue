@@ -180,9 +180,8 @@
 .cv-header {
 	padding: calc(var(--gutter) * 2) var(--gutter);
 	background-color: var(--cv-color);
-	display: grid;
-	grid-template-columns: 200px auto;
-	column-gap: calc(var(--gutter) * 2);
+	display: flex;
+	gap: 32px;
 	border-top-left-radius: 18px;
 	border-top-right-radius: 18px;
 	.information {
@@ -265,10 +264,16 @@
 			opacity: .6;
 		}
 	}
+	.avatar-root[hidden] + .information {
+		text-align: left;
+    padding-top: 20px;
+		padding: 20px 4px;
+	}
 	@media screen and (max-width: 1023px) {
 		text-align: center;
 		display: block;
 		.avatar-root {
+			margin: 0 auto;
 			text-align: center;
 		}
 		ul {

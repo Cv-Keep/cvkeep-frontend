@@ -1,9 +1,5 @@
 <template>
   <div class="download-cv" ref="downloadCvRoot">
-    <heading-tooltip
-      :title="$t('title')"
-      :tooltipMessage="$t('downloadCvHelp')"/>
-
     <ul>
       <li @click="downloadCvFile('pdf')">
         <i class="fa fa-download"></i>
@@ -20,21 +16,14 @@
         <span>JSON</span>
       </li>
     </ul>
-
-    <hr/>
   </div>
 </template>
 
 <script>
   import { mapState } from 'vuex'
-  import HeadingTooltip from '@/components/settings/HeadingTooltip.vue'
   
   export default {
     name: 'download-cv',
-
-    components: {
-      HeadingTooltip
-    },
 
     computed: {
 			...mapState([ 'curriculum' ]),      
@@ -43,10 +32,11 @@
     methods: {
       downloadCvFile (ext) {
         this.$appLoading = true;
-        const previousIframe = this.$refs.downloadCvRoot.querySelector('iframe')
+        const previousIframe = this.$refs.downloadCvRoot.querySelector('iframe#download-cv-iframe')
         previousIframe && previousIframe.remove();
 
         const iframe = Object.assign(document.createElement('iframe'), {
+          id: 'download-cv-iframe',
           src: `//${window.location.host}/cv/${this.curriculum.username}#download-${ext}`
         });
 
@@ -59,6 +49,7 @@
         const cv = JSON.parse(JSON.stringify(this.curriculum));
 
         [
+          '_id',
           'views',
           'locked',
           'created',
@@ -119,19 +110,18 @@
 
 <style lang="scss">
   .download-cv {
-    @media screen and (max-width: 1023px) {
-      display: none;
-    }
     ul {
-      display: grid;
-      list-style: none;
+      width: 100%;
       display: flex;
+      justify-content: space-evenly;
+      list-style: none;
       margin: 0;
       li {
+        border: solid 1px #d1d1d1;
         margin-bottom: 0;
         color: #444;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 16px;
         display: flex;
         align-items: center;
         border-radius: 25px;
