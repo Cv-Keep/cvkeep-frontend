@@ -10,7 +10,7 @@
     data () {
       return {
         apiUrl: 'https://github.com/login/oauth/authorize',
-        clientId: 'd5a6ed2d3697ced8ef7e',
+        clientId: process.env.VUE_APP_GITHUB_CLIENT_ID,
         scope: 'user:email',
       }
     }
