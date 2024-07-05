@@ -16,7 +16,7 @@ export default {
         invalidUrl: 'URL incorrecte',
         minLength: 'La taille de la valeur ne peut être inférieure au minimum',
         noEmptyChoices: 'Au moins une option doit être sélectionnée',
-      },  
+      },
     },
     educationTypes: {
       bachelor: 'Baccalauréat',
@@ -38,7 +38,7 @@ export default {
       recycling: 'Récupération ',
       professionalizing: 'Professionnalisation',
       extension: 'Prolongement',
-      exchange: 'Echange',            
+      exchange: 'Echange',
     },
     educationSituations: {
       notInform: 'Ne pas informer',
@@ -53,7 +53,7 @@ export default {
       'project': 'Projet',
       'production': 'Production',
       'competition': 'Concours',
-      'volunteering': 'Volontariat',            
+      'volunteering': 'Volontariat',
     },
     experienceLabel: {
       'professional': {
@@ -71,7 +71,7 @@ export default {
       'project': {
         title: 'Établissement',
         activity: 'Quel projet ?',
-      },  
+      },
       'competition': {
         title: 'Nom du concours',
         activity: 'Activité',
@@ -85,7 +85,7 @@ export default {
       'doNotInform': 'Ne pas informer',
       'married': 'Marié',
       'single': 'Seul',
-      'divorced': 'Divorcé',      
+      'divorced': 'Divorcé',
     },
     contactKinds: {
       'phone': 'Téléphone',
@@ -122,7 +122,7 @@ export default {
       searching: 'Rechercher',
       loadMore: 'Chargez plus',
       findACv: 'Trouver un CV',
-      nameRoleOrLocation: 'Nom, rôle, localisation, etc',
+      nameRoleOrLocation: 'Nom, rôle, localisation ou autres détails',
       noSearchQuery: 'Il n\'y a pas de requête de recherche',
       showingResultsFor: 'Afficher les résultats pour',
       theSearchFor: 'La recherche de',
@@ -138,11 +138,15 @@ export default {
       thanksForYourDonation: 'Merci pour votre don !',
       pixDonation: 'Don de PIX',
       heresThePixKey: 'Voici la clé PIX,',
+			paypalDonation: 'Don de Paypal',
       feature: {
         thisIsA: 'Il s\'agit d\'un',
         freeServiceAndPlatform: 'Service et plateforme gratuits',
         createdWithHardWork: 'créé avec un travail acharné.',
         considerDonate: 'Si cela vous a été utile, envisagez de faire un don..'
       }
-    }     
+    },
+		a11y: {
+			close: 'Fermer dialog'
+		}
   }

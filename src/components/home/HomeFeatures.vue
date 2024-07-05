@@ -1,35 +1,35 @@
 <template>
   <div :class="`home-features donation-${!!$showDonation}`">
-    <div class="container">
+    <section class="container" aria-labelledby="featuredText">
       <div class="home-features__head">
-        <h2>
+        <h2 id="featuredText">
           {{ $t('featuredText') }}
         </h2>
       </div>
 
-      <div class="home-features__items">
-        <div>
+      <article class="home-features__items">
+        <figure>
           <animated-icon icon="rocket"/>
-          <span>{{ $t('modern') }}</span>
-        </div>
+          <figcaption>{{ $t('modern') }}</figcaption>
+        </figure>
 
-        <div>
+        <figure>
           <animated-icon icon="key-password"/>
-          <span>{{ $t('secure') }}</span>
-        </div>
+          <figcaption>{{ $t('secure') }}</figcaption>
+        </figure>
 
-        <div>
+        <figure>
           <animated-icon icon="tea"/>
-          <span>{{ $t('simple') }}</span>
-        </div>
+          <figcaption>{{ $t('simple') }}</figcaption>
+        </figure>
 
-        <div>
+        <figure>
           <animated-icon icon="diamond"/>
-          <span>{{ $t('pretty') }}</span>
-        </div>
-      </div>
-    </div>
-  </div>  
+          <figcaption>{{ $t('pretty') }}</figcaption>
+        </figure>
+      </article>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -85,9 +85,10 @@
 			padding-top: 32px;
       flex-wrap: wrap;
 			justify-content: space-between;
-			> div {
+			> figure {
 				text-align: center;
-				img, span {
+				margin: 0;
+				img, figcaption {
 					margin: 0 auto;
 					display: block;
 					font-weight: 600;

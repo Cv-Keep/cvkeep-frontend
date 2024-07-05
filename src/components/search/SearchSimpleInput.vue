@@ -1,18 +1,25 @@
 <template>
-  <div class="field">
-    <label for="subject">
-      <i class="fa fa-search"></i>
-      {{ $t('searchMessages.findACv') }}
+  <fieldset class="field" aria-labelledby="findACv">
+    <label for="subject" id="findACv">
+      <i class="fa fa-search" aria-hidden="true" role="presentation"></i>
+      <span> {{ $t('searchMessages.findACv') }}</span>
     </label>
 
     <div class="search-input-holder" :disabled="disabled">
-      <input type="text" :name="name || 'subject'" :placeholder="$t('searchMessages.nameRoleOrLocation')" :value="value" :disabled="disabled" maxlength="54">
-      
-      <button type="submit">
-        <i class="fa fa-arrow-right"></i>
+      <input type="text" :name="name || 'subject'"
+				:id="name || 'subject'"
+				:placeholder="$t('searchMessages.nameRoleOrLocation')"
+				:value="value"
+				:disabled="disabled"
+				:aria-placeholder="$t('searchMessages.nameRoleOrLocation')"
+				:aria-disabled="disabled"
+				maxlength="54">
+
+      <button type="submit" :aria-label="$t('searchMessages.findACv')">
+        <i class="fa fa-arrow-right" role="presentation" aria-hidden="true"></i>
       </button>
     </div>
-  </div>
+  </fieldset>
 </template>
 
 <script>

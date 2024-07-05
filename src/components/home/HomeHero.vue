@@ -1,42 +1,49 @@
 <template>
   <div class="home-hero">
-    <div class="feature-img">
-      <img src="@/assets/guy.jpg" alt="a"/>
-    </div>
+    <figure class="feature-img">
+      <img src="@/assets/guy.jpg" :alt="$t('imageDescription')"/>
+    </figure>
 
-    <div class="container">
-      <h1 class="shadow text1">{{String($brandName).toUpperCase()}}</h1>
-      <h2><span>{{ $t('cvAsAnOnlineProfile') }}</span></h2>
+    <div class="container" role="region" aria-labelledby="brandName" aria-describedby="cvKeepDescription">
+      <h1 class="shadow text1" id="brandName">{{String($brandName).toUpperCase()}}</h1>
+      <h2 id="cvKeepDescription"><span>{{ $t('cvAsAnOnlineProfile') }}</span></h2>
 
-			<button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()">
+			<button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()"
+				:aria-haspopup="$logged ? false : 'dialog'"
+				type="button"
+				:aria-label="$logged ? $t('goToCv') : $t('startNow')"
+				>
 				<span v-html="$logged ? $t('goToCv') : $t('startNow')"></span>
 			</button>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
 export default {
 	name: 'home-hero',
-	
+
 	i18n: {
 		messages: {
 			'pt-br': {
 				goToCv: 'Ir para o meu CV',
-				startNow: 'Comece Agora',	
+				startNow: 'Comece Agora',
 				cvAsAnOnlineProfile: 'Seu currículo como um perfil online',
+				imageDescription: 'Homem sentado em um sofá, utilizando um laptop que está em cima de uma mesa branca'
 			},
 
 			'en': {
 				goToCv: 'Go to my CV',
-				startNow: 'Start now',	
+				startNow: 'Start now',
 				cvAsAnOnlineProfile: 'Your resumé as an online profile',
+				imageDescription: 'Man sitting on a sofa using a laptop on a white table'
 			},
 
 			'fr': {
 				goToCv: 'Accéder à mon CV',
-				startNow: 'Commencez maintenant',	
+				startNow: 'Commencez maintenant',
 				cvAsAnOnlineProfile: 'Votre CV comme profil en ligne',
+				imageDescription: 'Homme assis sur un canapé à l\'aide d\'un ordinateur portable sur une table blanche'
 			}
 		}
 	}

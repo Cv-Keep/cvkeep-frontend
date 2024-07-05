@@ -16,7 +16,7 @@ export default {
       invalidUrl: 'Invalid URL',
       minLength: 'The value size cannot be less than minimum',
       noEmptyChoices: 'At least one option must be selected',
-    },  
+    },
   },
   educationTypes: {
     bachelor: 'Bachelor',
@@ -38,7 +38,7 @@ export default {
     recycling: 'Recycling',
     professionalizing: 'Professionalizing',
     extension: 'Extention',
-    exchange: 'Exchange',            
+    exchange: 'Exchange',
   },
   educationSituations: {
     notInform: 'Do not inform',
@@ -53,7 +53,7 @@ export default {
     'project': 'Project',
     'production': 'Production',
     'competition': 'Competition',
-    'volunteering': 'Volunteering',            
+    'volunteering': 'Volunteering',
   },
   experienceLabel: {
     'professional': {
@@ -71,7 +71,7 @@ export default {
     'project': {
       title: 'Institution',
       activity: 'What project?',
-    },  
+    },
     'competition': {
       title: 'Competition\'s name',
       activity: 'Activity',
@@ -85,7 +85,7 @@ export default {
     'doNotInform': 'Dot not inform',
     'married': 'Married',
     'single': 'Single',
-    'divorced': 'Divorced',      
+    'divorced': 'Divorced',
   },
   contactKinds: {
     'phone': 'Phone',
@@ -122,7 +122,7 @@ export default {
     searching: 'Searching',
     loadMore: 'Load more',
     findACv: 'Find a CV',
-    nameRoleOrLocation: 'Name, role, locale, etc',
+    nameRoleOrLocation: 'Name, role, locale or other details',
     noSearchQuery: 'There is no search query',
     showingResultsFor: 'Showing results for',
     theSearchFor: 'The search for',
@@ -138,11 +138,15 @@ export default {
     thanksForYourDonation: 'Thanks for your donation!',
     pixDonation: 'PIX donation',
     heresThePixKey: 'Here is the PIX key,',
+		paypalDonation: 'Paypal donation',
     feature: {
       thisIsA: 'This is a',
       freeServiceAndPlatform: 'free service and platform',
       createdWithHardWork: 'created with some hard work.',
       considerDonate: 'If has been useful for your purposes, consider to make a donation.'
     }
-  }     
+  },
+	a11y: {
+		close: 'Close dialog'
+	}
 }

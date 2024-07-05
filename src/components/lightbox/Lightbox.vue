@@ -1,16 +1,24 @@
 <template>
 	<transition name="lb-transition">
-		<div class="cv-lightbox" @click.self="backdropClick" @keyup.esc="close" tabindex="0" v-observe-visibility="visibilityChanged">
-			<div class="cv-lightbox__content" ref="lbContent">
+		<div class="cv-lightbox" @click.self="backdropClick" @keyup.esc="close" tabindex="0" v-observe-visibility="visibilityChanged" role="dialog">
+			<div class="cv-lightbox__content" ref="lbContent" aria-labelledby="headerTitle">
 				<header v-if="title">
-					<h4 v-html="title"></h4>
-					<span @click="close"><i class="fa fa-times"></i></span>
+					<h4 v-html="title" id="headerTitle"></h4>
+					<span
+						role="button"
+						class="close-button"
+						@click="close"
+						@keyup.enter="close"
+						:aria-label="$t('a11y.close')"
+						>
+						<i class="fa fa-times" role="presentation" aria-hidden="true"></i>
+					</span>
 				</header>
-				
+
 				<div class="lightbox-main">
 					<slot/>
 				</div>
-				
+
 				<footer v-if="hasfooter">
 					<slot name="footer"/>
 				</footer>
@@ -22,16 +30,16 @@
 <script>
 	import Utils from '@/shared/script/helpers/utils.js'
 	import Vue from 'vue'
-	
+
 	export default {
 		name: 'cv-lightbox',
-		
+
 		props: {
 			title: {
 				type: String,
 				default: ''
 			},
-			
+
 			hasfooter: {
 				type: Boolean,
 				default: true
@@ -46,7 +54,7 @@
 			visibilityChanged (isVisible) {
 				this.hideBodyScroll(isVisible);
 			},
-			
+
 			hideBodyScroll (flag) {
 				document.body.style.overflow = flag ? 'hidden' : 'initial';
 			},
@@ -58,7 +66,7 @@
 
 		mounted () {
 			const autofocus = this.$el.querySelector('[autofocus]');
-			
+
 			Vue.nextTick(function () {
 				autofocus && autofocus.focus();
 			});
@@ -119,7 +127,7 @@
 						font-size: 20px;
 					}
 				}
-				span {
+				.close-button {
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -127,6 +135,7 @@
 					width: 100%;
 					font-size: 20px;
 					opacity: .8;
+					border: none;
 					cursor: pointer;
 					&:hover {
 						opacity: 1;
@@ -158,7 +167,7 @@
 		}
 	}
 
-	.lb-transition-enter-active, 
+	.lb-transition-enter-active,
 	.lb-transition-leave-active {
 		transition: 100ms ease-in-out;
 		transition-property: opacity;
@@ -167,5 +176,5 @@
 	.lb-transition-enter,
 	.lb-transition-leave-active {
 		opacity: 0
-	}	
+	}
 </style>

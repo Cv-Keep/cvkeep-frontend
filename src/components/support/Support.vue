@@ -1,49 +1,56 @@
 <template>
-  <div class="support">
+  <section class="support" role="region" aria-labelledby="supporter" aria-describedby="supportThisService">
     <div class="support__content">
       <div class="support__content__head" v-if="title">
-        <p class="title">
-          <i class="fa fa-heart"></i>
+        <p class="title" id="supporter">
+          <i class="fa fa-heart" aria-hidden="true" role="presentation"></i>
           <span>{{$t('supportMessages.becomeASupporter')}}</span>
         </p>
       </div>
 
       <div class="support__content__body" :style="`text-align: ${blocked ? 'left' : 'center'}`">
-        <p>
-          {{$t('supportMessages.feature.thisIsA')}} <strong>{{$t('supportMessages.feature.freeServiceAndPlatform')}}</strong> 
+        <p id="supportThisService">
+          {{$t('supportMessages.feature.thisIsA')}} <strong>{{$t('supportMessages.feature.freeServiceAndPlatform')}}</strong>
           {{$t('supportMessages.feature.createdWithHardWork')}}<br/>
-          
+
           {{$t('supportMessages.feature.considerDonate')}}
         </p>
       </div>
 
-      <div class="support__content__items">
+      <article class="support__content__items">
         <ul :class="`blocked-${blocked}`">
           <li class="paypal" v-if="paypalDonationUrl">
-            <a :href="paypalDonationUrl" target="_blank">
-              <img :src="require('@/assets/paypal.svg')" alt="Paypal logo">
+            <a :href="paypalDonationUrl" target="_blank"
+							:aria-label="$t('supportMessages.paypalDonation')">
+              <img :src="require('@/assets/paypal.svg')" alt="Paypal logo" loading="lazy" />
               <span>{{$t('supportMessages.donate')}}</span>
             </a>
           </li>
 
-          <li class="pix" v-if="pixKeyStr" @click="toggleModal('pixDonationModal')">
-            <img :src="require('@/assets/pix.svg')" alt="Pix logo">
-            <span>{{$t('supportMessages.donate')}}</span>
+          <li class="pix" v-if="pixKeyStr">
+						<button @click="toggleModal('pixDonationModal')" type="button"
+							:aria-label="$t('supportMessages.pixDonation')" aria-haspopup="dialog">
+							<img :src="require('@/assets/pix.svg')" alt="Pix logo" loading="lazy" />
+							<span>{{$t('supportMessages.donate')}}</span>
+						</button>
           </li>
 
-          <li class="bitcoin" v-if="bitcoinKeyStr" @click="toggleModal('bitcoinDonationModal')">
-            <img :src="require('@/assets/bitcoin.svg')" alt="Bitcoin logo">
-            <span>{{$t('supportMessages.donate')}}</span>
+          <li class="bitcoin" v-if="bitcoinKeyStr">
+						<button type="button" @click="toggleModal('bitcoinDonationModal')"
+							:aria-label="$t('supportMessages.bitcoinDonation')" aria-haspopup="dialog">
+							<img :src="require('@/assets/bitcoin.svg')" alt="Bitcoin logo" loading="lazy" />
+							<span>{{$t('supportMessages.donate')}}</span>
+						</button>
           </li>
         </ul>
-      </div>
+      </article>
     </div>
 
     <component
-      v-if="pixDonationModal" 
-      :active="pixDonationModal" 
+      v-if="pixDonationModal"
+      :active="pixDonationModal"
       :class="blocked ? 'cover-all-blocked' : ''"
-      :is="blocked ? 'div' : 'pix-donation-modal'" 
+      :is="blocked ? 'div' : 'pix-donation-modal'"
       @close="toggleModal('pixDonationModal')"
     >
       <span  class="go-back" v-if="blocked" @click="toggleModal('pixDonationModal')">
@@ -52,9 +59,9 @@
 
       <pix-key/>
     </component>
-    
+
     <component
-      v-if="bitcoinDonationModal" 
+      v-if="bitcoinDonationModal"
       :active="bitcoinDonationModal"
       :class="blocked ? 'cover-all-blocked' : ''"
       :is="blocked ? 'div' : 'bitcoin-donation-modal'"
@@ -66,7 +73,7 @@
 
       <bitcoin-key/>
     </component>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -129,7 +136,7 @@ export default {
         span {
           text-align: left;
         }
-      }      
+      }
     }
     &__content {
       padding: 0 var(--gutter);
@@ -142,7 +149,7 @@ export default {
           margin-bottom: var(--gutter);
           i {
             margin-right: 8px;
-          }  
+          }
         }
       }
       &__body {
@@ -157,7 +164,10 @@ export default {
           justify-content: space-around;
           li {
             opacity: .85;
-            cursor: pointer;
+						button {
+							cursor: pointer;
+							border: 0;
+						}
             a {
               text-decoration: none;
             }

@@ -1,5 +1,5 @@
 <template>
-  <img :src="draw" :alt="icon" :style="`max-width: ${size}px; filter: invert(${white ? '1' : '0'})`">
+  <img :src="draw" :alt="icon" :style="`max-width: ${size}px; filter: invert(${white ? '1' : '0'})`" loading="lazy" />
 </template>
 
 <script>

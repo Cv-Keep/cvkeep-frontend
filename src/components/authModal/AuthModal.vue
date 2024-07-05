@@ -1,26 +1,34 @@
 <template>
 	<app-modal ref="authModal" class="app-auth-modal" :hasfooter="false" v-show="active" @close="close">
-		<span class="close-it" @click="close"><i class="fa fa-times"></i></span>
-		
+		<span class="close-it"
+			@click="close"
+			@keyup.enter="close"
+			tabindex="0"
+			role="button"
+			:aria-label="$t('a11y.close')"
+			>
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</span>
+
 		<div class="auth-modal-content">
 			<swiper :options="swiperOptions" ref="sw">
-			
+
 				<!-- SIGNIN -->
-				
+
 				<swiper-slide>
-					<div class="text">
+					<div class="text" id="headerTitle">
 						<h4>{{ $t('doLogin') }}</h4>
 					</div>
-					
+
 					<div v-if="!withEmail" class="socials">
 						<social-login @emailClick="withEmail = !withEmail"/>
 						<p>{{ $t('stillNotRegistered') }} <strong><a href="/" @click.prevent="slideNext">{{ $t('registerYourself') }}</a></strong></p>
 					</div>
 
 					<div v-else>
-						<sign-in-form 
+						<sign-in-form
 							@error="error"
-							@go-back="hideForm" 
+							@go-back="hideForm"
 							@forgot-pass="slideTo(2)"
 						/>
 					</div>
@@ -32,22 +40,22 @@
 					<div class="text">
 						<h4>{{ $t('registerYourself') }}</h4>
 					</div>
-					
+
 					<div v-if="!withEmail" class="socials">
 						<social-login @emailClick="withEmail = !withEmail" :label="$t('registerUsing')"/>
 						<p>{{ $t('alreadyRegistered') }} <strong><a href="/" @click.prevent="slidePrev">{{ $t('doLogin') }}</a></strong></p>
 					</div>
-					
+
 					<div v-else>
 						<register-form
-							@error="error"						
+							@error="error"
 							@go-back="hideForm"
 						/>
 					</div>
 				</swiper-slide>
 
 				<!-- FORGOT PASSWORD -->
-				
+
 				<swiper-slide class="auth-register">
 					<div class="text">
 						<h4>{{ $t('forgotPassword') }}</h4>
@@ -58,7 +66,7 @@
 						<forgot-pass-form
 							@error="error"
 							@go-to-login="slideTo(0)"
-							@go-to-register="slideTo(1)"										
+							@go-to-register="slideTo(1)"
 						/>
 					</div>
 				</swiper-slide>
@@ -66,9 +74,9 @@
 		</div>
 
 		<div class="terms">
-			<p><small>{{ $t('termsAndConditionAgreement') }} <router-link to="/terms">{{ $t('termsAndConditions') }}</router-link></small></p>
+			<p><small>{{ $t('termsAndConditionAgreement') }} <router-link to="/terms" :aria-label="$t('termsAndConditions')">{{ $t('termsAndConditions') }}</router-link></small></p>
 		</div>
-		
+
 	</app-modal>
 </template>
 
@@ -122,7 +130,7 @@ export default {
 			this.slideTo(params.index || 0);
 			this.signInText = params.signInText ? params.signInText : '';
 			this.signUpText = params.signUpText ? params.signUpText : '';
-			
+
 			if (this.$refs.sw) {
 				const forms = this.$refs.sw.$el.querySelectorAll('form');
 
@@ -177,7 +185,7 @@ export default {
 
 		AuthModal.EventBus.$on('close', (params) => {
 			this.close(params);
-		});		
+		});
 	},
 
 	i18n: {
@@ -205,7 +213,7 @@ export default {
 				forgotPasswordNoProb: 'No problem! Please, inform your e-mail',
 				termsAndConditionAgreement: 'By using this platform you automatically agree with our',
 			},
-			
+
 			'fr': {
 				doLogin: 'Se connecter',
 				registerYourself: 'S\'enregistrer',

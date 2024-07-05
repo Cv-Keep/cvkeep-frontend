@@ -29,3 +29,4 @@ Leo Fabiano Alves
 Lucas Pierre de Alencar  
 Weslley Fratini  
 Jorge Gabriel
+Bruno Donatelli

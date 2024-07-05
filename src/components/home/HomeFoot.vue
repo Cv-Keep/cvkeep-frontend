@@ -4,14 +4,17 @@
 			<div class="left">
 				<p class="featured"><span>{{ $t('aGoodCv') }}</span> <strong>{{ $t('curriculum') }}</strong></p>
 				<p><strong>{{ $t('increasesYourChances') }}</strong></p>
-				<button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()">
+				<button @click="$logged ? $router.push(`/cv/${$username}`) : $AuthModal.show()"
+					:aria-label="$logged ? $t('goToCv') : $t('startNow')"
+					:aria-haspopup="$logged ? 'false' : 'dialog'"
+					>
 					<span v-html="$logged ? $t('goToCv') : $t('startNow')"></span>
 				</button>
 			</div>
-			
-			<div class="right">
-				<img src="@/assets/footer.svg" alt="Two women analysing a big cv on the wall">
-			</div>
+
+			<figure class="right">
+				<img src="@/assets/footer.svg" :alt="$t('ImageDescription')" loading="lazy">
+			</figure>
 		</div>
   </div>
 </template>
@@ -28,6 +31,7 @@
 					aGoodCv: 'Um bom',
 					curriculum: 'Currículo',
 					increasesYourChances: 'aumenta suas chances de conseguir um bom emprego.',
+					ImageDescription: 'Duas mulheres analisando um currículo grande em uma parede'
 				},
 
 				'en': {
@@ -36,7 +40,8 @@
 					aGoodCv: 'A good',
 					curriculum: 'Resumé',
 					increasesYourChances: 'increases your chances of getting a good job.',
-					imagineAGreatOne: 'Imagine a great one?',					
+					imagineAGreatOne: 'Imagine a great one?',
+					ImageDescription: 'Two women analysing a big cv on the wall'
 				},
 
 				'fr': {
@@ -45,7 +50,8 @@
 					aGoodCv: 'Un bon',
 					curriculum: 'Curriculum vitae',
 					increasesYourChances: 'augmente vos chances d\'obtenir un bon emploi.',
-					imagineAGreatOne: 'Imaginez en grand ?',					
+					imagineAGreatOne: 'Imaginez en grand ?',
+					ImageDescription: 'Deux femmes analysant un gros CV accroché au mur'
 				}
 			}
 		}
