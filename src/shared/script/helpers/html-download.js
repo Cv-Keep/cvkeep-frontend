@@ -7,6 +7,9 @@ export default {
     const element = document.querySelector(selector);
     element.classList.add('downloading-as-image');
 
+    const hiddenAvatars = element.querySelectorAll('.avatar-root[hidden]');
+    hiddenAvatars.forEach(avatar => avatar.remove());
+
     return new Promise(resolve => {
       domtoimage.toBlob(element)
         .then(blob => {
